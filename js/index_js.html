@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Javascript</title>
+ <link rel="stylesheet" href="script.js">
+ <script src="script.js"></script>
+
+
+ <script>alert("Hello Word");
+ alert("Je suis dans le body");
+ //Toujours finir l'iscruction par un point virgule(;)
+/*Commentaire sur plusieurs lignes*/
+
+//On déclare une variable sans valeur et on lui en affecte une valeur
+
+var nomDeLaVariable;
+var nomDeLaVariable="Mag";//Type String
+nomDeLaVariable='L\'école';
+nomDeLaVariable="J'habite dans le 78";
+console.log(nomDeLaVariable);
+
+//On déclare une variable et lui affecte directement une valeur
+var X=25;
+var x="Toto";
+//console.log(X);
+//console.log(x);
+
+//On déclare plusieurs valiables en même temps
+var a="azerty", b=true, c=10.5;
+//console.log(a+''+b+''+c);
+
+//On déclare une variable vide et on lui affecte une valeur
+var z='';
+z="Qwerty";
+//console.log(z);
+
+
+//var t=null;
+//var u=NaN;
+//var undefined;
+//var tabs=[];
+
+//console.log(typeof(z));//Verifie le type de la variable
+
+var x=5,y=10,z=-2;
+
+ //Addition
+x=x+1;
+x+=2;
+
+ //Soustraction
+x=x-2;
+x-=2;
+
+//Multiplication
+y=y*2;
+y*=2;
+var Multiplication=x*y;
+//console.log(Multiplication);
+
+ //Division
+var Division=y/z;
+y/=z
+//console.log(Division);
+
+// Modulo
+//le Modulo est le reste de la divition
+ var Modulo=13%3;
+ //13%=3;
+ //Dans cette opperation: 13 par 3 = 4-3 = 1; le Modulo est de 1. Il s'agit  du reste de la division entière d'un nombre par un autre.
+
+
+ var priority= x + y / (4+z) % 3;
+ //console.log(priority);
+ //console.log(a+''+b+''+c)
+
+ var prenom="Mathieu",
+ espace= '',
+ age= 29;
+ var moi= prenom+espace+age;
+ //alert(moi)
+
+
+/*
+ == est égal à -> 10 - "10";
+ != est différent de -> 12!="2";
+ === est égal à(en valeur et en type) -> 10 -10;
+ !== est différent de (en valeur et en type) 10 !== 9;
+ < strictement inferieur
+ > strictement supérieur
+ <= est inférieur ou égal
+ >= est supérieur ou égal
+
+ Exo: Effectuer une caparaison des variables x et y ou x = 4 et y ="4" pour chaque comparateur,
+ renvoyé les tous dans un alert().*/
+
+var x=4,
+y="4",
+vrai= x<y,
+vrai2= x>y,
+faux= x>=y,
+faux2= x<=y,
+egal= x==y,
+egalValType= x===y,
+diff=x!=y,
+diffValType= x!==y;
+alert(vrai + "\n"+faux+"\n"+ vrai2+"\n"+ faux2+"\n"+egal+"\n"+egalValType+"\n"+diff+"\n"+diffValType)
+//\n= retour a la ligne
+
+
+var heure=12.33;
+//Si
+if(heure<15){
+ if(typeof(heure)=="number")
+ alert("Il est midi");
+ //code à executer si la condition est verifiée
+
+}//Sinon si
+
+else if(Heure =="12.33" &&heure ===12.33){
+ //code à executer si l'autre condition est verifiée
+ alert("je suis dans la deuxième condition");
+}
+
+else if(Heure =="12.33"|| heure ===12.33){
+ //code à executer si l'autre condition est verifiée
+ alert("je suis dans la deuxième condition");
+} //Sinon
+
+//on peut utiliser un seul else!
+else{
+ //code à executer si aucune condition n'est verifier
+}
+
+//Exo: créer une variable heure comme suit: var heure=Number(prompt("entrez une valeur comprise entre 0 et 24");//
+//Créer une condition qui, si heure se situe entre 0 et 12 renvoie une alerte "c'est le matin", si elle se situe entre 12 et 17 "c'est l'après-midi", entre 17 et 24 "c'est le soir".//
+
+var heure=Number(prompt("Entrez une valeur comprise entre 0 et 24"));
+if(heure >=0 && heure<=12){
+    alert("c'est le matin");
+}
+else if(heure >=12 && heure<= 17){
+    alert("c'est l'après-midi");
+}
+else if(heure >=17 && heure<=24){
+    alert("c'est le soir");
+}
+else{
+    alert("la valeur n'est pas valide");
+}
+
+ //Switch est semblable à une condition à la différence que celui-ci ne peut tester que l'égalité des valeurs.//
+ var heure=Number(prompt("Entrez une valeur comprise entre 0 et 24"));
+
+switch(heure){
+    case 8:
+    alert("il est 8H")
+    break;
+    
+    case 9:
+    alert("il est 9H")
+    break;
+
+case 10:
+    alert("il est 10H")
+    break;
+    case 11:
+    alert("il est 11H")
+    break;
+    case 12:
+    alert("il est 12H")
+    break;
+    default:
+    alert("Error");
+}
+
+var prenom_etudiant="Magali",
+    nom_etudiant:"Piszczyglowa";
+    alert("Bonjour je m'appelle Magali Piszczyglowa")
+
+//Exercice: Créez 2 variables nom_etudiant et prenom_etudiant auxquelles vous affecterez respectivement votre nom et prénom. Vous afficherez dans une fonction alert() le message suivant : "Bonjour, je m'appelle prenom_etudiant nom_etudiant".
+
+//Exercice: Exercice quasi identique au précédent, mais vous n'affectez pas les nom et prénom dans la source, mais en questionnant l'utilisateur pour connaitre son nom et son prénom.//
+
+//Exercice: Créez 2 variables nombre1 et nombre2 auxquelles vous affecterez respectivement des valeurs numériques. Vous en calculerez la somme dont vous affecterez la variable somme et vous afficherez dans une fonction alert() le message suivant : "La somme de nombre1 et de nombre2 est resultat".//
+
+//Exercice: Exercice quasi identique au précédent, mais vous n'affectez pas nombre1 et nombre2 dans la source, mais en questionnant l'utilisateur pour connaitre les deux valeurs numériques nombre1 et nombre2.//
+
+//Exercice quasi identique au précédent, mais sans affecter nombre1 et nombre2 dans la source, mais en questionnant l'utilisateur pour connaitre les deux valeurs numériques nombre1 et nombre2, vous effectuerez les 4 opérations et donnerez 4 messages pour les résultats (addition, soustraction, multiplication et division).//
+
+ //Exercice: Ecrire le code d'un fichier HTML qui permet de saisir trois notes (DC1, DC2, DS) puis calcule et affiche la moyenne.//
+
+ //Exercice: Ecrire le code d'un fichier HTML qui permet de saisir le numéro du mois et l’année  puis affiche le nombre de jours.//
+
+ //Exercice: Ecrire le code d'un fichier HTML permettant d’afficher la table de multiplication d'un entier compris entre 1 et 10.//
+
+ //Exercice: Échanger les valeurs de deux variables. Si au départ a=7 et b=3, il faudrait qu'à la fin b=7 et a=3.//
+  Cet exercice semble facile si l'on fait intervenir provisoirement une troisième variable c, qui permettra les étapes :
+  1.- lire a et b
+  2.- c prend la valeur de a
+  3.- a prend la valeur de b
+  4.- b prend la valeur de c (ancienne valeur de a)     a     b     (c)
+  a     b     (a)
+  b     b     (a)
+  b     a     (a)
+
+  Puis résoudre le même problème sans faire appel à une troisième variable.
+  Une suggestion ? La voici :
+  1.- lire a et b
+  2.- a prend la valeur de a+b
+  3.- b prend la valeur de a-b
+  4.- a prend la valeur de a-b     a                 b
+  a+b             b
+  a+b             (a+b)-b=a
+  (a+b)-a=b     a//
+</script>
+</head>
+<body>
+
+</body>
+</html>

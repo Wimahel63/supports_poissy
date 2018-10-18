@@ -1,0 +1,123 @@
+#container{
+    width:80%;
+    height:400px;
+    background: url(img/woddPlank.jpg); 
+}
+
+header{
+    font-family:'Caveat Brush', cursive;   
+}
+header hr{
+    width:50px;
+    margin:5px;
+}
+.titre2{
+ text-transform:uppercase;
+}
+
+#logo{
+    width:200px;
+    height:200px;
+    position:absolute;
+    top:10%;
+    left:30%;
+    z-index:2;
+}
+
+.triangle{
+    width:1px;
+    height:1px;
+    border:1px solid brown;
+    border-color: transparent  brown transparent  transparent ;
+    border-width:100px;
+    position:absolute;
+    top:10%;
+    left:30%;
+    z-index:1;
+}
+nav a{
+   text-decoration: none;
+   text-transform:uppercase;
+
+
+   color: black;
+   position:absolute top right;
+}
+
+
+#contenu{
+    width:80%;
+    height:100%; 
+}
+
+#story{  /*image asperge*/
+    width:1015px;
+    height:600px;
+}
+.histoire{
+    text-align:center;
+    margin:50px;
+    width:20%;
+    float:left;
+}
+.image1{
+    width: 30%;
+    height:30px;
+    float:right;
+}
+span{
+    text-transform: uppercase;
+    color:brown;
+}
+#fare{
+    width:100%;
+    height:600px;
+} 
+
+.image2{
+    width:500px;
+    height:40px;
+    float:left;
+}
+
+.freshfare{
+    width:30%;
+    margin-right: 50px;
+    text-align:justify;
+    float:right;
+}
+#drink{
+    width:1015px;
+    height:200px;
+    margin-bottom:10px;
+}
+#oeufs{
+    width:100%;
+    margin-bottom: 0;
+}
+hr{
+    border-style:solid;
+    border-color:brown;
+    border-width:8px;
+
+}
+footer{
+    background: url(img/pattern.jpg);
+    text-transform:uppercase;
+}
+footer hr{
+    width:50px;
+    margin:5px;
+}
+footer h3{
+    font-family:'Caveat Brush', cursive;  
+}
+
+footer i{
+    width:20px;
+    background-color: brown;
+}
+
+.clear{
+    clear:both;
+}

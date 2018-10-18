@@ -1,0 +1,46 @@
+table{ 
+    border: 1px solid blue;
+    text-align: center;
+    width: 200px;
+    height: 900px;
+    background:lightblue;
+}
+
+h1, h3{
+    color: forestgreen;
+}
+
+img{    
+    width: 400px;
+    height:200px;
+}
+
+.a{
+    font-family: fantasy;
+}
+
+.c{
+    width: 20px;
+    height:10px;
+}
+
+.e{
+    margin-top: 50px;
+    margin-right:80px;
+    float: left;
+}
+
+.d{    /*site vulcania*/
+    width: 400px;
+    height:200px;
+}
+
+.r:hover{
+    font-family: fantasy;
+    font-size: 10px;
+    color: darkblue;
+}
+
+
+
+

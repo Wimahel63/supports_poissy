@@ -1,0 +1,73 @@
+html, body, div, footer, header, section{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-align: center;
+    color:white;
+}
+    
+
+#conteneur{
+    background: none repeat scroll 0 0 #336699;
+    height: 600px;
+    margin: 0 auto;
+    width: 800px;
+}
+
+header{
+    background: #ff5555;
+    height: 60px;
+    line-height: 70px;
+    width: 700px;
+    
+}
+
+
+.gauche{
+    background: navy;
+    width: 70px;
+    height:530px;
+    line-height: 530px;
+    float: left;
+}
+.droite{
+    width: 70px;
+    height:530px;
+    background: navy;
+    line-height: 530px;
+    float: right;
+}
+.milieu{
+    background:linear-gradient(green, lightskyblue);
+    width: 500px;
+    height: 450px;
+    line-height: 530px;
+    float: left;
+    
+}   
+    
+    
+
+.z_milieu{
+    border: 1px solid;
+    width: 98px;
+    height: 448px;
+    float: left;
+}
+.bas{
+    background: gold;
+    bottom: 80px;
+    height: 80px;
+    line-height: 80px;
+    left: 150px;
+    position: relative;
+    width: 500px;
+}
+
+.clear{
+    clear: both;
+}
+/* cf correction sur slack*/

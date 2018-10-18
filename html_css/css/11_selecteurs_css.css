@@ -1,0 +1,75 @@
+*{
+   font-family: sans-serif;
+}
+
+nav{
+    background-color: black;
+    color: #fff;
+    padding: 0 0.5em;
+    position: fixed; /* on demande a notre nav de ne pas bouger de son emplacement, même si on descend sur notre page, la nav reste affichée visible sur la page*/
+    text-align: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+nav a{
+    float: left;
+    text-decoration: none; /* il s'agit des soulignements des liens, qui sont normalement affichés par défaut.Ici, ils ne sont pas présents*/
+    color: #fff;
+    background: #000;
+    height: 2.8em;
+    line-height: 2.7em;
+    padding: 0em 2em;
+    font-size: 1.2em;
+    transition: 2s; /*temps de transition lors du hover (survol de la souris): ici 2 secondes*/
+}
+nav a:hover{
+    background: #fda500;
+    color: #000;
+}
+/* 1er container*/
+.container{
+    width: 70%;
+    margin: 4µ auto 2% auto;
+    background: #f1fcde;
+    padding: 2em;
+}
+
+mark{
+    background: #b5a7cf; /* change la couleur du surlignement de ma balise mark qui est jaune par défaut*/
+}
+
+/* 2e container*/
+.container1{
+    width: 70%;
+   margin: 2%; 
+   background: #f0e9fd;
+   padding: 2%;
+}
+
+/* container3 et 4 imbriqués dans le container1*/
+.container2, .container3{
+    width: 44.5%;
+    background: #f1fcde;
+    padding: 2%;
+    float: left;
+}
+
+.container2{
+    margin-right: 1.5%;
+}
+
+.container3{
+    margin-left: 1.5%;
+}
+
+/*5e container*/
+.container4{
+    margin-top: 2em;
+}
+
+.clear{
+    clear: both;
+}

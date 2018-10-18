@@ -1,0 +1,75 @@
+.kaki{
+
+    background-color: darkgreen;
+    height: 8em;
+    width: 8em;
+    margin: 1px;
+    text-align: center;
+    border: 0.1em solid black;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 20%;
+
+    float: left;
+    
+}
+
+.A, .C, .E, .S, .G, .Q, .I, .O, .M, .K{
+    background-color: darkturquoise;
+    height: 8em;
+    width: 8em;
+    margin: 1px;
+    text-align: center;
+    border: 0.1em solid black;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    float: left;
+}
+
+.a, .z, .e, .h, .n{
+    background-color: #b1f1cd;
+    height: 8em;
+    width: 8em;
+    margin: 1px;
+    text-align: center;
+    border: 0.1em solid black;
+    border-radius: circle;
+    float: left;
+}
+
+.b, .c, .d, .i, .k, .m, .w{
+    background-color: #e79d86;
+    height: 8em;
+    width: 8em;
+    margin: 1px;
+    text-align: center;
+    border: 0.1em solid black;
+    border-radius: 30%;
+    float: left;
+}
+
+section div:nth-child(18){
+    background-color: red;
+    height: 8em;
+    width: 8em;
+    margin: 1px;
+    text-align: center;
+    border: 0.1em solid black;
+    border-bottom-left-radius: 30%;
+    border-top-right-radius: 30%;
+    float: left;
+}
+.g, .j, .l{  /* ensemble vide mais il faut mettre les mêmes dimensions pour respecter le motif*/
+  height: 8em;
+  width:8em;
+  border: 0.1em solid #fff;
+  margin: 0.1em;
+
+}
+
+.clear{
+    clear: both;
+}
+
+

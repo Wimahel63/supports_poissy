@@ -1,0 +1,32 @@
+.zone-adaptative{
+    background-color: blue;
+    color: antiquewhite;
+    padding: 10px;
+}
+@media (min-width:480px){/* min-width: 440px =>à partir d'un écran large de 768px et au-dessus*/
+    .zone-adaptative{
+        width: 460px;
+        background: coral;
+        color: #000;
+    }
+}
+@media (min-width: 768px){ /*min-width: 760px => à partir d'un écran large de 768px et au-dessus*/
+.zone-adaptative{
+    width: 750px;
+    background-color: red;
+     }
+}
+/*les média- queries définissent des points de rupture: de transition d'affichage (break points)*/
+@media (min-width: 992px){ /*1200px et plus*/
+    .zone-adaptative{
+        width: 970px;
+        background: purple;
+    }
+}
+
+@media (min-width:1200px){ /*1200px et plus*/
+.zone-adaptative{
+    width: 1170px;
+    background: green;
+ }
+}   

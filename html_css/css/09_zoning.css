@@ -1,0 +1,53 @@
+#conteneur{
+    width: 80%;  /* le fait de mettre un % fait que le resultat s'adapte a la taille de l'ecran c'est le responsive*/
+    margin: auto;
+    border: 2px solid darkslategray;
+}
+
+header{
+    height: 100px;
+    background-color:  #8e3557;Haut<0x0d>
+    menu<0x0d>
+}
+
+nav{
+    background-color: #4a1a2c;
+    height: 30px;
+}
+
+section{
+    background-color: #787746;
+    margin: 20px;
+    height: 500px;
+}
+
+footer{   
+    background-color: #4a1a2c;
+    height: 100px;
+}
+
+.a, .b, .c, .d{
+    width: 50%;
+    height: 250px;
+    float: left;
+}
+.a{
+    background-color: #4a1a2c
+}
+
+.b{
+    background-color: #787746;
+}
+
+.c{
+    background-color: #e6e2af;
+}
+
+.d{
+    background-color: lightskyblue;
+}
+
+footer{    
+    background-color: #4a1a2c;
+    height: 100px;
+}

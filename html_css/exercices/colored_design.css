@@ -1,0 +1,54 @@
+#conteneur{
+    width: 50%;
+    margin: 50px 40em;
+
+    border: 4px solid olive;
+    background-color: yellowgreen;
+}
+
+header{
+    height: 50px;
+    background-color: white;
+    
+}
+
+img{
+    float: left;
+
+}
+nav{
+    width: 5px;
+    height: 10px;
+    background-color: lawngreen;
+}
+section{
+    margin: 3px;
+    text-align: justify;
+    float: left;
+}
+footer{
+    color: olivedrab;
+    text-align: left;
+}
+
+.A, .B, .C, .D, .E, .F{
+    height: 10px;
+    width: 15px;
+    background-color: greenyellow;
+    color: white;
+}
+
+figure{
+    background: greenyellow;
+    float: left;
+    width: 100%;
+}
+.h3{
+    color: greenyellow;
+    float: left;
+}
+
+h4{
+    color:olive;
+    float: left;
+}

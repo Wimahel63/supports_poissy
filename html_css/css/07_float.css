@@ -1,0 +1,37 @@
+body{
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+div{
+    width: 90%;
+    margin:0 auto;
+    background-color: lightsteelblue;
+}
+
+.boite{
+    height: 11vh;
+    width: 18vh;
+    padding: 5vh;
+    background: url(../img/hibou.jpg);
+    background-repeat: no-repeat;
+    border: 5px double green;  /*taille, style, couleur de la bordure*/
+    margin: 2vh;
+    float: left; /*effet flottant, permet de placer les balises côte à côte alors que selon le flux du web standard les éléments se placent les uns au-dessus des autres*/
+    transition: margin 0.5s;
+}
+.boite:hover{ /* la pseudo-class 'hover' modifie un affichage au survol de la souris*/
+    margin-top: 10vh; /* 1vh est 1% de la hauteur de la page */
+}
+
+.clear{
+   clear: both; /* supprime l'effet flottant*/
+}
+
+ p{
+     background-color: lightblue;
+ }
+
+ p span{ /*sélectionne les spans contenus dans des p*/
+     background-color: yellow;
+ }

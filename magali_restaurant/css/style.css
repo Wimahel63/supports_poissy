@@ -1,0 +1,71 @@
+body{
+    width:50%;
+    margin: auto;
+    background-color: #f6f6f7;
+    font-family: Cormorant Garamond; 
+}
+#container{
+    width:40%;
+}
+header{
+    text-align: center;
+}
+
+h1{
+    border-bottom: 10px;
+    font-weight: normal;
+    padding:2px;
+}
+
+hr{
+
+    width:300px;    
+}
+
+header p{
+    color: #cf884d;
+}
+
+nav a{
+    color: #000;
+    text-decoration: none;
+}
+.exemple ul{
+    height:80px;
+    float:right;
+    list-style-type: none;
+}
+ul{
+    left: 100px;
+}
+.salle, .dressage { /*texte correspondant*/
+    width:200px;
+    float:left;
+}
+
+.salle-resto .resto3{
+    width:200px;
+    float:right;    /*image correspondante*/
+}
+ 
+.service, .goût{ 
+    width:200px; /*texte*/
+    float: right;
+}
+.resto2, .resto4{
+    width:200px;
+    float:left;  /*image*/
+}
+footer{
+    text-align:center;
+}
+.ouverture{
+    font-family: fantasy;
+}
+span{
+    text-align: center;
+}
+
+.clear{
+    clear:both;
+}

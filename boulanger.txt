@@ -1,0 +1,36 @@
+BOULANGER 
+
+UX-DESIGN:
+
+
+Le site ne propose pas d'inscription dès l'ouverture d'une page: pas de matraquage, ce qui laisse plus de liberté au client. Le client
+ peut tout de même se faire un compte pour commander.
+Beaucoup de choix mais dans un espace restreint, ce qui donne une impression de "profusion" au profit de la clarté du site.
+La règle des trois-clics est respectée.
+La facilité d'utilisation rend la navigation plus aisée: on peut choisir de naviguer librement parmi tous les univers, ou d'aller 
+directement chercher un article.
+Tout est pensé pour faciliter la recherche, le site est intuitif.
+
+
+UI-DESIGN:
+
+Page trop condensée, avec un container trop étroit pour le contenu qu'il propose.
+Visuel "aseptisé", trop blanc, les éléments (police, photos... petits, pas aisément visibles du premier coup)
+Une page guide d'achats est présente et peut être bien utile, avec des conseils et un conseiller qui repond si besoin.
+Beaucoup de redondances, avec certains éléments présents plusieurs fois.
+De nombreuses possibilités d'arriver où on veut.
+
+
+
+
+
+Scénario: 
+Une famille, la mère, le père et les deux enfants, souhaite changer leur téléviseur. Ils désirent un téléviseur de bonne taille, mais ne connaissent pas 
+nécessairement toutes les spécificités des écrans modernes.
+Ils se rendent sur le site de Boulanger. Une fois sur le site, la nav est détaillée et très fournie, ils trouvent l'onglet voulu rapidement, 
+en dépit d'une police relativement petite, et s'ils ne trouvent pas tout de suite, ils peuvent faire une recherche dans la barre de recherche. 
+Ils ont plusieurs voies pour arriver directement à leur but, ce qui leur permet d'y accéder rapidement.
+En cliquant sur l'onglet, la famille découvre l'ensemble des possibilités disponibles concernant les TV, ainsi qu'une description de l'article et un guide d'achat
+ pour en savoir plus. Ils ont également la possibilité d'avoir accès à un conseiller qui leur répondrait en cas de question. La famille 
+dispose de nombreux détails tels que le prix de la livraison et le retrait d'un seul coup d'oeil. 
+
