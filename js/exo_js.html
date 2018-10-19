@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>exojs</title>
-    <script>
+    <!-- <script>
 
             var prenom="Magali",
                 nom="Piszczyglowa";      
-             alert("Bonjour je m'appelle "+prenom+" "+nom);
+             alert("Bonjour je m'appelle "+prenom + '' +nom);
 
            var prenom=(prompt("quel est votre prenom?")),
                nom=(prompt("quel est votre nom?"));
-                 alert(prenom+nom);
+                 alert(prenom +nom);
                 
 
             
@@ -27,8 +27,26 @@
            resultat=chiffre1+chiffre2;
            alert(resultat);
     
-        
+           var difference=chiffre1-chiffre2;
+           var produit=chiffre1*chiffre2;
+           var quotient=chiffre1/chiffre2;
+           alert("L'addition de " + chiffre1+ "et de " +chiffre2+ "est"+resultat+ "\nLa difference " +chiffre1 + "et de " + chiffre2 +"est " +difference+ "\nle produit de  " + chiffre1+ "et de" +chiffre2+ "est " +produit + "\nle quotient de " +chiffre1 + "et de " +chiffre2 + "est " +quotient);
          
+
+
+
+           var mois=Number(prompt("entrez un mois en chiffre"));
+           var annee=Number(prompt("entrez une annee"));
+           switch(mois){
+             case1: case3: case5: case7: case8: case10: case12: j=31; break;
+             case4: case6: case9: case11: j=30; break;
+             case2: if(annee%4==0){
+               j=29;
+             }else {
+               j=28;
+             }
+            }
+            alert("le mois de" +mois +"a"+j);
         </script>
 
     
@@ -67,8 +85,112 @@
   4.- a prend la valeur de a-b     a                 b
   a+b             b
   a+b             (a+b)-b=a
-  (a+b)-a=b     a-->
+  (a+b)-a=b     a
 
+ecrire une fonction simple qui au clic sur un bouton lance la fonction. Cette fonction  demande la saisie d'une largeur, d'une longueur et affiche la surface du rectangle correspondant.
+<p><button onclick="nomdevotrefonction()">lancer la fonction</button></p>--> 
+<p><button onclick="surface()">Calcul de la surface d'un rectangle</button></p>
+    <script>
+       function surface(x,y){
+        var x=Number(prompt("Entrez une largeur"));
+        var y=Number(prompt("Entrez une longueur"));
+        return alert("la surface de notre rectangle est de "+x*y);
+      }
+    </script>
+        <!-- var resultat=surface(43,61);
+        // resultat=x * y ;
+        // alert("la surface de mon rectangle est " +resultat);
+        1. Créez une fonction qui demande la saisie d'un rayon, retourne la surface du cercle de ce rayon
+        2. Affichez le résultat de l'appel à cette fonction en cliquant sur le bouton.-->
+        <p><button onclick="aire()">Calcul de l'aire d'un cercle</button></p>
+        <script>
+        function aire(x,y){
+        var x=Number(prompt("Entrez une longueur de rayon"));
+        var y=Number(prompt("Entrez 3.14"));
+        alert("l'aire de notre cercle est de "+(x*x)*y);
+      }
+        </script>
+
+        <!--1. Créez deux variables globales a et b, initialisées respectivement à 3 et à 2.
+
+        2. Créez une fonction multiplie prenant un argument x prenant comme valeur par défaut 8, et renvoyant le résultat de la multiplication de x par 3
+
+        3. Créez une fonction affiche, appelée au clic sur le bouton, qui affiche dans des boîtes d'alerte successivement le résultat de multiplie appliquée a, à b, puis sans aucun paramètre (en exécutant donc la fonction avec la valeur de x par défaut)
+        1. Au click sur le premier bouton, lancez la fonction boucle() qui crée un tableau de 3 en 3 et utilise une boucle for pour le remplir. Affichez le tableau dans une boîte d'alerte.
+        2.Au click sur le second bouton, lancez la fonction boucle2() qui demande à l'utilisateur via un prompt de saisir la longueur souhaitée du tableau, puis crée ce tableau et utilise une boucle for pour le remplir de sorte que l'élément i du tableau contienne i². Affichez le tableau dans une boîte d'alerte.
+        Au click sur le bouton, lancer la fonction jourDeLaSemaine(). Cette fonction détermine le jour de la semaine et affiche selon le cas dimanche, lundi, mardi... etc. jusqu'à samedi.-->
+    <p><button onclick="multiplie()">multiplications</button></p>
+   
+<script>
+ 
+  var a=3,
+      b=2;
+      function multiplie(x=8){
+        if(x==undefined){
+      return x * a;
+    }
+  }
+function affiche(){
+  alert(multiplie()*a);
+  alert(multiplie()*b);
+  alert(multiplie()); 
+}      
+</script>
+<p><button onclick="affiche()">affiche</button></p>
+<script>
+  function boucle(){
+    var t=new Array(5);
+    for(i=0; i< t.length; i++){
+      t[i]=i*i;
+    }
+    alert(t);
+  }
+</script>
+<button onclick="boucle()">boucle b1</button>
+
+
+<script>
+
+function boucle2(){
+    var longueur=Number(prompt("quelle est la longueur du tableau?"));
+    var t= new Array(); /*on utilise le constructeur "new" pour créer un objet 
+    tableau (array)*/
+    for(i=0; i< longueur; i++){
+      t[i]= i * i;
+    }
+    alert(t);
+}
+</script>
+<button onclick="boucle2()">boucle b2</button><br>
+
+<script>
+  function jour(){
+   var aujourdhui= new Date;
+   var jour= aujourdhui.getDay();
+   var jourFr;
+    switch(jour){
+  case 0:jourfr="dimanche";break;
+  case 1:jourfr="lundi";break;
+  case 2:jourfr="mardi";break;
+  case 3:jourfr="mercredi";break;
+  case 4:jourfr="jeudi";break;
+  case 5:jourfr="vendredi";break;
+  case 6:jourfr="samedi";break;
+  default:jourFr("Erreur");
+     }
+     alert("nous sommes " +jourFr);  
+  }
+</script>
+<button onclick="jour()">jours</button><br>
+<script>
+function jourDelaSemaine(){
+  var date=new Date();
+    var moi= new Object();
+    moi.nom="Helene";
+    
+  }
+}
+</script>
 </head>
 <body>
      
