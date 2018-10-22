@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index2_js</title>
+</head>
+<body>
+    <h1>Les boucles  </h1>
+        <h2>La boucle while</h2>
+       La boucle while va nous permettre de répéter une série d'actions tant qu'une condition est vraie.
+    <script>
+        /*var x=0;
+        while(x <= 10){
+            alert('x contient la valeur ' + x);
+            //x++; equivaut à x=x+1  =>incrémentation
+            //x--;equivaut à x=x-1  =>décrémentation//
+        } */
+        </script>
+    <h2> la boucle do...while</h2>
+    <script>
+        var x=100;
+    do{
+        alert("x contient la valeur"+ x );
+    } while(x<10)
+    </script>
+
+     <h2>La boucle for</h2>
+     Elle nous permet de répéter une série d'instructions à partir d'une valeur donnée jusqu'à une certaine valeur seuil.
+    <script>
+       for(i = 0; i< 10; i++){
+           alert("i contient la valeur " + i);
+       }
+       </script>
+       <h2>Les Fonctions</h2>
+       C'est un bloc de code qui va exécuter une tâche précise.
+       <script>
+       function multiplication(x, y){
+           //code de la tache a effectuer
+           alert(x*y);
+           return x * y;
+       }
+       var resultat=multiplication(5, 10);
+       resultat +=2; //exemple donné en cours: achats en boutique, plus ajout de la TVA. Le + indique que je demande au navigateur de ne pas écraser les valeurs du dessus mais de les ajouter.
+       alert(resultat);
+       </script>
+
+</body>
+</html>
