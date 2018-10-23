@@ -1,0 +1,140 @@
+body{ /* la couleur du fond est dégradée*/
+    background: linear-gradient(gray, white) no-repeat;
+    width:1000px;
+    margin: auto;
+    border:1px solid gray;
+    box-shadow:2px 2px 0px gray;
+}
+.conteneur{
+    background-color: white;
+    height:1115px;
+}
+header{
+    width:1000px;
+    height:20px;
+}
+
+/*div logo*/
+.logo{
+    
+    float:left;
+}
+.boutique{
+
+    float:right;
+}
+span{
+    color:#E464CE;
+}
+
+/*div aide*/
+.aide{
+
+    color:#ACE8FA;
+    position: relative;
+    z-index:1;
+}
+.aide span{
+    color:#ACE8FA;
+    z-index:2;
+}
+
+.aide p{
+    color:black;
+}
+/*div panier*/
+.panier{
+
+    text-align:center;
+  border:1px solid #ACE8FA;
+  background-color: #ACE8FA;
+  color: white;
+  float:right;
+}
+.panier p{
+    float:right;
+}
+
+nav{
+    position:relative;
+    height:20px;
+}
+nav ul li{
+    list-style-type: none;
+    display:inline-block;
+}
+nav ul li a{
+text-decoration:none;
+}
+
+footer{
+    border-collapse: collapse;
+    background-color:#ACE8FA;
+     
+    height:60px;
+}
+
+footer ul li a{
+    text-decoration:none;
+    list-style-type:none;
+    color:white;
+    text-align: center;
+    
+}
+footer ul li{
+    list-style-type:none;
+    display:inline-block;
+    
+}
+
+/*contenu*/
+
+.paiement, .robe, .coeur {
+    float:left;
+}
+
+.identite, .objectif{
+    float:right;
+}
+.service{
+    float:right;
+}
+
+.identite{
+    width:100px;
+padding:20px;
+}
+
+
+.robe, .coeur, .objectif{
+    margin:5px;
+    width:300px;
+    height:180px;
+    border-radius: 5px;
+    text-align: center;
+    border:1px solid black;
+}
+.bloc{
+    margin:10px;
+}
+.bloc p{
+    float:right;
+}
+
+.bloc h3{
+    background-color: gray;
+    height:20px;
+}
+.bloc p a{
+    text-align:bottom right;
+}
+
+
+.clear{
+  clear:both;
+}
+  
+
+
+
+    
