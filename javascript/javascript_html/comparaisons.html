@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script type="text/javascript" src="../javascript_js/comparaisons.js"></script>
+        <p>Exercice: j'arrive sur un espace sécurisé au moyen du prénom et de l'âge pour être authentifié sur le site(les infos sont en BdD, ici dans mes variables prenom et âge). En cas d'échec, une alerte me previent du problème.
+            Si tout se passe bien,un message de bienvenue m'accueille.
+        </p>
+
+        <script>
+           /* var age=30;
+            var prenom="mag";
+
+            var prenomLogin=prompt("Indiquez votre prénom");// je verifie si le prenom saisi (prenomLogin) correspond à celui en base de données (prenom)
+          if (prenomLogin === prenom){
+              
+              // si tout est ok je continue la vérification avec l'age
+              // demande à mon utilisateur son âge via un prompt
+              
+            var ageLogin=parseInt(prompt("Indiquez votre âge"));
+           if (ageLogin === age){
+              alert("bienvenue" + " " + prenomLogin);
+          } else {
+             // si les ages ne correspondent pas, je lance une alert
+             alert("erreur");
+          }
+          } else {
+              // si les prenoms ne correspondent pas, je lance une alert
+              alert("prenom non reconnu");
+          }*/
+
+    var prenom, age;
+    prenom = "Hélène";
+    age = 100;
+    mdp = "bibi";
+
+    var prenomLogin = prompt("Quel est votre prénom ?");
+    if (prenomLogin === prenom){
+        var ageLogin = parseInt(prompt("Quel est votre age ?"));
+    if (ageLogin === age) {
+        var mdpLogin = prompt("le mot de passe?");
+    if (mdpLogin === mdp){
+        alert("bienvenue" + " " + prenomLogin);
+    }   else{
+        alert("pb mdp");
+    } 
+    } else{
+        alert("erreur d'âge");  
+    }
+    }else{
+        alert("prenom non reconnu");
+    }
+        </script>
+</body>
+</html>

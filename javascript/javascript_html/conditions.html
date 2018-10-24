@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" src="../javascript_js/conditions.js"></script>
+
+   <p> exercice: on utilise le if pour verifier l'age de l'internaute.
+       s'il est majeur je lui souhaite bienvenue
+       s'il est mineur je lui signale et le renvoie vers un autre site
+   </p>
+<script>
+    var age=Number(prompt("Quel est votre âge?"));
+
+    if(age >= 18){
+        alert("vous êtes majeur, vous pouvez circuler");
+    }
+    else{
+        alert("vous ne passerez pas, voyez plutôt sur:");
+        document.location.href "http://www.darty.com/"
+    }
+</script>
+</body>
+</html>
