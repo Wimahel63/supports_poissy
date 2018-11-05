@@ -1,0 +1,135 @@
+
+/*header*/
+header{
+ height:350px;
+ background: lightgray;
+ color:black;
+ text-decoration:none;
+}
+
+#bandeau{
+   background: lightslategray;
+   color:white;
+}
+span{
+    font-style:italic;
+}
+
+
+.aide{
+    text-align:center;
+    margin-top:-20px;
+}
+.securite{
+    margin-top:-20px;
+    float:right;
+}
+
+.logo{
+    margin-top:15px;
+    margin-left:30px;
+}
+
+#devis-panier{
+    text-decoration:none;
+    color:black;
+    font-weight: bold;
+    margin:-10px;
+    float:right;
+}
+#conseil-panier{
+    color:black;
+    float:right;
+}
+
+.gauche{
+    float:left;
+}    
+
+.droite{
+    float:right;
+}
+/* fin header*/
+/* nav*/
+nav{
+   border:1px solid gray;
+   background: lightgray;
+   height:40px;
+   text-align:center;
+}
+nav ul li{
+    display:inline-block;
+    list-style-type: none;
+}
+nav ul li a{
+    width:10px;
+    text-decoration:none;
+    color:black;
+}
+
+#contenu{
+    width:70%;
+    background: white;
+    margin:auto;
+}
+.carroussel{
+    width:40%;
+    height:100px;
+    margin-left:10px;
+    margin-top:10px;
+    position:absolute;
+}
+.carrelage{
+    border:1px solid white;
+}
+.carrelage p{
+    text-align:center;
+    color:white;
+    background:#F32675;
+}
+.parquet{
+    border:1px solid white;
+}
+.parquet p{
+    text-align:center;
+    color:white;
+   
+    height:20px;
+    background:#F32675;
+}
+
+.clear{
+    clear:both;
+}
+h3{
+    border:1px solid #F32675; 
+    background:#F32675; 
+    color: white;
+    text-transform:uppercase;
+    width:200px;
+}
+.list ul li{
+    float:right;
+    list-style-type: none;
+    color: gray;
+}
+.produits{
+    border:1px solid gray;
+    margin:10px;
+    float:left;
+    text-align:center;
+   font-weight: bold;
+}
+.produits span{
+    color: #F32675;
+}
+.produits i .fas fa-calculator{
+    color: white;
+    border:1px solid gray;
+    background: gray;
+}
+.coordonnees{
+    background:lightslategray;
+    border: 1px solid lightslategray;
+}
+

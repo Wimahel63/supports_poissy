@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>eshop tp</title>
+    <link rel="stylesheet" href="css_eshop/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+    <div id="container">
+                <!--container composé de 3 sections, du header, de la nav et du footer-->
+    <header>
+        <!--zone grisée-->
+        <div id="bandeau">
+            <div class="satisfait">Satisfait ou remboursé</div>
+            <div class="aide">Besoin d'aide? 
+                <i class="fas fa-phone">01 28 02 29 45 <span>(appel gratuit)</span></i>
+            </div>
+            <div class="securite">Paiement sécurisé</div>
+        </div>
+
+        <!--zone eshop divisée en trois div: logo, devis-compte et conseils-panier-->
+        <div class="eshop">
+            <div class="logo">
+               <img src="css_eshop/IMG/logo3.png" alt="logo"><br>
+               <span>De l'élégance pour votre habitat!</span>
+            </div>
+            <!-- fin image logo-->
+
+            <!--zone devis-compte-->
+            <div id="devis-panier">
+
+                <div class="devis-compte">
+                <div class="devis">
+                  <div class="gauche">
+                  <img src="css_eshop/IMG/devis.png" alt="carnet">
+                  </div><!--fin div class gauche-->
+                  <div class="droite">
+                  <a href="#devispersonnalise">Devis personnalisé<br><span>devis gratuit sous 24h</span></a>
+                  </div>
+                </div><!--fin div devis-->
+
+                <div class="compte">
+                  <div class="gauche">
+                  <a href="#mon_compte">Mon Compte<br><span>Se connecter</span>
+                  </div>
+                  <div class="droite"><img src="css_eshop/IMG/compte1.png" alt="personnages"></a>
+                  </div><!--div fin class droite-->
+                </div><!--fin div compte-->
+
+            
+                <div class="clear"></div>
+            <hr>
+            <!--zone conseil-mon panier-->
+            <div class="conseil-panier">
+                <div class="Conseils">
+                    <div class="gauche">
+                    <img src="css_eshop/IMG/conseils.png" alt="femme"></div>
+                    <div class="droite">
+                   <a href="#conseils_questions">Conseils et Questions<br><span>Rappel automatique gratuit</span></a></div>   
+                </div>
+
+                <div class="panier">
+                    <div class="gauche">
+                   <a href="#monpanier">Mon Panier<br><span>0€-0 produit(s)</span></a></div>
+
+                   <div class="droite">
+                   <i class="fas fa-shopping-cart"></i>
+                   </div>
+                </div>
+            </div> <!--fin div conseil-panier-->
+            </div><!--fin id devis-panier-->
+            <hr>
+
+        </div><!--balise fermante du div eshop -->
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home"><i class="fas fa-home"></i></a></li>
+            <li><a href="#carrelage">Carrelage</a></li>
+            <li><a href="#parquet">Parquet</a></li>
+            <li><a href="#exterieur">Extérieur</a></li>
+            <li><a href="#mur">mur</a></li>
+            <li><a href="#accessoire">Accessoires</a></li>
+            <li><a href="#pose">Pose</a></li>
+            <li><a href="#sanitaire">Sanitaires</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#recherche">Rechercher un produit<i class="fas fa-search"></i></a></li>
+        </ul>
+    </nav>
+
+    <div id="contenu"><!--contenu divisé en 4 sections; chacune également divisée en div-->
+
+        <section><!--section carroussel, avec le carroussel, les div photos et la liste en dessous-->
+            
+        <div class="carroussel">
+            <img src="css_eshop/IMG/slider1.jpg">
+        </div>
+
+        <div class="droite">
+            <div class="carrelage"><img src="css_eshop/IMG/carrelage3.jpg"><p>voir tous les carrelages</p>
+            </div>
+
+            <div class="parquet"><img src="css_eshop/IMG/carrelage13.jpg"><p>Voir tous les parquets</p>
+            </div>
+        </div><!--fin div droite, apres le carroussel-->
+        </section>
+        <div class="clear"></div>
+        
+        <section><!--section 2-->
+       
+           <div class="list"> 
+               <i class="fas fa-lock">Paiement sécurisé </i>
+               <i class="">Garantie anti-casse </i>
+           </div>
+
+            <div class="list2">  
+               <i class="fas fa-smile">Satisfait ou remboursé </i>
+               <i class="fas fa-truck">Livraison à domicile </i>
+            </div> 
+
+            <div class="list3">
+               <i>Echantillon gratuit </i>
+               <i class="fas fa-exchange-alt">Echange et retour facile </i>
+            </div>
+
+               <i class="fas fa-euro-sign">facilités de paiement</i>
+           </ul>
+        </div>
+        </section><!--fin section 2-->
+
+        <section><!--section 3 avec 2 rangees de 3 div -->
+            <h3>nos produits</h3>
+            <hr>
+            <div class="produits">
+                <img src="css_eshop/IMG/carrelage1.jpg" alt="carrelage"><h4>carreaux de ciment imitations<br><span>19,99 € TTC/m</span></h4>
+                <a href="#"><i class="fas fa-search">Voir le produit</i>
+                    <i class="fas fa-shopping-cart">Ajout au panier</i><br>
+                    <i class="fas fa-calculator">demande de devis personnalisé</i></a>
+                    
+            </div>
+            <div class="produits">
+                    <img src="css_eshop/IMG/carrelage2.jpg" alt="carrelage"><h4>carreaux de ciment imitations<br><span>19,99 € TTC/m</span></h4>
+                    <a href="#"><i class="fas fa-search">Voir le produit</i>
+                        <i class="fas fa-shopping-cart">Ajout au panier</i><br>
+                        <i class="fas fa-calculator">demande de devis personnalisé</i></a>
+                        
+             </div>
+            <div class="produits">
+                   <img src="css_eshop/IMG/carrelage4.jpg" alt="carrelage"><h4>carreaux de ciment imitations<br><span>19,99 € TTC/m</span></h4>
+                    <a href="#"><i class="fas fa-search">Voir le produit</i>
+                        <i class="fas fa-shopping-cart">Ajout au panier</i><br>
+                        <i class="fas fa-calculator">demande de devis personnalisé</i></a>
+                       
+           </div>
+           <div class="clear"></div>
+
+            <div class="produits">
+                    <img src="css_eshop/IMG/carrelage5.jpg" alt="carrelage"><h4>carreaux de ciment imitations<br><span>19,99 € TTC/m</span></h4>
+                    <a href="#"><i class="fas fa-search">Voir le produit</i>
+                        <i class="fas fa-shopping-cart">Ajout au panier</i><br>
+                         <i class="fas fa-calculator">demande de devis personnalisé</i></a>
+                        
+            </div>
+            <div class="produits">
+                    <img src="css_eshop/IMG/carrelage6.jpg" alt="carrelage"><h4>carreaux de ciment imitations<br><span>19,99 € TTC/m</span></h4>
+                    <a href="#">Voir le produit
+                         <i class="fas fa-shopping-cart">Ajout au panier</i><br>
+                          <i class="fas fa-calculator">demande de devis personnalisé</i></a>
+                       
+                </div>
+                <div class="produits">
+                    <img src="css_eshop/IMG/carrelage7.jpg" alt="carrelage"><h4>carreaux de ciment imitations<br><span>19,99 € TTC/m</span></h4>
+                    <a href="#"> Voir le produit
+                        <i class="fas fa-shopping-cart">Ajout au panier</i><br>
+                         <i class="fas fa-calculator">demande de devis personnalisé</i></a></div>
+        <div class="clear" ></div>                
+        </section>
+
+        <section>
+        <div class="coordonnes">
+            <!--debut section eshop avec 3 div-->
+        
+            <!--11 div: 2 listes, 3 blocs, 6 paragraphes-->
+            <h3>eshop</h3>
+            <div class="adresse">
+                <p>Adresse: <br>
+                avenue leclerc<br>
+            75015 Paris</p>
+            </div>
+
+            <div class="telephone">
+                <p>
+                    tel:01 28 02 29 45<br>
+                    fax: 01 60 05 12 33
+                </p>
+            </div>
+
+            <div class="email">
+                <p>email:<br>
+                    contact@eshop.fr
+                </p>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="horaires">
+                <p>Horaires d'ouverture:<br>
+                du lundi au vendredi de 8h à 12h<br> et de 13h30 à 18h00<br>
+            le samedi de 9h à 17h sans interruption<br>
+        service de livraison et enlevement des marchandises jusqu'à 18h et le samedi jusqu'à 17h</p>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="identite">
+                <p> specialiste du carrelage et du parquet, ESHOP vous accompagne dans vos projets de construction ou de renovation.<br>
+                entreprise familiale depuis 35 ans, nous possedons l'experience et le savoir faire alliant methodes traditionelles et techniques actuelles.</p>
+            </div>
+         </div>
+        </section>
+
+    </div><!--fin contenu-->
+    
+
+
+
+
+    </div><!--balise fermante id container-->
+</body>
+</html>
