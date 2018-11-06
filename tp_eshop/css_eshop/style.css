@@ -1,14 +1,14 @@
 
 /*header*/
 header{
- height:350px;
- background: lightgray;
+ height:270px;
+ background: #F8F8F8;
  color:black;
  text-decoration:none;
 }
 
 #bandeau{
-   background: lightslategray;
+   background: gray;
    color:white;
 }
 span{
@@ -30,72 +30,143 @@ span{
     margin-left:30px;
 }
 
-#devis-panier{
-    text-decoration:none;
-    color:black;
-    font-weight: bold;
-    margin:-10px;
+#droite{
     float:right;
-}
-#conseil-panier{
-    color:black;
-    float:right;
+    color: #000;
+    margin-top:-40px;
 }
 
-.gauche{
+.gauche, .compte, .panier, .left{
     float:left;
+    padding-right:4px;
 }    
 
-.droite{
+.droite, .devis, .conseil, .right{
     float:right;
+}
+
+.conseil, .devis, .compte, .panier{
+    width:250px;
+    height:70px;
+    border-bottom:1px solid gray;
+
+}
+.conseil a, .devis a, .compte a, .panier a{
+    color:black;
+    text-decoration:none;
+}
+.conseil a p, .devis a p, .compte a p, .panier a p{
+    font-weight:bold;
+}
+
+.conseil, .panier{
+    border-top:1px solid gray;
+}
+
+.compte, .panier{
+    padding-left:5px;
+    padding-right:-5px;
 }
 /* fin header*/
 /* nav*/
 nav{
-   border:1px solid gray;
-   background: lightgray;
+   border:1px solid lightslategray;
+   background: #F8F8F8;
    height:40px;
    text-align:center;
 }
+
 nav ul li{
     display:inline-block;
     list-style-type: none;
 }
 nav ul li a{
-    width:10px;
     text-decoration:none;
     color:black;
+    font-weight:bold;
+    border-left: 0.5px solid lightslategrey;
+    padding:5px;
 }
+/*fin header et nav*/
+
 
 #contenu{
     width:70%;
     background: white;
     margin:auto;
 }
+/* essai carroussel
+#slider{
+    width:779px;
+    max-width:780px;
+    height:450px;
+}
+#slider, .carroussel{
+    position:relative;
+    width:3895px;
+    margin:0;
+    padding:0;
+    font-size:0;
+}
+#slider, .carroussel, img{
+    width:779px;
+
+}
+@keyframe slidy{
+    0%{
+        left:0%;
+    }
+    20%{
+        left:0%;
+    }
+    25%{
+        left:-778px;
+    }
+    45%{
+        left:-778px;
+    }
+    50%{
+        left:-1556px;
+    }
+    70%{
+        left:-1556px;
+    }
+    75%{
+        left:-2334px;
+    }
+    95%{
+        left:-2334px;
+    }
+    100%{
+        left:3112px;
+    }
+
+}*/
 .carroussel{
-    width:40%;
-    height:100px;
     margin-left:10px;
-    margin-top:10px;
+    margin-top:60px;
     position:absolute;
 }
-.carrelage{
-    border:1px solid white;
+
+aside{
+    float:right;
+    margin:20px;
 }
-.carrelage p{
+
+.carrelage, .parquet{
+    border:1px solid #F8F8F8 ;
+    width:400px;
+    height:400px;
+    margin:40px;
+    
+}
+
+.carrelage  p a, .parquet p a{
     text-align:center;
     color:white;
     background:#F32675;
-}
-.parquet{
-    border:1px solid white;
-}
-.parquet p{
-    text-align:center;
-    color:white;
+    text-decoration:none;
    
-    height:20px;
-    background:#F32675;
 }
 
 .clear{
@@ -106,19 +177,31 @@ h3{
     background:#F32675; 
     color: white;
     text-transform:uppercase;
-    width:200px;
+    width:100px;
 }
-.list ul li{
-    float:right;
-    list-style-type: none;
-    color: gray;
+.ligne1, .ligne2, .ligne3{
+    margin:5px;
+    padding:5px;
+    color:gray;
 }
+.ligne1{
+    float:left;
+}
+.ligne2{
+    float:left;
+}
+
+.ligne1 p, .ligne2 p, .ligne3 p{
+    text-transform:uppercase;
+    font-weight: normal;
+}
+
 .produits{
     border:1px solid gray;
-    margin:10px;
+    margin:15px;
     float:left;
     text-align:center;
-   font-weight: bold;
+    font-weight: bold;
 }
 .produits span{
     color: #F32675;
@@ -128,8 +211,72 @@ h3{
     border:1px solid gray;
     background: gray;
 }
+
+.gris{
+    float:left;
+    width:50%;
+    background: #363636;
+    color:white;
+}
+.rose{
+    float:right;
+    width:50%;
+    background: #F32675;
+    color:white;
+}
+.clair{
+    background: lightgray;
+    color:white;
+
+}
 .coordonnees{
-    background:lightslategray;
+    background:#363636;
     border: 1px solid lightslategray;
+    width:100%;
+    height:400px;
+    color: white;  
+}
+.boutique{
+    color:#F32675;
+    text-align:center;
+    width:100%;
+    height:20px;
+ 
+}
+.contact{
+    width:33%;
+    height:300px;
+    float:left;
+    border-right:1px solid gray;
 }
 
+.horaires{
+    width:33%;
+    height:300px;
+    float:left;
+    padding-left:5px;
+    border-right:1px solid gray;
+}
+
+.identite{
+    padding-left:5px;
+    height:300px;
+    width:33%;
+    float:left;
+}
+footer{
+    
+    background: #F8F8F8;
+    color:black;
+    text-decoration:none;
+}
+.enligne{
+    float:left;
+}
+.liste1, .liste2, .qualite, .partage{
+    width:320px;
+    float:left;
+} 
+
+
+    
