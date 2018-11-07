@@ -95,7 +95,7 @@
             <li><a href="#pose">Pose</a></li>
             <li><a href="#sanitaire">Sanitaires</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#recherche">Rechercher un produit<i class="fas fa-search"></i></a></li>
+            <li><!--<a href="#recherche"></a>--><input type="rechercher" name="rechercher" placeholder="rechercher un  produit"><button><i class="fas fa-search"></i></button></li>
         </ul>
     </nav>
 
@@ -106,10 +106,11 @@
         <div id="slider">  
           <div class="carroussel">
             <img src="css_eshop/IMG/slider1.jpg" alt="salon">
-        <!--    <img src="css_eshop/IMG/slider2.jpg" alt="sejour">
+            <img src="css_eshop/IMG/slider2.jpg" alt="sejour">
             <img src="css_eshop/IMG/slider3.jpg" alt="salle a manger">
             <img src="css_eshop/IMG/image1.jpg" alt="salle de bain">
-            <img src="css_eshop/IMG/image2.jpg" alt="affiches">-->
+            <img src="css_eshop/IMG/image2.jpg" alt="affiches">
+            <img src="css_eshop/IMG/slider1.jpg" alt="salon">
           </div> 
         </div>
 
@@ -117,12 +118,12 @@
         
             <div class="carrelage">
                 <img src="css_eshop/IMG/carrelage3.jpg" alt="carrelage">
-                <p><a href="#">voir tous les carrelages</a></p>
+                <div class="para"><a href="#">voir tous les carrelages</a></div>
             </div>
 
             <div class="parquet">
                 <img src="css_eshop/IMG/carrelage13.jpg" alt="parquet">
-                <p><a href="#">Voir tous les parquets</a></p>
+                <div class="para"><a href="#">Voir tous les parquets</a></div>
             </div>
         
     </aside>
@@ -133,16 +134,16 @@
        
        
            <div class="ligne1"> 
-                <p> <i class="fas fa-lock"> Paiement sécurisé </i></p>
-                <p> <i class="fas fa-th-large"> Garantie anti-casse </i></p>
-                <p> <i class="fas fa-smile"> Satisfait ou remboursé </i></p>
+                <div class="gauche"> <i class="fas fa-lock"> Paiement sécurisé </i></div>
+                <div class="gauche"> <i class="fas fa-th-large"> Garantie anti-casse </i></div>
+                <div class="gauche"> <i class="fas fa-smile"> Satisfait ou remboursé </i></div>
            </div>
     <div class="clear"></div>
 
             <div class="ligne2">  
-                    <p><i class="fas fa-truck"> Livraison à domicile </i></p>
-                    <p> <i class="fab fa-sistrix"> Echantillon gratuit </i></p>
-                    <p> <i class="fas fa-exchange-alt"> Echange et retour facile </i></p>
+                    <div class="gauche"><i class="fas fa-truck"> Livraison à domicile </i></div>
+                    <div class="gauche"> <i class="fab fa-sistrix"> Echantillon gratuit </i></div>
+                    <div class="droite"> <i class="fas fa-exchange-alt"> Echange et retour facile </i></div>
             </div> 
 
             <div class="ligne3">
@@ -154,7 +155,8 @@
 
         <section><!--section 3 avec 2 rangees de 3 div -->
             <h3>nos produits</h3>
-            <hr>
+            <div id="produits">
+            
             <div class="produits">
                 <img src="css_eshop/IMG/carrelage1.jpg" alt="carrelage"><h4>carreaux de ciment imitations<br><span>19,99 € TTC/m</span></h4>
                 <a href="#">
@@ -171,8 +173,8 @@
                         <div class="gris"><i class="fas fa-search">Voir le produit</i></div>
                         <div class="rose"><i class="fas fa-shopping-cart">Ajout au panier</i><br></div>
                         <div class="clair"><i class="fas fa-calculator">demande de devis personnalisé</i></div></a>
-                      <!-- <div class="promo">
-                        <img src="css_eshop/IMG/promo.png" alt="promo">  </div>--> 
+                       <div class="promo">
+                        <img src="css_eshop/IMG/promo.png" alt="promo">  </div> 
              </div>
             <div class="produits">
                    <img src="css_eshop/IMG/carrelage4.jpg" alt="carrelage"><h4>carreaux de ciment imitations<br><span>19,99 € TTC/m</span></h4>
@@ -180,6 +182,8 @@
                         <div class="gris"><i class="fas fa-search">Voir le produit</i></div>
                         <div class="rose"><i class="fas fa-shopping-cart">Ajout au panier</i><br></div>
                         <div class="clair"><i class="fas fa-calculator">demande de devis personnalisé</i></div></a>
+                        <div class="promo">
+                                <img src="css_eshop/IMG/livraison.png" alt="promo">  </div> 
                        
            </div>
            <div class="clear"></div>
@@ -206,7 +210,10 @@
                         <div class="gris">Voir le produit</div>
                         <div class="rose"><i class="fas fa-shopping-cart">Ajout au panier</i><br></div>
                         <div class="clair"><i class="fas fa-calculator">demande de devis personnalisé</i></div></a>
+                        <div class="promo">
+                             <img src="css_eshop/IMG/nouveauté.png" alt="promo">  </div> 
                     </div><!--fin class produit-->
+                </div>
         <div class="clear" ></div>                
         </section>
 
@@ -261,13 +268,18 @@
    
 
     <footer>
-        <div class="enligne">
+
+    <div class="enlien"><!--le nom de la liste est destiné à me souvenir de les mettre en liens; represente mon milieu de footer-->
+
+        <div class="gaucheleft"><!--represente ma div gauche du footer, qui comprend:liste1, liste2, qualite, a propos-->
+            
         <div class="liste1">
             <h4>eshop</h4>
+            <hr>
             <ul>
-            <li><img src="plan" alt="plan">eshop<br>
+            <li><img src="plan" alt="plan">eshop<br><span>
             avenue leclerc<br>
-            75015 paris<br>
+            75015 paris<br></span>
             0128022945</li>
             <li><a href="#">qui sommes nous?</a></li>
             <li><a href="#">nos produits</a></li>
@@ -281,6 +293,7 @@
 
         <div class="liste2">
             <h4>informations</h4>
+            <hr>
          <ul>
              <li><a href="#">votre commentaire</a></li>
              <li><a href="#">mon compte</a></li>
@@ -295,75 +308,112 @@
              <li><a href="#">conditions générales de vente</a></li>
              <li><a href="#">mentions legales</a></li>
          </ul>
-        </div>
+        </div><!--fin liste 2-->
 
         <div class="qualite">
             <h4>qualite</h4>
-            <img src="css_eshop/IMG/qualite.png" alt="jauge">
+            <hr>
+            <img src="css_eshop/IMG/qualite.png" alt="jauge"></div>
 
-        </div>
+        <div class="apropos">
+            <h5>a propos</h5>
+             <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. At reprehenderit ipsam aliquam blanditiis, magni rem sit quibusdam vel iure nulla! Numquam beatae qui iusto error commodi facilis earum et? Dolorum!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus esse, error odio voluptatum praesentium, nesciunt sint recusandae sed alias officiis eum cum eius amet ipsa similique quisquam, aut beatae illum.
+            </p>
+            <h5>devis gratuit</h5>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ea, numquam consequatur eveniet id minima nulla maiores! A vel aspernatur atque magni nemo repellat neque doloribus iste autem? Amet, tempora.
+            </p>
+            <h5>prix d'usine </h5>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam minus officia ducimus repellendus adipisci qui labore deserunt sunt, velit eveniet neque consectetur non iste, eligendi perspiciatis! Mollitia aspernatur in fugit.</p>
+            <h5>echantillons gratuits</h5>
+             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, explicabo quod. Fuga exercitationem tempore numquam consectetur ad inventore explicabo sunt, dignissimos beatae quibusdam quidem minima vitae sed eligendi? Aliquam, iure!</p>
+            <h5>livraison gratuite</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, accusamus? Fuga repudiandae hic excepturi, iusto saepe repellendus corporis veritatis esse cumque totam, dolore aspernatur corrupti, doloremque voluptates consectetur tempora porro.</p>
+            <h5>service client</h5>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo laborum cumque deleniti eveniet, consectetur magni cupiditate neque et ipsam quod quos perspiciatis aperiam, illo dicta officia nobis sit suscipit totam?</p>
+            </div>       
+        </div><!--fin partie gauche footer-->
 
+        <!--debut partie droite footer-->
         <div class="partage">
+
             <h4>partage</h4>
+            <hr>
             <div class="reseaux">
-            <img src="css_eshop/IMG/reseaux.JPG" alt="tweet"></div>
+            <img src="css_eshop/IMG/reseaux.JPG" alt="tweet">
+            </div>
+
             <div class="newsletter">
-                <p>inscription a la newsletter<br>
+                <p>Inscription a la newsletter<br>
                 <span>recevez les promotions et nouveautes du site</span></p>
-                <div class="inscription">adress.client@gmail.com</div>
+                <input type="inscription" name="inscription" placeholder="adresse.client@gmail.com">
+                <input type="submit" name="validation" value="M'inscrire"> 
+
             </div>
       
 
         <div class="envoi">
-            <p>envoi a un ami<br>
+            Envoi à un ami<br>
             <span>notre site peut interesser l'un de vos proches?<br>
             </span>
-        <span>votre adresse mail</span><br>
-        <span>l'adresse email de votre ami:</span>
-    </p>
+          <span>votre adresse mail</span><br>
+        <input type="inscription" name="inscription" placeholder="adresse.client@gmail.com"><br>
+        <span>l'adresse email de votre ami:</span><br>
+        <input type="inscription" name="inscription" placeholder="adresse.client@gmail.com"><br>
+        <input type="submit" name="envoyer" value="Envoyer">
         </div>
-        <div class="iconesreseaux">
 
+        <div class="iconesreseaux">
                 <i class="fab fa-twitter"></i>
                 <i class="fab fa-facebook-f"></i>
                 <i class="fab fa-google-plus-g"></i>
                 <i class="fab fa-pinterest-square"></i>
         </div>
     </div><!--fin class partage-->
-    </div><!--fin class enligne-->
-    <div class="clear"></div>
-        <div class="apropos">
-            <h4>a propos</h4>
+</div><!--fin class enlien-->
+    
+
+    
+
+     <!--   <div class="apropos">
+            <h5>a propos</h5>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. At reprehenderit ipsam aliquam blanditiis, magni rem sit quibusdam vel iure nulla! Numquam beatae qui iusto error commodi facilis earum et? Dolorum!
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus esse, error odio voluptatum praesentium, nesciunt sint recusandae sed alias officiis eum cum eius amet ipsa similique quisquam, aut beatae illum.
             </p>
-            <h4>devis gratuit</h4>
+            <h5>devis gratuit</h5>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ea, numquam consequatur eveniet id minima nulla maiores! A vel aspernatur atque magni nemo repellat neque doloribus iste autem? Amet, tempora.
             </p>
-            <h4>prix d'usine </h4>
+            <h5>prix d'usine </h5>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam minus officia ducimus repellendus adipisci qui labore deserunt sunt, velit eveniet neque consectetur non iste, eligendi perspiciatis! Mollitia aspernatur in fugit.</p>
-            <h6>echantillons gratuits</h6>
+            <h5>echantillons gratuits</h5>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, explicabo quod. Fuga exercitationem tempore numquam consectetur ad inventore explicabo sunt, dignissimos beatae quibusdam quidem minima vitae sed eligendi? Aliquam, iure!</p>
-            <h4>livraison gratuite</h4>
+            <h5>livraison gratuite</h5>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, accusamus? Fuga repudiandae hic excepturi, iusto saepe repellendus corporis veritatis esse cumque totam, dolore aspernatur corrupti, doloremque voluptates consectetur tempora porro.</p>
-            <h4>service client</h4>
+            <h5>service client</h5>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo laborum cumque deleniti eveniet, consectetur magni cupiditate neque et ipsam quod quos perspiciatis aperiam, illo dicta officia nobis sit suscipit totam?</p>
-        </div>
-        <hr>
-        <img src="css_eshop/IMG/ancre.png" alt="ancre">
-
+        </div>-->
+<div class="clear"></div>
+       
+    <div id="bas"><!--englobe toute ma partie basse-->
         <div class="copyright">
                 <i class="far fa-copyright">eshop</i>
+        
+
+        <a href="#top"><img src="css_eshop/IMG/ancre.png" alt="ancre"></a>
         </div>
+
         <div class="rdv">
-            <span>contactez nous 01 28 02 29 45 (lundi au vensredi de 9h30 à 17h30 appel gratuit)</span>
+            <span>contactez nous 01 28 02 29 45 (lundi au vendredi de 9h30 à 17h30 appel gratuit)</span>
         </div>
 
-
-
+    </div>
+    
     </footer>
+    
     
 </div><!--fin contenu-->
 

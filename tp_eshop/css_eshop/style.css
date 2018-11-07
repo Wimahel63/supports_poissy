@@ -26,14 +26,15 @@ span{
 }
 
 .logo{
-    margin-top:15px;
-    margin-left:30px;
+    margin-top:30px;
+    margin-left:60px;
+    float:left;
 }
 
 #droite{
     float:right;
     color: #000;
-    margin-top:-40px;
+   
 }
 
 .gauche, .compte, .panier, .left{
@@ -87,6 +88,10 @@ nav ul li a{
     border-left: 0.5px solid lightslategrey;
     padding:5px;
 }
+button{
+    background-color:#808080;
+    color: white;
+}
 /*fin header et nav*/
 
 
@@ -95,57 +100,59 @@ nav ul li a{
     background: white;
     margin:auto;
 }
-/* essai carroussel
+/* essai carroussel*/
 #slider{
-    width:779px;
-    max-width:780px;
-    height:450px;
+    border:1px solid gray;
+    background:white;
+    overflow:hidden;
+    margin-top:20px;
+    float:left;
 }
-#slider, .carroussel{
-    position:relative;
-    width:3895px;
-    margin:0;
-    padding:0;
-    font-size:0;
-}
-#slider, .carroussel, img{
-    width:779px;
 
+#slider, .img{
+    width:779px;
+    height:448px;
+    
 }
-@keyframe slidy{
+.carroussel{
+    width:4674px;
+    color:white;
+    transform:translatex(-779px);
+    animation-name:slide;
+    animation-duration:5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes slide{
     0%{
-        left:0%;
+         transform:translatex(0%);
     }
     20%{
-        left:0%;
+         transform:translatex(0%);
     }
     25%{
-        left:-778px;
+         transform:translatex(779px);
     }
     45%{
-        left:-778px;
+         transform:translatex(779px);
     }
     50%{
-        left:-1556px;
+         transform:translatex(1558px);
     }
     70%{
-        left:-1556px;
+         transform:translatex(1558px);
     }
     75%{
-        left:-2334px;
+         transform:translatex(2337px);
     }
     95%{
-        left:-2334px;
+         transform:translatex(2337px);
     }
     100%{
-        left:3112px;
+         transform:translatex(3895px);
     }
 
-}*/
-.carroussel{
-    margin-left:10px;
-    margin-top:60px;
-    position:absolute;
 }
 
 aside{
@@ -158,15 +165,21 @@ aside{
     width:400px;
     height:400px;
     margin:40px;
+    position:relative;
+    
+}
+.para{
+    position:absolute;
+    bottom:0;
+    text-align:center;
+    width:100%;
     
 }
 
-.carrelage  p a, .parquet p a{
-    text-align:center;
+.carrelage  .para a, .parquet .para a{
     color:white;
     background:#F32675;
     text-decoration:none;
-   
 }
 
 .clear{
@@ -181,8 +194,9 @@ h3{
 }
 .ligne1, .ligne2, .ligne3{
     margin:5px;
-    padding:5px;
+    padding:20px;
     color:gray;
+   
 }
 .ligne1{
     float:left;
@@ -190,10 +204,22 @@ h3{
 .ligne2{
     float:left;
 }
+.ligne3{
+float:right;
+}
+.ligne1 .droite, .ligne2 .droite{
+    width:330px;
+}
+.ligne1 .gauche, .ligne2 .gauche{
+    width:330px;
+}
 
 .ligne1 p, .ligne2 p, .ligne3 p{
     text-transform:uppercase;
     font-weight: normal;
+}
+#produits{
+    border-top:1px solid gray;
 }
 
 .produits{
@@ -202,6 +228,12 @@ h3{
     float:left;
     text-align:center;
     font-weight: bold;
+    position:relative;
+}
+.promo{
+    position:absolute;
+    top:0;
+
 }
 .produits span{
     color: #F32675;
@@ -229,6 +261,7 @@ h3{
     color:white;
 
 }
+/*****zone eshop coordonnees***/
 .coordonnees{
     background:#363636;
     border: 1px solid lightslategray;
@@ -264,19 +297,124 @@ h3{
     width:33%;
     float:left;
 }
+
+/****footer*****/
 footer{
-    
     background: #F8F8F8;
     color:black;
     text-decoration:none;
 }
-.enligne{
+/***partie gauche de mon footer***/
+.enlien{
+    width:100%; 
+}
+.gaucheleft{
+    width:75%;
     float:left;
 }
-.liste1, .liste2, .qualite, .partage{
-    width:320px;
+
+h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+hr{
+    width:300px;
+    color:lightgrey;
+}
+
+.liste1{ /*.qualite, .partage*/
+    width:25%;
     float:left;
 } 
+.liste2{
+    width:25%;
+    float:right;
+}
 
+.liste1 ul li, .liste2 ul li{
+    list-style-type: none;
+}
+
+.liste1 ul li a, .liste2 ul li a{
+   color: lightslategrey;
+   
+}
+.qualite{
+    text-align: center;
+    float:right;
+}
+
+/*****partie droite de mon footer****/
+.partage{
+    float:right;
+    width:25%;
+    height:90%;
+}
+.newsletter{
+    border:1px solid #EEE8E8;
+    width:350px;
+    height:150px;
+    text-align:center;
+    background: #EEE8E8;
+}
+.envoi{
+    margin-top:5px;
+    border:1px solid #EEE8E8;
+    width:350px;
+    height:170px;
+    text-align:center;
+    background: #EEE8E8;
+}
+input:first-of-type{
+    position:relative;
+}
+
+ #partage input:last-of-type{
+    background-color:#808080;
+    color:white;
+}
+.iconesreseaux{
+    margin-right:20px;
+    text-align: center;
+}
+.iconesreseaux i{
+    margin:10px;
+}
+h5{
+    font-weight:bolder;
+    font-size:1em;
+}
+h5:first-child{
+    font-size:1.2em;
+}
+.apropos{
+    width:800px;
+    float:left;
+}
+#bas{
+    border-top: 1px solid gray;
+}
+.copyright{
+    width:50%;
+    height:50px;
+    float:left;
+}
+
+.copyright img{
+    float:right; 
+}
+
+.rdv{
+    float:right;
+}
 
     
+/*.triangle{
+    width:30px;
+    height:30px;
+    border:1px solid black;
+    border-color: transparent pink transparent;
+    border-width: 1px;
+    
+}*/
