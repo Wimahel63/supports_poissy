@@ -3,8 +3,9 @@
    License: none (public domain)
 */
 
-
-/* HTML5 display-role reset for older browsers */
+/* HTML5 display-role reset for older browsers 
+=======
+/* HTML5 display-role reset for older browsers *
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -26,11 +27,13 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
+
+}*/
 
 *{
     box-sizing:border-box; /* ça bloque l'élément, le recentre et
     fait une marge*/
+
 }
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -41,7 +44,222 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+h1{
+   font-size: 70px;
+   color: slategrey;
+   text-shadow:3px 3px 1px white;
+   margin-top: 50px;
+   text-align: center;
+    font-family: 'Amatic SC', cursive;
+	font-weight: 400;
+	float: left;
+}
+h2{
+   font-size: 50px;
+   color: CRIMSON;
+   padding: 20px;
+   font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+
+}
+h3{
+   font-size: 22px;
+   color: #2c3e50;
+   padding: 15px;
+}
+h4{
+    text-align: center;
+    margin-top: 30px;
+    color: #2c3e50;
+    font-size: 20px;
+}
+h5{
+   font-size: 85px;
+   color: /*CRIMSON*/purple;
+   padding: 20px;
+   font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+}
+blockquote{
+   font-style: italic;
+   font-size: 120%;
+}
+strong{
+   font-weight: bold;
+}
+main{
+    background:linear-gradient(yellow, orangered);
+    margin: 0 auto;
+    width: 1000px;
+}
+aside{
+   /*height: 250px;*/
+   height: 300px;
+
+}
+section{
+   margin-top: 50px;
+   /*background: THISTLE;*/
+   padding: 20px;
+}
+footer{
+   background:MISTYROSE;
+   height: 30px;
+}
+/*********************************  DEBUT HEADER  ***********************************/
+header{
+   background-color:lightgray;
+   height: 200px;
+}
+#logo{
+ width: 25%;
+ text-align: center;
+ padding: 15px;
+ float: left;
+}
+#rs{
+ width: 5%;
+ float: right;
+ padding: 20px;
+}
+#rs a{
+font-size: 30px;
+color: white;
+display: block;/*change leur type inline en block pour les mettre les uns en dessous des autres*/
+text-align: center;
+padding: 15px 30px 0 0;
+text-decoration: none;
+}
+#rs a:hover{
+ font-size: 40px;
+ transition: 0.3s;
+ color: aqua;
+}
+/**********************FIN DE HEADER*******************/
+/*********************DEBUT DE NAV*********************/
+nav{
+ background-color: indianred;
+ border-bottom: 4px solid slategray;
+ text-align: center;
+ padding: 17px;
+}
+nav a{
+ font-family: 'Amatic SC' cursive;
+ font-size: 25px;
+ text-decoration: none;
+ color: black;
+ font-weight: 500;
+ border: 1px solid pink;
+ padding: 6px 9px;
+ border-radius: 7px;
+ margin: 0px 8px;
+}
+nav a:hover{
+ background: red;
+ transition: 1s;
+}
+.activ{
+ background: pink;
+}
+/********************FIN DE NAV**********************/
+/********************DEBUT DE TEXTE*****************/
+.roboto p{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+/*fin de page texte*/
+/* debut page selecteur*/
+.select p{
+	color: red;
+}
+.select p:first-of-type{
+	color: aquamarine;
+}
+.select p:last-of-type{
+	color:yellow;
+}
+.select p:nth-of-type(5),.select p:nth-of-type(6){
+	color: slategray;
+}
+.select .zoneb .couleurBleu{
+	color:blue;
+}
+.select #zoned span{
+	color: #32ff32;
+}
+.select .zonea{
+	color:purple;
+}
+.select .zoneb{
+	color:red;
+}
+.select #zonec{
+	color:green;
+}
+/*******fin selecteurs********/
+
+/*******page image************/
+.imageFond{
+	background: url(img/chouette.jpg) no-repeat;
+	background-size: cover;
+}
+
+.imageFond p{
+	width:75%;
+	margin: 100px auto 200px auto;/*auto permet de centrer*/
+	background: rgba(255, 255, 255, 0.2);
+	padding: 20px;
+	font-size: 120%;
+	border-radius: 10px;
+}
+/******la chauve-souris*******/
+img[src="css/img/chauve_souris.jpg"]{
+margin: auto;
+width: 250px; 
+display: block;
+border: 5px solid green;
+box-shadow:5px 5px 15px rgba(0, 0, 0, 1);
+}
+/******le volcan********/
+.image1, .image2, .image3{
+	margin: 20px;
+	border: 5px solid red;
+	box-shadow:5px 5px rgba(0, 0, 0, 0.7);
+}
+.image1:hover{
+	padding:20px;
+	transform:rotate(25deg);
+	transition: 20s;
+	margin:-500px;
+}
+.image2:hover{
+	padding:20px;
+	transform:rotate(45deg);
+	transition: 1s;
+}
+.image3:hover{
+	padding:20px;
+	display: block;
+	margin-left:50px;
+	transform:rotate(360deg);
+	transition: 2s;}
+
+
+
+
+/*article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
@@ -105,10 +323,782 @@ section{
 footer{
     background: coral;
     height:30px;
-}
+}*/
 
-/*header*/
+/*******************header******************/
 
 header{
-    background-color:lightgray;
+    background-color:lightgray;}
+ 
+
+
+.centre{
+    margin: 0 auto;
+    width: 500px;
+    background: #3cc;
+    color: white;
+    text-align: center;
+    line-height: 180px;
+    font-size: 50px;
+    font-style: italic;
 }
+
+.relative{
+    background: red;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    bottom :50px;
+    margin: 0 auto;
+}
+ .relative div{
+     position: absolute;
+     bottom: 10px;
+     width: 50px;
+     height: 50px;
+     background: blue;
+ }
+
+ button{
+     position: fixed;
+     background: transparent;
+     right: 20px;
+     cursor: pointer;
+     font-size: 350%;
+     color: slategray;
+     border: none;
+     bottom: 40px;
+ }
+
+ button:hover{
+     color:blue;
+     transition: 1s;
+ }
+
+ .trente{
+     width: 30%;
+     padding:20px;
+     font-size:22px;
+     background: crimson;
+     color: #f1684e;
+     font-weight: bold;
+ }
+
+ .cinquante{
+     width: 50%;
+     padding:20px;
+     font-size:22px;
+     background:#383746;
+     color: #f1684e;
+     font-weight: bold;
+     margin-top:10px;
+ }
+
+ .cent{
+    width: 100%;
+    padding:20px;
+    font-size:22px;
+    background:#3cc;
+    color: #f1684e;
+    font-weight: bold;
+    margin-top:10px;
+ }
+
+ .carre{
+     width: 170px;
+     height: 170px;
+     background: rosybrown;
+     border: 3px solid #3cc;
+     margin: 10px;
+     float:left;
+     text-align: center;
+     font-size: 25px;
+     color: aliceblue;
+     line-height: 150px;
+     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+ }
+
+ .carre:hover{
+  background: #dc143c;
+  border: 15px solid lightseagreen;
+  transition:1s;
+  transform:rotate(45deg);
+  border-radius: 85px;
+ }
+
+ .float2{
+     margin: 0 auto;
+     width: 100%;
+ }
+
+ .rect{
+     height: 40px;
+     background: darkseagreen;
+ }
+
+ .c1, .c2, .c3, .c4{
+     width: 25%;
+     height: 250px;
+     float: left;
+ }
+
+ .c1{
+     background: lightpink;
+ }
+ .c2{
+    background: lightsalmon;
+}
+.c3{
+    background: turquoise;
+}
+.c4{
+    background: indianred;
+}
+
+.clear{
+    clear: both;
+}
+
+/* le flex: méthode et technique qui permettent de placer des éléments.On place un display:flex aux éléments parents*/
+
+.flex{
+    display:flex;
+    /*justify-content:space-around; les éléments s'affichent avec un espace égal autour d'eux-mêmes*/
+    justify-content: space-around;/* les éléments s'affichent avec un espace entre eux*/
+    flex-direction: row;/*flex-direction:row-reverse; les éléments s'inversent sur la rangée*/
+}
+
+.flex div{
+    width: 150px;
+    height: 150px;
+    background: indianred;
+    border: 3px solid ;
+    text-align: center;
+    font-size: 50px;
+    color: aliceblue;
+}
+
+/*********fin page position****/
+
+/*******page zoning*******/
+
+.zone1{
+    width:80%;
+    height:500px;
+    border:3px solid #000;
+    box-shadow:3px 3px 3px slategray;
+}
+.haut{
+    width:100%;/*prend en compte la largeur de l'élément parent, donc ici de .zone1*/
+    height:20%;
+    background: #32ff32;
+}
+
+.gauche{
+    width:35%;
+    float:left;
+    height:80%;
+    background: #3cc;
+}
+
+.droite{
+width:65%;
+height:80%;
+background: #f1684e;
+float:right;
+}
+/*************zone2*************/
+.zone2{
+    width:80%;
+    height:500px;
+    border:3px solid #000;
+    box-shadow:3px 3px 3px slategray;
+}
+.haut2{
+    width:100%;/*prend en compte la largeur de l'élément parent, donc ici de .zone1*/
+    height:20%;
+    background: #32ff32;
+}
+.gauche2{
+    width:15%;
+    float:left;
+    height:80%;
+    background: #3cc;
+}
+.droite2{
+    width:15%;
+    float:right;
+    height:80%;
+    background: #3cc;
+}
+
+.milieu2{
+    width:70%;
+    float:right;
+    height:80%;
+    background:crimson;
+}
+
+/********zone3*********/
+
+.zone3{
+    width:80%;
+    height:500px;
+    border:3px solid #000;
+    box-shadow:3px 3px 3px slategray;
+}
+
+.gauche3{
+    width:35%;
+    float:left;
+    height:80%;
+    background: #3cc;
+}
+
+.droite3{
+width:65%;
+height:80%;
+background: #f1684e;
+float:right;
+}
+
+.bas3{
+    width:100%;/*prend en compte la largeur de l'élément parent, donc ici de .zone3*/
+    height:20%;
+    background: red;
+}
+/*******fin zone 3********/
+
+/********zone4*********/
+.zone4{
+    width:80%;
+    height:700px;
+    border:3px solid #000;
+    box-shadow:3px 3px 3px slategray;
+    background-color: aliceblue;
+}
+
+.haut4{
+width:100%;
+height:15%;
+background: #2c3e50;
+text-align: center;
+color: #32ff32;
+}
+.menu4{
+    width:100%;
+    height:5%;
+    background: #3cc;
+    text-align: center;
+    color: #32ff32;
+    border-bottom: 5px solid pink;
+}
+
+.milieu4{
+    width:95%;
+    height:450px;
+    margin:2.5%;/*ici je mets 2.5% car ma largeur totale de mon element est de 95%, donc la marge correspond a la largeur de chaque côté de mon element, c-a-d 2.5+2.5=5% qui nous manque pour avoir 100% de la lmargeur totale*/
+    text-align:center;
+    background: #f1684e;
+    color:#32ff32;
+}
+.bas4{
+    width:100%;
+    height:10%;
+    background: antiquewhite;
+    color:#32ff32;
+    text-align: center;
+}
+
+/******fin zone4*******/
+/********zone5*********/
+.zone5{
+    width:80%;
+    height:700px;
+    border:3px solid #000;
+    box-shadow:3px 3px 3px slategray;
+    background-color: aliceblue;
+}
+
+.haut5{
+    width:100%;
+    height:15%;
+    background: #2c3e50;
+    text-align: center;
+    color: #32ff32;
+    }
+    .menu5{
+        width:100%;
+        height:5%;
+        background: #3cc;
+        text-align: center;
+        color: #32ff32;
+        
+    }
+    
+    .milieu5{
+        background:url("img/survol_img4.jpg") no-repeat;
+        background-size: 100%;
+        width:95%;
+        height:450px;
+        margin:2.5%;/*ici je mets 2.5% car ma largeur totale de mon element est de 95%, donc la marge correspond a la largeur de chaque côté de mon element, c-a-d 2.5+2.5=5% qui nous manque pour avoir 100% de la lmargeur totale*/
+        text-align:center;
+        color:#32ff32;
+        position:relative;
+    }
+    .milieuA{
+        position:absolute;
+         top:0;
+        left:0;
+        width:50%;
+        height:50%;
+        z-index:1; 
+    }
+
+    .milieuB{
+        position: absolute;
+        top: 0;
+        right:0;
+        width:50%;
+        height:50%;
+        background-color: aqua;
+        z-index:1; 
+    }
+    .milieuC{
+        position: absolute;
+        bottom: 0;
+        left:0;
+        width:50%;
+        height:50%;
+        background-color: yellowgreen;
+        z-index:1; 
+    }
+    .milieuD{
+        position: absolute;
+        bottom: 0;
+        right:0;
+        width:50%;
+        height:50%;
+        background-color: coral;
+        z-index:1; 
+    }
+    .milieuA:hover{
+        transform:rotate(360deg);
+       
+	    transition: 5s;
+    }
+    .milieuB:hover{
+        transform:rotate(360deg);
+        border-radius:100px;
+        transition: 3s;
+        opacity: 0.5;
+    }
+    .milieuC:hover{
+        transform:rotate(360deg);
+        border-radius:100px;
+        transition: 3s;
+        opacity: 0.5;
+    }
+       .milieuD:hover{
+        transform:rotate(360deg);
+        transition: 3s;
+        border-radius:100px;
+        opacity: 0.5;
+    }
+
+    .bas5{
+        width:100%;
+        height:10%;
+        background: antiquewhite;
+        color:#32ff32;
+        text-align: center;
+    }
+    /******zone 6****/
+    .zone6{
+        width:80%;
+        height:700px;
+        border:3px solid #000;
+        box-shadow:3px 3px 3px slategray;
+        background-color: aliceblue;
+        text-align: center;
+    }
+    .haut6{
+        width:100%;
+        height:15%;
+        float:left;
+    }
+    .haut6A{
+        background: #f1684e;
+        width:25%;
+        height:100%;
+        float:left;
+        text-align:center;
+    }
+    .haut6B{
+        background: #32ff32;
+        width:50%;
+        height:100%;
+        float:left;
+        text-align:center;
+    }
+    .haut6C{
+        background: #f1684e;
+        width:25%;
+        height:100%;
+        float:right;
+        text-align:center;
+    }
+    .menu6{
+        width:100%;
+        height:5%;
+        background: blueviolet;
+        text-align: center;
+    }
+    .milieu6{
+        width:100%;
+        height:75%;
+    }
+    .aside6{
+        width:20%;
+        height:100%;
+        background: yellow;
+        float:left;
+    }
+    .droite6{
+        width:80%;
+        height:100%;
+        background: #000;
+        float:right;
+    }
+    .milieu6A{
+        width:50%;
+        height:35%;
+        background: #3cc;
+        float:left;
+    }
+    .milieu6B{
+        width:50%;
+        height:35%;
+        background: lightpink;
+        float:right;
+    }
+    .slideshow{
+        width:100%;
+        height:40%;
+        background: #dc143c;
+        clear: both;
+    }
+
+    .milieu6C{
+        width:25%;
+        height:25%;
+        background:blue; 
+        float:left; 
+    }
+    .milieu6D{
+        width:25%;
+        height:25%;
+        background: orchid;
+        float:left;
+    }
+    .bas6{
+        width:100%;
+        height:5%;
+        background: orangered;
+    }
+
+
+
+       /***********page listes******/
+
+
+ .fruit ul{/* je cible le ul qui a pour class fruit different avec espace, je cible la class fruit qui se trouve en ul*/
+    color: blueviolet;
+    list-style:none;
+    display:inline-block;
+}
+
+x .fruit ul li{
+    display:inline-block;
+    margin: 20px;
+}
+li .fa{
+    font-size:80%;
+    color:green;
+    list-style: circle;
+
+}
+.imbriquee, .imbriquee ul{
+    padding-left: 15px;
+    list-style: none;
+    font-size: 20px;
+}
+/* .imbriquee li:not(.eu), .imbriquee li:not(.asie){
+    margin-left:15px;}*/
+
+.asie ul li:hover{
+   color:blue;
+   font-size: 30px;
+   transition:2s;
+
+}
+
+.asie span:hover{
+    color:blue;
+    font-size: 30px;
+    transition:1s;
+}
+
+.eu ul li:hover{
+    color:blue;
+    font-size: 30px;
+    transition:1s;
+ }
+
+ .eu span:hover{
+    color:blue;
+    font-size: 30px;
+    transition:1s;
+}
+.asie span, .eu span{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/********fin page listes*******/
+
+/********debut page liens et menus*****/
+/**div les liens***/
+.liens{
+    border-top:2px dotted black;
+    border-bottom: 2px solid black;
+    border-bottom-style:dotted;
+    height:80px;
+    padding:25px;
+    margin:5px;
+    text-align: center;
+}
+
+.liens a{
+    padding:20px;
+    color: ghostwhite;
+    text-decoration: none;
+    background: #dc143c;
+    border:1px solid black;
+    border-radius:15px;
+    box-shadow:0px 1px 24px 0px rgba(46, 50, 50, 0.73);
+}
+
+.liens a:hover{
+    font-size:150%;
+    text-shadow:4px 4px 2px black;
+    box-shadow:2px 3px 48px 1px black;
+    transition:2s;
+}
+
+
+p{
+    color: white;
+}
+
+p a{
+    text-decoration: none;
+    font-weight:bold;
+}
+
+p a i{
+    padding:10px;
+}
+/****section les menus***/
+
+#menus nav{
+    background: transparent;
+    border: none;
+    color: ghostwhite;
+    
+}
+#menus ul{
+    list-style-type: none;
+    text-align: center;
+     
+}
+
+#menus ul li{
+    display: inline-block;
+    color:white;
+}
+
+#menus nav a{
+    text-decoration: none;
+    padding: 10px;
+    color:white;
+    background:linear-gradient(transparent, lightblue);
+}
+
+#menus nav a:hover{
+    background:linear-gradient(lightblue, blue);
+    transition:1s ease-in-out;
+}
+
+/*menu deroulant*/
+
+#menuscroll{
+    height:650px;
+}
+
+#menuscroll nav{
+    background: transparent;
+    border: none;
+    width:90%;
+    margin:0 auto;
+}
+
+#menuscroll nav ul li{
+    float:left;
+    list-style: none;
+    width: 20%;
+}
+
+#menuscroll ul ul{/*listes dans les listes*/
+    display: none;
+}
+
+#menuscroll nav ul li ul li{
+    border-top: 1px dotted gray;
+    width:100%;
+}
+
+#menuscroll nav li{
+    background: transparent;
+}
+
+#menuscroll nav li a{
+    text-decoration: none;
+    color:whitesmoke;
+    padding: 4px 0 4px;
+    display:block;/*pour qu'il s'étende sur toute la largeur de son contenu*/
+    background: #f06a2b;
+}
+
+#menuscroll nav ul.niveau1 li.sousMenu:hover ul.niveau2{
+    display:block;
+}
+#menuscroll nav ul.niveau1 li.sousMenu ul.niveau2 li a{
+    background: linear-gradient(#f00423, #f6c930);
+    text-shadow:5px 5px 2px black;
+}
+
+/*****fin page liens et menus*****/
+
+/******page tableaux*****/
+
+table{
+    border:1px solid blue;
+    width:50%;
+    text-align:center;
+    margin:0 auto;
+    border-collapse: collapse;
+}
+
+thead, tfoot{
+    background: lightskyblue;
+}
+
+tr, td{
+    border: 1px solid blue;
+}
+
+/****fin page tableaux****/
+
+/*******page formulaire********/
+form{
+    background:linear-gradient(blue, lightskyblue); 
+    width:65%;
+    border:1px solid navy;
+    padding:20px;
+    margin:0 auto;
+    border-radius: 30px;
+    color:white;
+}
+
+label{
+   margin:10px 0;
+   width:50%;
+   display:inline-block;
+}
+
+textarea{
+    resize:none;
+}
+
+label[for="orange"], label[for="banane"], label[for="fraise"]{
+   width:10%;
+} 
+
+/******fin page formulaire*********/
+
+
+/******page animation*******/
+
+.popup{
+    height: 250px;
+    width: 500px;
+    margin: auto;
+    padding-top: 15px;
+    background: turquoise;
+    box-shadow: 0 0 50px #222 inset /*effet à l'intérieur de l'élément*/
+}
+.popup p{
+    text-align: center;
+    padding-top: 30px;
+}
+.popup a{
+    color: white;
+    text-shadow: 0 -2px 0 black;
+    text-decoration: none;
+    border-radius: 3px;
+    padding:5px 15px;
+}
+.popup a:hover{
+    text-shadow: 0 1px 2px black;
+    background: rgba(0,0,0,0.4);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.4);
+    color: white;
+}
+.popup a span{
+    position: absolute;
+    padding: 15px;
+    margin-top: 23px;
+    margin-left: -35px;
+    background: blue;
+    opacity: 0;
+    color: white;
+    transform: scale(0) rotateZ(-12deg);
+    transition: .25s;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,.5);
+}
+.popup a:hover span{
+    opacity: 1;
+    transform: scale(1) rotateZ(0);
+}
+.popup a span:before{
+    content:'';
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    border-bottom: 6px solid rgba(0,0,0,.9);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+     
+
+
+
+
+
+
+
+
+
+    

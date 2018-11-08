@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>mon premier site</title>
+    <title>mon premier site: listes</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Salsa">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Old+Standard+TT">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
 <header>
@@ -32,7 +33,7 @@
             <a href="images.html">Images</a>
             <a href="positions.html">Positions</a>
             <a href="zoning.html">Zoning</a>
-            <a href="listes.html">Listes</a>
+            <a href="index.html">Accueil</a>
             <a href="lien_menu.html">Liens & Menus</a>
             <a href="tableau.html">Tableaux</a>
             <a href="formulaire.html">Formulaire</a>
@@ -42,12 +43,66 @@
 </nav>
 
 <main><!-- contenu principal de la page ,un seul par page-->
+    
+    
+            <h2>Les listes</h2>
+
+            <section class="nonOrdonnee">
+                <h3>Les listes ul : non ordonnées</h3>
+                <ul class="fruit">
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Fraise</li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Banane</li>
+                    <li><i class="fa fa-arrow-right" aria-hidden="true"></i> Mangue</li>
+                </ul>
+            </section>
+
+            <section>
+
+                <h3>Listes imbriquées</h3>
+
+                <ul class="imbriquee">
+                    <li class="eu"><i class="fa fa-arrow-right" aria-hidden="true"></i> <span>Europe</span>
+                        <ul>
+                            <li>Angleterre</li>
+                            <li>Islande</li>
+                            <li>Suède</li>
+                        </ul>
+                    </li>
+                    <li class="asie"><i class="fa fa-arrow-right" aria-hidden="true"></i> <span>Asie</span>
+                        <ul>
+                            <li>Malaisie</li>
+                            <li>Japon</li>
+                            <li>Indonésie</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+
+                <h3>Listes ol : ordonnées</h3>
+
+                <ol>
+                    <li>Html / Css</li>
+                    <li>PHP / SQL</li>
+                    <li>JS / JQUERY</li>
+                </ol>
+
+            </section>
+
+            <section>
+
+                <h3>Listes de définition</h3>
+
+                <dl>
+                    <dt>F</dt>
+                    <dd>France</dd>
+                    <dd>Finlande</dd>
+                </dl>
+                
+            </section>
         
-    <aside><!--cette balise est recommandée dans un main et son contenu est secondaire-->
-        <marquee direction="left" behaviour="scroll" scrollamount="10"><h5>Session poissy 20018/2019</h5></marquee>
-        <marquee direction="right" behaviour="scroll" scrollamount="6"><h5>Voici mon premier site</h5></marquee>
-    </aside>
-</main>
+</main>   
 <a href="#logo">
     <!--je place ma balise lien devant pour englober tout mon bouton et je relie au haut avec # jusqu'à l'id logo-->
     <button type="button"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
