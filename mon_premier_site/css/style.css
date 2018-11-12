@@ -1039,7 +1039,7 @@ label[for="orange"], label[for="banane"], label[for="fraise"]{
 
 
 /******page animation*******/
-
+/*section popup*/
 .popup{
     height: 250px;
     width: 500px;
@@ -1091,14 +1091,196 @@ label[for="orange"], label[for="banane"], label[for="fraise"]{
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
 }
-     
+   /*fin section popup*/
+   
+   /*section effets*/
+.imgEffets{
+    width: 320px;
+    height:320px;
+    margin:70px auto;
+}
+
+.imgEffets li{
+    list-style: none;
+    float:left;
+    width:141px;
+    height:150px;
+    margin:5px;
+}
 
 
+.imgEffets li:nth-child(3){
+    clear:both;
+}
+
+   .imgEffets img{
+       position:absolute;
+       z-index:1;
+       height:150px;
+       box-shadow:0 0 3px black;
+       transition: .5s cubic-bezier(0, 3, .4,1);
+   }
+
+   .imgEffets li:hover img{
+       z-index:2;
+       transform:scale(1.5);
+       box-shadow:0 0 10px black;
+   }
+
+   .imgEffets:hover li:not(:hover) img{/* au survol de la class imgEffets je mets les images d'arrière-plan en gris et flou*/
+       filter:grayscale(1) blur(8px);
+   }
 
 
+#carre{
+    position:relative;
+}
+
+.a{
+    width:100px;
+    height:100px;
+    background:blue;
+    border:1px solid black; 
+    position:absolute;
+    bottom:0;
+   margin-top:20px;
+   margin-left:44px;
+}
+
+.b{
+    width:100px;
+    height:100px;
+    background:blueviolet;
+    border:1px solid black; 
+    position:absolute;
+    z-index:2;
+    top:10;
+    left:10;
+    opacity:0.5;
+   
+}
+ 
+.c{
+    width:100px;
+    height:45px;
+    background:pink;
+    border:1px solid black; 
+    -webkit-transform:skew(45deg);
+    -moz-transform:skew(45deg);
+    -o-transform:skew(45deg);
+    transform:skew(45deg);
+    opacity:0.5;
+    margin-left:22px;
+}
+
+.d{
+    width:100px;
+    height:45px;
+    background:yellow;
+    border:1px solid black; 
+    -webkit-transform:skew(45deg);
+    -moz-transform:skew(45deg);
+    -o-transform:skew(45deg);
+    transform:skew(45deg);
+    margin-top:55px;
+    margin-left:22px;
+    opacity:0.5;
+}
+
+#carre:hover{
+    transform:rotate(180deg);
+    transition:2s;
+}
 
 
+#menuRotate{
+    width:576px;
+    height:360px;
+    margin:100px auto;
+    border:2px dotted red;
+    text-align: center;
+    position:relative;/*absolute en fonction du body sauf si son parent est en relative*/
+    background: linear-gradient(indianred, crimson);
+    overflow:hidden;
+}
 
+#menuRotate .masque{
+    position:absolute;
+    z-index:50;
+    width:585px;
+    height:135px;
+    top:0;
+    left:0;
+    background: linear-gradient(to top,indianred, crimson);
+}
 
+#menuRotate .ombre{
+    position: absolute;
+    z-index:40;
+    width:300px;
+    height:6px;
+    box-shadow: 0px 100px 3px black;
+    border-radius:75px / 3px;/*rayon horizontal /rayon vertical*/
+    top:32px;
+    left:142px;
+}
 
+#menuRotate dl{
+    position: relative;
+    top:0;
+    left:50%;
+    margin-left: -75px;
+    width:150px;
+    height:155px;
+    color:white;
+    text-align:center;
+    background:orangered;
+    border-radius:4px;
+    box-shadow:0 0 6px rgba(0,0,0,0.7);
+    transform-origin:50% 120px;
+    animation: bounceOut 0.7s ease-in-out;/* animation intérieure et exterieure*/
+}
     
+#menuRotate dt{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:30px;
+    padding-top:5px;
+}
+
+#menuRotate dd{
+    transform:rotate(180deg);
+}
+
+#menuRotate dd a{
+    display:block;
+    height:24px;
+    padding:3px 0;
+    color:white;
+    text-decoration: none;
+}
+
+#menuRotate dd a:hover{
+    background: rgba(255,255,255,0.1);
+}
+
+#menuRotate dl:hover{
+    transform:rotate(-180deg);
+    animation:bounceIn 0.7s ease-in-out;
+}
+
+@keyframes bounceIn{
+    from{transform:rotate(0deg);}
+    75%{transform:rotate(-200deg);}
+    90%{transform:rotate(-175deg);}
+    to{transform:rotate(-180deg);}
+}
+
+@keyframes bounceOut{
+    from{transform:rotate(0deg);}
+    0%{transform:rotate(-180deg);}
+    10%{transform:rotate(-165deg);}
+    to{transform:rotate(-360deg);}
+}
+
