@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+section{
+    background:#243B76 ;
+    width:800px;
+    height:830px;
+    margin:0 auto;
+    padding-top:10px;
+}
+
+h2{
+    color:white;
+    text-align:center;
+    font-family:'Shadows Into Light', cursive;
+    font-size:3.4em;
+    font-weight:normal;
+    margin-bottom:5px;
+    margin-top:50px;
+}
+
+.haut{
+    padding:20px;
+    margin-left:40px;
+    padding-bottom:5px;
+}
+
+.milieu{
+    margin-left:80px;
+}
+
+.bas{
+    margin-left:200px;
+}
