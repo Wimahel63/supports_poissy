@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>mon premier site</title>
+    <title>mon premier site: multimedias</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Salsa">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script|Old+Standard+TT">
@@ -19,38 +19,68 @@
         <h1>Mon premier site en HTML / CSS</h1>
     </div>
     <div id="rs">
-             <a href="https://twitter.com/?lang=fr" target="blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-              <a href="https://fr-fr.facebook.com/" target="blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-             <a href="https://www.instagram.com/?hl=fr" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/?lang=fr" target="blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <a href="https://fr-fr.facebook.com/" target="blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/?hl=fr" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
     </div>
 </header>
 
 <nav><!--ne pas oublier de les créer dans le dossier source, ici mon premier site-->
-            <a href="index.html">Structure</a>
-            <a href="texte.html">Texte</a>
-            <a href="selecteurs.html">Selecteurs</a>
-            <a href="images.html">Images</a>
-            <a href="positions.html">Positions</a>
-            <a href="zoning.html">Zoning</a>
-            <a href="listes.html">Listes</a>
-            <a href="lien_menu.html">Liens & Menus</a>
-            <a href="tableau.html">Tableaux</a>
-            <a href="formulaire.html">Formulaire</a>
-<<<<<<< HEAD
-            <a href="index.html">Accueil</a>
-=======
-            <a href="multimedia.html">Multimedias</a>
->>>>>>> 4fe958a02670dc98cf0b672db9d34872e93e15c3
-            <a href="animation.html">Animations</a>
-            <a href="fancy_box.html">Fancy Box</a>
+        <a href="index.html">Structure</a>
+        <a href="texte.html">Texte</a>
+        <a href="selecteurs.html">Selecteurs</a>
+        <a href="images.html">Images</a>
+        <a href="positions.html">Positions</a>
+        <a href="zoning.html">Zoning</a>
+        <a href="listes.html">Listes</a>
+        <a href="lien_menu.html">Liens & Menus</a>
+        <a href="tableau.html">Tableaux</a>
+        <a href="formulaire.html">Formulaire</a>
+        <a href="index.html">Accueil</a>
+        <a href="multimedia.html" class="active">Multimedias</a>
+        <a href="animation.html">Animations</a>
+        <a href="fancy_box.html">Fancy Box</a>
+        <a href="explications.html">Explications</a>
 </nav>
 
 <main><!-- contenu principal de la page ,un seul par page-->
-        
-    <aside><!--cette balise est recommandée dans un main et son contenu est secondaire-->
-        <marquee direction="left" behaviour="scroll" scrollamount="10"><h5>Session poissy 20018/2019</h5></marquee>
-        <marquee direction="right" behaviour="scroll" scrollamount="6"><h5>Voici mon premier site</h5></marquee>
-    </aside>
+        <h2>Multimédia</h2>
+
+     <section class="videoFond">
+         <h3>Vidéos en fond</h3>
+         <div class="videoTexte">
+             <video controls>
+                 <source src="css/videos/sch_morpheus.mp4" type="video/mp4">
+             </video>
+         <p>J'ai mis cette vidéo car je n'en avais pas d'autres sous la main. Ceci étant, cette musique ne reflète pas du tout mon goût et je ne l'écoute qu'avec le son entièrement baissé (!!!!). Cet avis ne concerne cependant que moi, libre à chacun d'aimer le style qu'il veut :-) .</p>
+        </div>
+     </section> 
+     
+     <section>
+         <h3>Video Youtube</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8Xl3oMGmOkM"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     </section>
+
+     <section>
+         <h3>Audio</h3>
+         <div class="audio">
+             <h4>Format Mp3</h4>
+             <audio src="css/audio/son.mp3" controls></audio>
+
+             <h4>Format OGG</h4>
+             <audio src="css/audio/son.ogg" controls></audio>
+         </div>
+     </section>
+
+     <section>
+         
+            <h3>Carte Google Map</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2621.3817863279087!2d2.0411164152698453!3d48.927169603816054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6896c26be5b99%3A0xef9a5df82633b33e!2sConservatoire+de+Musique+Et+de+Danse!5e0!3m2!1sfr!2sfr!4v1542121248360" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+     </section>
+    
+
+   
 </main>
 <a href="#logo">
     <!--je place ma balise lien devant pour englober tout mon bouton et je relie au haut avec # jusqu'à l'id logo-->

@@ -2,9 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
-/* HTML5 display-role reset for older browsers 
-=======
 /* HTML5 display-role reset for older browsers *
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -254,76 +251,8 @@ box-shadow:5px 5px 15px rgba(0, 0, 0, 1);
 	display: block;
 	margin-left:50px;
 	transform:rotate(360deg);
-	transition: 2s;}
-
-
-
-
-/*article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    transition: 2s;
 }
-
-h1{
-    font-size: 70px;
-    color:black;
-    margin-top: 50px;
-    text-align: center;
-    font-family:'Amatic SC', cursive;
-    font-weight:400;
-    text-shadow:2px 2px 2px slategray;
-}
-
-h2{
-    font-size: 50px;
-    color: blue;
-    padding: 20px;
-    font-weight: bold;
-    text-shadow:1px 1px 1px gray;
-    font-family:'Amatic SC', cursive;
-}
-
-h3{
-    font-size:22px;
-    color: white;
-    padding:15px;
-}
-
-h5{
-    font-size: 85px;
-    color:violet;
-    padding: 20px;
-    font-weight: bold;
-    font-family:'Amatic SC', cursive;
-}
-blockquote{
-    font-style: italic;
-    font-size: 120%;
-}
-strong{
-    font-weight:bold;
-}
-main{
-    background: linear-gradient( orangered, yellow);
-}
-aside{
-    height: 300px;
-}
-section{
-    margin-top:50px;
-    padding:20px;
-}
-footer{
-    background: coral;
-    height:30px;
-}*/
 
 /*******************header******************/
 
@@ -351,50 +280,50 @@ header{
     bottom :50px;
     margin: 0 auto;
 }
- .relative div{
-     position: absolute;
-     bottom: 10px;
-     width: 50px;
-     height: 50px;
-     background: blue;
- }
+.relative div{
+    position: absolute;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    background: blue;
+}
 
- button{
-     position: fixed;
-     background: transparent;
-     right: 20px;
-     cursor: pointer;
-     font-size: 350%;
-     color: slategray;
-     border: none;
-     bottom: 40px;
- }
+button{
+    position: fixed;
+    background: transparent;
+    right: 20px;
+    cursor: pointer;
+    font-size: 350%;
+    color: slategray;
+    border: none;
+    bottom: 40px;
+}
 
- button:hover{
-     color:blue;
-     transition: 1s;
- }
+button:hover{
+    color:blue;
+    transition: 1s;
+}
 
- .trente{
-     width: 30%;
-     padding:20px;
-     font-size:22px;
-     background: crimson;
-     color: #f1684e;
-     font-weight: bold;
- }
+.trente{
+    width: 30%;
+    padding:20px;
+    font-size:22px;
+    background: crimson;
+    color: #f1684e;
+    font-weight: bold;
+}
 
- .cinquante{
-     width: 50%;
-     padding:20px;
-     font-size:22px;
-     background:#383746;
-     color: #f1684e;
-     font-weight: bold;
-     margin-top:10px;
- }
+.cinquante{
+    width: 50%;
+    padding:20px;
+    font-size:22px;
+    background:#383746;
+    color: #f1684e;
+    font-weight: bold;
+    margin-top:10px;
+}
 
- .cent{
+.cent{
     width: 100%;
     padding:20px;
     font-size:22px;
@@ -402,55 +331,58 @@ header{
     color: #f1684e;
     font-weight: bold;
     margin-top:10px;
- }
+}
 
- .carre{
-     width: 170px;
-     height: 170px;
-     background: rosybrown;
-     border: 3px solid #3cc;
-     margin: 10px;
-     float:left;
-     text-align: center;
-     font-size: 25px;
-     color: aliceblue;
-     line-height: 150px;
-     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
- }
+.carre{
+    width: 170px;
+    height: 170px;
+    background: rosybrown;
+    border: 3px solid #3cc;
+    margin: 10px;
+    float:left;
+    text-align: center;
+    font-size: 25px;
+    color: aliceblue;
+    line-height: 150px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
 
- .carre:hover{
-  background: #dc143c;
-  border: 15px solid lightseagreen;
-  transition:1s;
-  transform:rotate(45deg);
-  border-radius: 85px;
- }
+.carre:hover{
+    background: #dc143c;
+    border: 15px solid lightseagreen;
+    transition:1s;
+    transform:rotate(45deg);
+    border-radius: 85px;
+}
 
- .float2{
-     margin: 0 auto;
-     width: 100%;
- }
+.float2{
+    margin: 0 auto;
+    width: 100%;
+}
 
- .rect{
-     height: 40px;
-     background: darkseagreen;
- }
+.rect{
+    height: 40px;
+    background: darkseagreen;
+}
 
- .c1, .c2, .c3, .c4{
-     width: 25%;
-     height: 250px;
-     float: left;
- }
+.c1, .c2, .c3, .c4{
+    width: 25%;
+    height: 250px;
+    float: left;
+}
 
- .c1{
-     background: lightpink;
- }
- .c2{
+.c1{
+    background: lightpink;
+}
+
+.c2{
     background: lightsalmon;
 }
+
 .c3{
     background: turquoise;
 }
+
 .c4{
     background: indianred;
 }
@@ -488,6 +420,7 @@ header{
     border:3px solid #000;
     box-shadow:3px 3px 3px slategray;
 }
+
 .haut{
     width:100%;/*prend en compte la largeur de l'élément parent, donc ici de .zone1*/
     height:20%;
@@ -514,17 +447,20 @@ float:right;
     border:3px solid #000;
     box-shadow:3px 3px 3px slategray;
 }
+
 .haut2{
     width:100%;/*prend en compte la largeur de l'élément parent, donc ici de .zone1*/
     height:20%;
     background: #32ff32;
 }
+
 .gauche2{
     width:15%;
     float:left;
     height:80%;
     background: #3cc;
 }
+
 .droite2{
     width:15%;
     float:right;
@@ -626,193 +562,210 @@ color: #32ff32;
     background: #2c3e50;
     text-align: center;
     color: #32ff32;
-    }
-    .menu5{
-        width:100%;
-        height:5%;
-        background: #3cc;
-        text-align: center;
-        color: #32ff32;
-        
-    }
+}
+
+.menu5{
+    width:100%;
+    height:5%;
+    background: #3cc;
+    text-align: center;
+    color: #32ff32;      
+}
     
-    .milieu5{
-        background:url("img/survol_img4.jpg") no-repeat;
-        background-size: 100%;
-        width:95%;
-        height:450px;
-        margin:2.5%;/*ici je mets 2.5% car ma largeur totale de mon element est de 95%, donc la marge correspond a la largeur de chaque côté de mon element, c-a-d 2.5+2.5=5% qui nous manque pour avoir 100% de la lmargeur totale*/
-        text-align:center;
-        color:#32ff32;
-        position:relative;
-    }
-    .milieuA{
-        position:absolute;
-         top:0;
-        left:0;
-        width:50%;
-        height:50%;
-        z-index:1; 
-    }
+.milieu5{
+    background:url("img/survol_img4.jpg") no-repeat;
+    background-size: 100%;
+    width:95%;
+    height:450px;
+    margin:2.5%;/*ici je mets 2.5% car ma largeur totale de mon element est de 95%, donc la marge correspond a la largeur de chaque côté de mon element, c-a-d 2.5+2.5=5% qui nous manque pour avoir 100% de la lmargeur totale*/
+    text-align:center;
+    color:#32ff32;
+    position:relative;
+}
 
-    .milieuB{
-        position: absolute;
-        top: 0;
-        right:0;
-        width:50%;
-        height:50%;
-        background-color: aqua;
-        z-index:1; 
-    }
-    .milieuC{
-        position: absolute;
-        bottom: 0;
-        left:0;
-        width:50%;
-        height:50%;
-        background-color: yellowgreen;
-        z-index:1; 
-    }
-    .milieuD{
-        position: absolute;
-        bottom: 0;
-        right:0;
-        width:50%;
-        height:50%;
-        background-color: coral;
-        z-index:1; 
-    }
-    .milieuA:hover{
-        transform:rotate(360deg);
-       
-	    transition: 5s;
-    }
-    .milieuB:hover{
-        transform:rotate(360deg);
-        border-radius:100px;
-        transition: 3s;
-        opacity: 0.5;
-    }
-    .milieuC:hover{
-        transform:rotate(360deg);
-        border-radius:100px;
-        transition: 3s;
-        opacity: 0.5;
-    }
-       .milieuD:hover{
-        transform:rotate(360deg);
-        transition: 3s;
-        border-radius:100px;
-        opacity: 0.5;
-    }
+.milieuA{
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:50%;
+    z-index:1; 
+}
 
-    .bas5{
-        width:100%;
-        height:10%;
-        background: antiquewhite;
-        color:#32ff32;
-        text-align: center;
-    }
+.milieuB{
+    position: absolute;
+    top: 0;
+    right:0;
+    width:50%;
+    height:50%;
+    background-color: aqua;
+    z-index:1; 
+}
+
+.milieuC{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width:50%;
+    height:50%;
+    background-color: yellowgreen;
+    z-index:1; 
+}
+
+.milieuD{
+    position: absolute;
+    bottom: 0;
+    right:0;
+    width:50%;
+    height:50%;
+    background-color: coral;
+    z-index:1; 
+}
+
+.milieuA:hover{
+    transform:rotate(360deg);
+	transition: 5s;
+}
+
+.milieuB:hover{
+    transform:rotate(360deg);
+    border-radius:100px;
+    transition: 3s;
+    opacity: 0.5;
+}
+
+.milieuC:hover{
+    transform:rotate(360deg);
+    border-radius:100px;
+    transition: 3s;
+    opacity: 0.5;
+}
+
+.milieuD:hover{
+    transform:rotate(360deg);
+    transition: 3s;
+    border-radius:100px;
+    opacity: 0.5;
+}
+
+.bas5{
+    width:100%;
+    height:10%;
+    background: antiquewhite;
+    color:#32ff32;
+    text-align: center;
+}
     /******zone 6****/
-    .zone6{
-        width:80%;
-        height:700px;
-        border:3px solid #000;
-        box-shadow:3px 3px 3px slategray;
-        background-color: aliceblue;
-        text-align: center;
-    }
-    .haut6{
-        width:100%;
-        height:15%;
-        float:left;
-    }
-    .haut6A{
-        background: #f1684e;
-        width:25%;
-        height:100%;
-        float:left;
-        text-align:center;
-    }
-    .haut6B{
-        background: #32ff32;
-        width:50%;
-        height:100%;
-        float:left;
-        text-align:center;
-    }
-    .haut6C{
-        background: #f1684e;
-        width:25%;
-        height:100%;
-        float:right;
-        text-align:center;
-    }
-    .menu6{
-        width:100%;
-        height:5%;
-        background: blueviolet;
-        text-align: center;
-    }
-    .milieu6{
-        width:100%;
-        height:75%;
-    }
-    .aside6{
-        width:20%;
-        height:100%;
-        background: yellow;
-        float:left;
-    }
-    .droite6{
-        width:80%;
-        height:100%;
-        background: #000;
-        float:right;
-    }
-    .milieu6A{
-        width:50%;
-        height:35%;
-        background: #3cc;
-        float:left;
-    }
-    .milieu6B{
-        width:50%;
-        height:35%;
-        background: lightpink;
-        float:right;
-    }
-    .slideshow{
-        width:100%;
-        height:40%;
-        background: #dc143c;
-        clear: both;
-    }
+.zone6{
+    width:80%;
+    height:700px;
+    border:3px solid #000;
+    box-shadow:3px 3px 3px slategray;
+    background-color: aliceblue;
+    text-align: center;
+}
 
-    .milieu6C{
-        width:25%;
-        height:25%;
-        background:blue; 
-        float:left; 
-    }
-    .milieu6D{
-        width:25%;
-        height:25%;
-        background: orchid;
-        float:left;
-    }
-    .bas6{
-        width:100%;
-        height:5%;
-        background: orangered;
-    }
+.haut6{
+    width:100%;
+    height:15%;
+    float:left;
+}
+
+.haut6A{
+    background: #f1684e;
+    width:25%;
+    height:100%;
+    float:left;
+    text-align:center;
+}
+
+.haut6B{
+    background: #32ff32;
+    width:50%;
+    height:100%;
+    float:left;
+    text-align:center;
+}
+
+.haut6C{
+    background: #f1684e;
+    width:25%;
+    height:100%;
+    float:right;
+    text-align:center;
+}
+
+.menu6{
+    width:100%;
+    height:5%;
+    background: blueviolet;
+    text-align: center;
+}
+
+.milieu6{
+    width:100%;
+    height:75%;
+}
+
+.aside6{
+    width:20%;
+    height:100%;
+    background: yellow;
+    float:left;
+}
+
+.droite6{
+    width:80%;
+    height:100%;
+    background: #000;
+    float:right;
+}
+
+.milieu6A{
+    width:50%;
+    height:35%;
+    background: #3cc;
+    float:left;
+}
+
+.milieu6B{
+    width:50%;
+    height:35%;
+    background: lightpink;
+    float:right;
+}
+
+.slideshow{
+    width:100%;
+    height:40%;
+    background: #dc143c;
+    clear: both;
+}
+
+.milieu6C{
+    width:25%;
+    height:25%;
+    background:blue; 
+    float:left; 
+}
+
+.milieu6D{
+    width:25%;
+    height:25%;
+    background: orchid;
+    float:left;
+}
+
+.bas6{
+    width:100%;
+    height:5%;
+    background: orangered;
+}
+
+/***********page listes******/
 
 
-
-       /***********page listes******/
-
-
- .fruit ul{/* je cible le ul qui a pour class fruit different avec espace, je cible la class fruit qui se trouve en ul*/
+.fruit ul{/* je cible le ul qui a pour class fruit different avec espace, je cible la class fruit qui se trouve en ul*/
     color: blueviolet;
     list-style:none;
     display:inline-block;
@@ -822,6 +775,7 @@ x .fruit ul li{
     display:inline-block;
     margin: 20px;
 }
+
 li .fa{
     font-size:80%;
     color:green;
@@ -833,6 +787,7 @@ li .fa{
     list-style: none;
     font-size: 20px;
 }
+
 /* .imbriquee li:not(.eu), .imbriquee li:not(.asie){
     margin-left:15px;}*/
 
@@ -1283,4 +1238,48 @@ label[for="orange"], label[for="banane"], label[for="fraise"]{
     10%{transform:rotate(-165deg);}
     to{transform:rotate(-360deg);}
 }
+/****fin page animation****/
+
+/*****page multimedias********/
+
+.videoFond{
+    padding-left:0;
+    padding-right:0;
+}
+
+.videoFond video{
+    position:absolute;
+    z-index:1;
+    width:100%;
+}
+
+.videoTexte{
+    position:relative;
+    width:100%;
+    height:500px;
+}
+
+.videoFond p{
+    position:absolute;
+    z-index:2;
+    width:500px;
+    margin:auto;
+    background: rgba(255, 255, 255, 0.6);
+    left:250px;
+    top:100px;
+    padding:20px;
+    font-size:120%;
+    border-radius:10px;
+}
+
+iframe[allowfullscreen]{/*pour une video et une map*/
+    width:100%;/***css iframe***/
+}
+
+.audio{
+    text-align:center;
+}
+
+/******fin page multimedia*****/
+
 
