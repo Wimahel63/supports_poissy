@@ -1,0 +1,138 @@
+body{
+    background:url(img/foret.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.container{
+    width:70%;
+    height:100%;
+    margin:auto;
+    background:#8fbc8f;
+    opacity: 0.6;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+header{
+    background: #9370d8;
+    height:200px;
+}
+
+.haut{
+    background:#8fbc8f;
+    height:50px;
+    text-align: end;
+    text-decoration: none;
+    color: #000; 
+    font-weight: bold;
+}
+
+.haut a{
+    text-decoration: none;
+    color: #000; 
+}
+
+nav{
+    background: #9370d8;
+}
+
+.etoile{
+    float:left;
+}
+
+h1 .far.fa-star::before{
+    font-size:70px;
+    margin: 15px;
+
+}
+
+ul li{
+    float:right;
+    display:inline-block;
+
+}
+
+ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.contenu{
+    width:90%;
+    margin:auto;
+}
+
+.gauche{
+    width:50%;
+    height:25%;
+    float:left;
+}
+.droite{
+    width:50%;
+    height:25%;
+    float:right;
+}
+.clear{
+    clear: both;
+}
+.lien{
+    text-align: center;
+}
+
+.lien a{
+    width:120px;
+    height:35px;
+    border:1px solid;
+    text-align: center;
+    text-decoration: none;
+    color:black;
+}
+
+span{
+    font-weight:bold;
+    font-style:italic;
+}
+
+
+#parcours{
+    border:1px solid  #9370d8;
+    background: #9370d8;
+    width:30%;
+    height:361px;
+    margin:10px;
+    float:left;
+}
+
+#conteurs{
+   border:1px solid  #9370d8;
+   background: #9370d8;
+   width:30%;
+   height:361px;
+   margin:12.5px;
+   float:left;
+}
+
+#partenaires{
+    border:1px solid  #9370d8;
+    background: #9370d8;
+    width:30%;
+    height:361px;
+    margin:10px;
+    float:right;
+}
+
+#parcours i,#conteurs i,#partenaires i{
+    font-size: 100px;
+    text-align: center;
+    color: black;
+}
+
+.generique{
+    background:  #9370d8;
+    text-align: center;
+}
+
+.mentions{
+
+}
+
