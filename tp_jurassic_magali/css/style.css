@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.photo{
+    background: url(img/dinosaure.jpg) no-repeat;
+    background-size:100%;
+    position:relative;
+    z-index:1;/*plus petite valeur, photo affichée en dessous*/
+}
+
+nav{
+    background:black;
+    z-index:22;
+    opacity:0.7;
+    height:70px;
+    position:fixed;
+    width:100%;
+    text-transform: uppercase;
+}
+
+nav li:hover{
+    border:1px solid white;
+}
+
+nav li a:focus{
+    border-top:1px solid #8dae4f;
+}
+
+nav ul li{
+    display:inline-block;
+    margin-left:20px;
+    margin-bottom:10px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration: none;
+}
+
+nav button{
+    background: #1c5f81;
+    color:white;
+}
+
+.logo img{
+    margin-top:150px;
+    z-index:2;/*placé au dessus de la photo background*/
+}
+.bandeau{
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+button{
+    border:1px solid #1c5f81;
+    padding:10px;
+    background: #1c5f81;
+    color:white;
+}
+
+button:hover{
+    background: white;
+    color:#1c5f81;
+}
+/*fin nav*/
+
+/*contenu*/
+
+.contenu{
+    width: 720px;
+    text-align: justify;
+    margin:0 auto;
+}
+
+.invitation{
+    font-size:1.4em;
+    font-weight:bold;
+    text-align:center;
+}
+
+span{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+h2{
+    font-size: 3.2em;
+    text-transform: uppercase;
+    font-family: 'Montserrat black', sans-serif;
+    font-weight:bolder;
+    margin-top:120px;/*pour laisser plus d'espace en haut*/
+}
+
+figure{
+    position:relative;
+    overflow:hidden;/*cache les depassements*/
+    margin:0;
+}
+
+figure img{
+    z-index:20;
+}
+
+figcaption{/*masque la legende tant que la photo n'a pas ete survoléé par la souris*/
+    display:block;
+    position:absolute;
+    transition:all .5s;
+}
+
+figure:hover{
+    transform:scale(1.2);/*effet de zoom au survol*/
+    transition:3s;/*temps de l'effet*/
+    margin-top:100px;/*les margin permettent de decaler le texte autour pour continuer à le voir au survol de la souris*/
+    margin-bottom:100px;
+}
+
+figure:hover figcaption{
+    z-index:1;/*met la legende au premier plan au survol.elle apparait alors*/
+    position:relative;
+}
+
+.pratique{
+    width: 60%;
+    height:800px;
+    margin:auto;/*centre mon élément*/
+    text-align:initial;
+}
+
+h4, h4 i{
+    font-size:30px;
+    text-transform: uppercase;
+}
+
+.droite ul li, .gauche ul li{/*prend en compte  le style des liens de mes listes*/
+    list-style:none;/*enleve les puces*/
+    text-align:justify;
+}
+
+.pratique ul{
+    padding-left:1px;/*le plus près possible du bord de ma div*/
+}
+
+.gauche{
+    width: 45%;
+    float:left;
+}
+
+.droite{
+    width: 45%;
+    float:right;
+}
+
+.tarif{
+    margin-bottom:50px;
+}
+
+iframe{/*map de direction*/
+    width:509px;/*lui mettre la même taille que la div dans laquelle elle se trouve*/
+}
+
+.partenaires{
+    margin:auto;
+    margin-bottom:10px;
+    width:60%;
+    height:300px;
+}
+
+.partenaires img{/*gere les photos et symboles de ma section en creant un espace pour donner un aspect plus "aéré"*/
+    margin-left:30px;
+    margin-right:30px;
+}
+
+footer{
+    height:400px;
+    background:black;
+}
+
+.liens{
+    width:700px;
+    float:left;
+    margin-left:300px;
+    margin-top:150px;
+    text-align:left;/*le text-align left cale mes éléments a gauche*/
+}
+
+footer ul li a{/*travaille sur les liens de mon footer en leur donnant une couleur de police blanche et sans souligné*/
+    color:white;
+    text-decoration: none;
+}
+
+.t-rex{/*div avec le logo representant un t-rex*/
+    width:700px;
+    float:right;
+    margin-top:100px;
+    text-align:left;
+}
