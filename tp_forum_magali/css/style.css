@@ -1,0 +1,63 @@
+/*@import url('https://fonts.googleapis.com/css?family=Sunshiney');*/
+
+body{
+    font-family: 'Sunshiney', cursive;
+}
+
+#container{
+    display:flex;
+    width:70%;
+    margin:auto;
+    
+}
+
+h1{
+   text-align:center;
+   font-size:3.5em;
+}
+
+.chaman{
+    width:100%;
+    height:550px;
+    display:inline-flex;
+    margin:20px;
+}
+
+.demoniste{
+    width:100%;
+   height:504px;
+   display:inline-flex;
+   overflow:hidden;/*gere le depassement des blocs mais le bloc doit avoir une height pour que le overflow soit pris en compte*/
+   margin-right:300px;
+   margin-left:100px;
+   
+}
+
+.demoniste img{
+    height:700px;
+    margin-right:75px;
+}
+
+.para p{ 
+    box-sizing:border-box;/*propriete qui tient en compte toutes les mesures dans la taille du block,afin que le bloc ne bouge pas si on ajuste les mesures*/
+    border:3px dashed #E8531B;
+    border-radius:4px;
+    width:80%;
+    height:350px;
+    margin:100px;
+    padding:20px;
+    padding-top:50px;
+    text-align: center;
+}
+
+.demoniste .para p{
+    font-family: 'Rock Salt', cursive;
+}
+
+.chaman .para p{
+    font-size:2em;
+}
+
+span{
+    font-weight:bold;
+}
