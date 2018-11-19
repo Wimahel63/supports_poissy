@@ -1,0 +1,257 @@
+body{
+    background:white;
+}
+
+#container{
+    width:100%;
+}
+
+.haut{
+    width:1200px;
+    background: white;
+    margin:auto;
+    border-bottom:1px solid gray;
+}
+
+.clear{
+    clear:both;
+}
+
+.logo{
+    height:150px;
+    width:1200px;
+    background:white;
+}
+
+.logo img{
+    width:150px;
+    height:100px;
+    padding-right:10px;
+    float:left;
+}
+
+.logo nav{
+    float:left;
+    padding-top:20px;
+}
+
+.logo nav ul li{
+    display:inline-block;
+    margin:8px;
+}
+
+.logo  nav ul li a{
+    list-style:none;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:black;
+}
+
+.logo  nav ul li a i{
+    color:blue;
+}
+
+.phone{
+    float:right;
+    width:120px;
+}
+
+.phone  i.fas.fa-phone{
+    background: yellow;
+    width:20px;
+    padding:2px;
+    margin-top:42.5px;
+
+}
+
+.phone p{
+    float:right;
+    margin-top:30px;
+    padding-top:5px;
+}
+
+header{
+   width:1200px;
+    height:600px;
+    background: url(img/symfony-13-09-18_1-768x576.jpeg) no-repeat;
+    background-size:100%;
+}
+
+.fondImg{
+  width:40%;
+  height:600px;
+  text-align:justify;
+  font-size: 2.5em;
+  color:white;
+  padding-left:120px;
+  background:#161D6E;
+  opacity:.7;
+  float:left;
+}
+
+.texte{
+    padding-top:120px;
+   
+}
+.fondImg span{
+    font-size:.5em;
+    width:400px;
+    display:block;
+}
+
+.fondImg button{
+    width:200px;
+    height:40px;
+    background:yellow;
+    border:none;
+    border-bottom:4px solid #FFD400;
+    color:black;
+}
+
+.fondImg i{
+    float:right;
+    color:yellow;
+}
+
+aside{
+    padding-left:10px;
+    width:550px;
+    height:600px;
+    background: white;
+    float:left;
+}
+ 
+aside h2{
+    margin-top:auto;
+}
+
+aside iframe{
+    width:340px;
+    height:345px;
+}
+
+.map{
+    width:340px;
+    background:yellow;
+    height:500px;
+    float:left;
+}
+
+.bandeau{
+    height:70px;
+    text-align:center;
+}
+
+.bleu{
+    background:turquoise;
+    height:70px;
+}
+
+.bleu p{
+    color:white;
+}
+
+.bleu span{
+    color:black;
+    font-weight:bold;
+}
+
+.bleu button{
+    background: black;
+    color:white;
+}
+
+.pret{
+    font-size:1.4em;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+.rs{
+    float:right;
+    width:50px;
+}
+
+.rs a i{
+    font-size:30px;
+    height:30px;
+}
+
+.rs a:last-child{
+    transform:rotate(90deg);
+}
+
+main{
+border-top:1px solid gray;
+}
+
+button{
+    background:black;
+    color:white;
+}
+
+.icone, .icone1{
+    margin-top:100px;
+    margin-left:100px;
+    text-align:center;
+    width:135px;
+    float:left;
+}
+
+.icone{
+    opacity:.5;
+}
+
+.icone a{
+    text-decoration: none;
+    color:gray;
+    text-transform:uppercase;
+}
+
+#icones .icone1 a{
+    text-decoration: none;
+    text-transform:uppercase;
+    color:black;
+  
+}
+
+#icones .icone i, .icone1 i{
+    font-size:50px;
+}
+
+#icones hr{
+    color:turquoise;
+}
+
+.icone2{
+    width:900px;
+    font-size:1.5em;
+    margin:auto;
+}
+
+.icone2 i{
+    font-size:150px;
+    color:black;
+}
+.icone2 button{
+    background:turquoise;
+    width:120px;
+    height:30px;
+    border:none;
+    border-bottom:3px solid blue;
+}
+.gauche{
+float:left;
+width:150px;
+height:290px;
+margin-top:70px;
+}
+
+.droite{
+    width:700px;
+    float:right;
+}
+.icone2 p{
+
+    float:right;
+}
