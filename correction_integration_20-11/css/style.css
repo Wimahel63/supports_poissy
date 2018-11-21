@@ -1,0 +1,72 @@
+/**reset css**/
+
+*{    /* petit reset: ici, enleve les marges les padding, les puces et les soulignements des liens*/
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-decoration:none;
+}
+
+body{
+    background:black;
+}
+/** style header**/
+
+#main-header{
+    display:flex;
+    justify-content:space-around;
+    background:white;
+}
+
+/**style espace personnel**/
+
+#espace-personnel{
+    display:flex;
+}
+
+h2{
+    text-align:right;
+}
+
+/**style main navigation**/
+
+#main-navigation ul{
+    display:flex;
+}
+
+/** style top section**/
+
+.articles-section{
+    display:flex;
+    justify-content:center;
+}
+
+#footer-navigation ul{
+    display:flex;
+}
+
+#services{
+    display:flex;
+}
+
+#reseaux-sociaux{
+    display:flex;
+}
+
+.copyright{
+    text-align:center;
+}
+
+/**style section**/
+
+section{
+    width:60%;
+    margin:auto;
+    background: #fff;
+}
+
+section .banniere > img{
+    width:100%;
+}
+
+/**style footer***/
