@@ -311,7 +311,7 @@ do{
 
 
 //exercice : demander à l'utilisateur d'entrer son age, 
-//tant que la valeur entré par l'utilisateur est bien un nombre.
+//tant que la valeur entrée par l'utilisateur est bien un nombre.
 
 /*var age;
 
@@ -334,7 +334,7 @@ do{
 
 d("<h2>Fonctions prédéfinies et utilisateurs</h2>");
 
-document.write("du texte");
+/*document.write("du texte");
 
 var unePhrase = "bonjour comment vas-tu ?";
 d(unePhrase.toUpperCase());
@@ -447,7 +447,7 @@ presentationFinale();
 //ecrire une fonction qui verifie le type de donnée
 //d'une variable par exemple verifie(maVariable)
 
-function verifie(x){//peu importe le nom de ma variable ici, c'est comme une generalite, en effet, c'est l'affichage du bas qui importe c-a-d que je dois definir la variable que je veux tester dans mon affichage sous ma fonction :  verifie(nom_de_ma_variable_a_verifer);
+function verifie(x){//peu importe le nom de ma variable ici, c'est comme une generalite, en effet, c'est l'affichage du bas qui importe c-a-d que je dois definir la variable que je veux tester dans mon affichage sous ma fonction :  verifie(nom_de_ma_variable_a_verifier);
     console.log(typeof x);
 }
 var ma_variable="10";
@@ -459,7 +459,7 @@ var ma_variable3=[10];
  verifie(nom);
  verifie(age);
 
- //exercice 14: ecrire une fonction qui affiche un message pour informer l'utilisateur si la variable qu'il test est de type 'string', 'number', par exemple verifier(maVariable) ---> "votre variable est de type:")
+ //exercice 14: ecrire une fonction qui affiche un message pour informer l'utilisateur si la variable qu'il teste est de type 'string', 'number', par exemple verifier(maVariable) ---> "votre variable est de type:")
 
  function verifier(maVariable){
      
@@ -574,14 +574,14 @@ liste_contact[0][1];//le premier chiffre represente le tableau general et le deu
 
 d("<h2>Objets</h2>");
 
-var monObjet={};
+/*var monObjet={};
 monObjet.nom="SHAKESPEAR";//ici, j'appelle mon objet et je lui donne une propriété, ici, .nom
 monObjet.prenom="William";
 monObjet.age=45;
 
 d(monObjet.prenom+" "+ monObjet.age);
 
-var Humain={//je peux ici mettre une majuscule car c'est un objet, c'est a ça que je reconnais un objet en js, ainsi qu'aux {} qui declare ma valeur d'objet, et mes propriétés sont separées  par des ,sauf la derniere qui ne prend RIEN
+var Humain={//je peux ici mettre une majuscule car c'est un objet, c'est a ça que je reconnais un objet en js, ainsi qu'aux {} qui declarent ma valeur d'objet, et mes propriétés sont separées  par des ,sauf la derniere qui ne prend RIEN
 sexe:"male",
 origine:"anglaise",
 age:45
@@ -608,7 +608,7 @@ var Voiture={
 };
 
 d(Voiture.modele);
-d(Voiture.couleur);
+d(Voiture./*couleur);
 Voiture.changerCouleur("violet");
 d(Voiture.couleur);
 d(Voiture.optionsDeSerie[1]);
@@ -619,11 +619,157 @@ for(var elements in Voiture){
     
     if(typeof Voiture[elements]=="object"){
         for (var elemnts in Voiture.motorisation){
-            d("propriete :" + elemnts + "valeur :" + Voiture.motorisation[elemnts]);
+            d("propriete :" + elemnts + "valeur :" + Voiture.motorisation[elemnts]);//ce n'est pas une erreur, car ce n'est pass la même variable
         }
     }
 }
 
+//creer un objet Joueur avec 3 caracteristiques (force, experience et race), puis les afficher.
+
+/*var Joueur={
+	force:80,
+	experience:110,
+	race:"elfe",
+}
+
+d(Joueur.force + ' ' +  Joueur.experience + ' ' + Joueur.race );*/
+
+// creer une class 
+
+function Animal(nom,espece,categorie,age){
+	this.nom= nom,   //this represente l'objet, donc ici animal
+	this.espece =espece,
+	this.categorie =categorie,
+	this.age =age
+}
+
+var lion = new Animal("simba", "lion", "felin", 10 );
+var harfang=new Animal("hedwig", "chouette", "strigides", 4);
+
+d(lion.nom);
+d(harfang.nom);
+
+//creer une class joueur avec experience, force et race.Puis creer un deuxieme joueur.
+
+/*function Joueur(experience,force,race){
+	this.experience=experience,
+	this.force=force,
+	this.race=race
+}
+var troll = new Joueur(50, 180, "troll");
+
+var elfe= new Joueur(140, 120, "elfe");
+
+var elfe2= new Joueur(20, 32, "mage");
+d(troll.experience + ' ' + troll.force + ' '+ troll.race);
+d(elfe.experience + ' ' + elfe.force + ' '+ elfe.race);
+
+d(troll.force+ ' ' + elfe.force + ''+ elfe2.force);
+
+	//c'est un constructeur, avec la notion de prototypage  qui rajoute une fonction à mon objet
+	
+	function Vehicule(marque){
+		this.marque=marque;
+	}
+	var megan = new Vehicule("Renault");
+
+	megan.demarrer=function(){
+		d("vroum vroum la voiture demarre");
+	}
+
+	megan.demarrer();
+	d(megan.marque);
+
+	megan.freiner=function(){
+		d("ma voiture freine");
+	}
+	megan.freiner();
+	d(megan.marque);
+
+
+	
+
+------------ LAISSEZ LIBRE COURS A VOTRE IMAGINATION POUR LE TEXTE --------------- 
+ 
+Exercice : Oyé Oyé ! Bienvenue dans votre JDR Javascript, vous etes capable
+de creer divers Personnages (monstres, guerriers, mages, chasseurs, voleurs)
+avec différentes caractéristiques (pseudo, sante,niveau,points d'experiences, classe, 
+race, armes).
+Une petite présentation de votre héros est nécéssaire.
+Votre Héros se retrouve dans diverses situations telles que
+le combat ! :-O Il est donc capable de se défendre en attaquant ses adversaires,
+il inflige des dégats proportionnellement à sa force de combat qui elle dépendra de 
+l'arme utilisée et donc les points de vie de l'adversaire baissent en conséquence ;-). 
+A chaque fois que votre Champion sort vainqueur d'un combat ^_^ il gagne 50 points 
+d'experiences, et prend un niveau chaque 100 points d'experiences. A chaque fois que votre
+héros gagne un niveau, pour atteindre le niveau suivant l'experience est augmentée de 25%.
+
+Par exemple si vous souhaitez creer un magicien, celui ci est capable de faire des attaques 
+magiques qui ne font pas les mêmes dégats qu'un guerrier et son épée ou bien un chasseur 
+et son arc. Un magicien possède également le pouvoir de se soigner et donc si il souhaite 
+soigner un allié il le fera et lui rendra 50% de sa vie. Votre héros n'est pas immortel, 
+il subit des dégats lors de ses périples, vous pouvez lui faire prendre des potions de vie 
+qui lui redonne 20% de sa vie ou bien le booster avec des potions de force qui 
+augmente sa force de 15%. Bonne chance :).
+
+*/
+
+	
+
+function Player(pseudo,sante,niveau,experience,classe,race,arme,degats){        this.pseudo=pseudo,
+	this.sante=sante,
+	this.niveau=niveau,
+	this.experience=experience,
+	this.classe=classe,
+	this.race=race,
+	this.arme=arme,
+	this.degats=degats,
+		attaquer=function(attaquer){
+			this.attaquer=attaquer;
+		}
+}
+
+var elfe= new Player("whitebat",100, 1, 0,"chassou", "elfe", "arc", 30);
+
+var troll = new Player("gourk",100, 1, 0,"monstre", "troll","gourdin", 25);
+
+var dragon= new Player("luciole", 100, 1, 0,"incendiaire", "dragon","feu",40);
+
+var harpie= new Player("mona", 100, 1, 0, "mage", "harpie", "hurlements",20);
+
+var humain= new Player("ankou", 100, 1, 0, "guerrier", "humain", "hache",35);
+
+d(elfe.pseudo+" " +"est une "+" " + elfe.race+" "+elfe.classe +" "+"de niveau :"+ elfe.niveau+ " "+ "avec "+ "  " +elfe.sante +" "+ "de PV" +", "+ elfe.experience + " "+" % d'experience"+ " "+ "qui manie fort bien l'" + " "+ elfe.arme+" "+" infligeant " +" "+ elfe.degats +" "+ "points de degat");
+
+
+d(troll.pseudo+" " +"est un "+" " + troll.race+" "+troll.classe +" "+"de niveau :"+ troll.niveau+ " "+ "avec "+ "  " +troll.sante +" "+ "de PV" +", "+ troll.experience +" "+ "% d'experience"+ " "+ "qui aime faire mumuse avec son" + " "+ troll.arme + " :"+"occasionnant"+" "+troll.degats+" "+ "attention aux degats!!!");
+
+
+d(dragon.pseudo+" " +"est un "+" " + dragon.race+" "+ "feroce"+" "+ "d'un temperament tres "+ " " +dragon.classe +" "+"de niveau :"+ dragon.niveau+ " "+ "avec "+ "  " +dragon.sante +" "+ "de PV" +", "+ dragon.experience + " "+" % d'experience"+ " "+ "qui assure une ambiance toujours chaleureuse grâce à son arme: le " + " "+ dragon.arme + " "+ "et ses " +" "+dragon.degats +" "+ "points de degat" );
+
+d(harpie.pseudo+" " +"est une "+" " +"charmante"+" "+ harpie.race+" "+harpie.classe +" "+" de son état,"+ " "+"de niveau :"+ harpie.niveau+ " "+ "avec "+ "  " +harpie.sante +" "+ "de PV" +", "+ harpie.experience +" "+ "% d'experience"+ " "+ "et dont les" + " "+ harpie.arme + " " + " à "+ harpie.degats+" "+"points de degat" +" "+"sauront vous glacer le sang juste comme il faut!!");
+
+d(humain.pseudo+" " +"est un "+" " + humain.race+" "+humain.classe +" "+"de niveau :"+ humain.niveau+ " "+ "avec "+ "  " +humain.sante +" "+ "de PV" +", "+ humain.experience +" "+ " % d'experience."+ " "+" Les"+" "+humain.degats+" "+"points de degat de sa double" + " "+ humain.arme + " "+"auront raison de tous vos doutes... et de votre tête");
 
 
 
+
+/*var a = 4 , b = 4, c = 8;
+
+if (a == b) {
+	d("oui a est égal à b");
+}
+
+if(a > c){
+	d("oui a est plus grand que c");
+} else{
+	d("non a n'est pas plus grand que c");
+}
+
+// &&
+if(a == b && c > b){
+	d("true");
+} else {
+	d("false");
+}
+*/
