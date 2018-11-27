@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>setinterval</title>
+    <style type="text/css">
+        img{
+       width:400px;
+       height:300px;
+        }
+   </style>
+</head>
+<body>
+        <div>
+                <img id="monImage" src="../img/fennec.jpg"> 
+            </div>
+        
+            <button id="demarrer">lancer le carroussel</button>
+            <button id="arreter">stopper le carroussel</button>
+
+<script>
+
+    var img = 0;
+    var monImage = document.querySelector('#monImage');
+    var demarrer = document.querySelector("#demarrer");
+    var arreter = document.querySelector("#arreter");
+
+    function f(){
+        img += 1;//modifie la valeur img
+        monImage.setAttribute("src", "../img/" + img +".jpg");
+        if(img>=6){
+            img = 0;
+        }
+    }
+
+    demarrer.addEventListener("click", function(){
+        timer =window.setInterval("f()",3000);//setInterval declenche une fonction de maniere informatisee. 3000correspond au temps ou la fonction doit etre declencher en millisecondes, c-a-d toutes les 3 secondes
+    })//ce code est valide mais necessite une procedure qui lui mettrait fin, car ici il va continuer a chercher des images apres la derniere alors qu'il n'y en a plus.Il faut donc le stopper pour qu'il ne tourne pas dans le vide a la recherche d'images qui n'existent pas ici.
+//
+    arreter.addEventListener("click", function(){
+   clearInterval(timer);
+    })
+
+</script>
+        
+</body>
+</html>
