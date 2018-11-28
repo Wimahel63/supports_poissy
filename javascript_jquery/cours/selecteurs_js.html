@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>selecteur js</title>
+</head>
+<body>
+    
+
+
+   <!-- <div class="avion">Air bus 1</div>
+    <div class="avion">Air bus 2</div>
+    <div class="avion">Air bus 3</div>
+
+    <div class="voiture">Voiture 1</div>
+    <div class="voiture">Voiture 2</div>
+    <div class="voiture">Voiture 3</div>
+    
+    <p>Paragraphe 1</p>
+    <p>Paragraphe 2</p>
+    <p>Paragraphe 3</p>
+    <p>Paragraphe 4</p>
+    <p>Paragraphe 5</p>
+
+    <section id="maSection">Section</section>
+
+    <span>Un span</span>
+
+    <div id="resultat">Résultat...</div>-->
+
+
+
+    <script >
+        //Selection naturelle :je recupere un element du DOM sans utiliser getElement
+
+        // je definis une variable dans laquelle je mets le nom de l'element
+        var monId2= maSection;
+        console.log("Sans getElement: "+ monId2);
+        console.log("monId2 :"+monId2.innerHTML);//des que j'ai affiche mon element j'ai acces a ses proprietes
+        console.log("body :"+document.body);//ici j'appelle mon body et j'y accede via mon element mais je ne l'ai pas stocke dans une variable car il est unique
+
+        //SELECTION byID: pas de difference avec la selection naturelle, mais on rajoute la fonction getElementBy
+        var monId = document.getElementById('maSection');//pas de 's'  a element car chaque id est unique
+        console.log(monId.innerHTML);//innerHTML 
+        console.log(monId)//j'appelle mon Id, comme en haut, mais en passant par une fonction, getElementById. Le nom de ma fonction est le nom du parametre
+
+        //SELECTION TAGNAME
+        var maBalise = document.getElementsByTagName('span');
+        console.log("ma balise :" + maBalise);
+        console.log("ma balise "+ maBalise[0].innerHTML);//ma balise est un tableau, d'ou les []
+
+        //SELECTION CLASSNAME
+        var mesClasses = document.getElementsByClassName('avion');
+        console.log("typeof de mesClasses :" + typeof mesClasses);
+        console.log("mes classes[0] : "+ mesClasses[0].innerHTML);
+
+        //mini exo afficher tous les avions dans la console
+
+        
+        for (var i = 0 ; i < mesClasses.length; i++){//le nom de mon tableau ici est mesClasses, defini juste au dessus
+        
+        console.log("mes classes :" +mesClasses[i].innerHTML);
+        }
+        
+        //SELECTEUR QUERYSELECTORALL
+        var p =document.querySelectorAll('p');//selectionne tous les elements que j'ai defini et qui sont dispo dans mon document .Ici, ça me selectionne TOUTES mes balises p)
+
+        //afficher le type de l'element
+        //afficher le contenu du premier paragraphe
+        //afficher tous les paragraphes
+        console.log("typeof de p :" + p);//affiche le type des elements selectionnés --> ici c'est NodeList
+        console.log("typeof de p :" + typeof p);
+        console.log("mon contenu :" +p[0].innerHTML);//[0] correspond au premier indice de mon tableau, c-a-d en fait a la premier case du tableau
+
+        for (var j = 0; j < p.length; j++){
+        console.log("contenu de mes p :"+ p[j].innerHTML);
+        document.write("\ncontenu de mes p :"+" "+ p[j].innerHTML);//je fais appel a l'attribut innerHTML pour l'afficher
+    }
+
+    //SELECTION QUERYSELECTOR
+    var voiture = document.querySelector('voiture');//pour selectionner les classes dans le cas des queryselector, je fais comme en css:  .nomdemaclasse
+    console.log(typeof voiture);
+    console.log("contenu de ma voiture :"+voiture.innerHTML);//queryselector renvoie le premier element de ma liste, queryselectorall retourne tous les elements de ma liste
+
+    //recuperer la premiere balise p avec un queryselector et  afficher son contenu
+
+    var premierP= document.querySelector('p');
+    console.log(premierP.innerHTML);
+
+    </script>
+</body>
+</html>

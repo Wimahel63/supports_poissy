@@ -619,7 +619,7 @@ for(var elements in Voiture){
     
     if(typeof Voiture[elements]=="object"){
         for (var elemnts in Voiture.motorisation){
-            d("propriete :" + elemnts + "valeur :" + Voiture.motorisation[elemnts]);//ce n'est pas une erreur, car ce n'est pass la même variable
+            d("propriete :" + elemnts + "valeur :" + Voiture.motorisation[elemnts]);//ce n'est pas une erreur, car ce n'est pas le même parametre
         }
     }
 }

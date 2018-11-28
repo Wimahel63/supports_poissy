@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selecteurs en js_exos</title>
+</head>
+<body>
+        <div id="main-nav">
+                <ul>
+                    <li><a href="#">Lien 1</a></li>
+                    <li><a href="#">Lien 1</a></li>
+                    <li><a href="#">Lien 1</a></li>
+                    <li><a href="#">Lien 1</a></li>
+                </ul>
+            </div>
+    
+            <h1>Titre principale de ma page</h1>
+    
+            <section class="container">
+                <h2>Sous-titre</h2>
+                <p>Lorem ipsum dolor <span>sit amet</span>, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute <span>irure dolor in reprehenderit</span> in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+                <h2>Sous-titre</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis <span>nostrud exercitation</span> ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor <span>in reprehenderit in</span>in reprehenderit in voluptate velit esse
+                <span>cillum dolore eu fugiat</span> nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+    
+            <section class="container">
+    
+                <h2>Sous-titre</h2>
+    
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+                <h2>Sous-titre</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+    
+    
+            <footer>
+                <div id="footer-navigation">
+                    <ul>
+                        <li><a href="#">Lien 1</a></li>
+                        <li><a href="#">Lien 1</a></li>
+                        <li><a href="#">Lien 1</a></li>
+                        <li><a href="#">Lien 1</a></li>
+                    </ul>
+                </div>
+            </footer>
+
+<script>
+    /*-Combien y a t il de span dans mon document? Afficher la reponse dans la console.Afficher leur valeur (ou contenu) et les surligner en jaune
+    -Pareil pour les liens presents dans mon document, sauf qu'ils seront surligner en bleu
+    -Recuperer les sous-titres de mon document et modifier le contenu a la  place de sous-titre on ecrira "Mon joli sous-titre".
+    Pour modifier le style en js il existe une propriete appelée "style". C'est de celle-ci dont on a besoin pour l'exercice.
+    -Les balises p sont sans attributs class . Ajoutez-en (avec setAttribute js) pour pouvoir attribuer la class "mes-jolis-paragraphes " dans les balises p.
+    
+   
+    var span = document.querySelectorAll('span');
+    var nombre=0;//pour chercher le nombre de span presents dans mon doc et initialiser ma boucle
+    console.log(typeof span);//ma balise span est un objet tableau , je peux lui definir sa taille avec une boucle
+    console.log( span);
+    for (var i = 0; i< span.length; i++){
+    console.log(span[i].innerHTMl);
+    nombre++;
+    span[i].style.background="yellow";//se place dedans pour pouvoir etre pris en compte
+
+    }
+
+    var liens = document.querySelectorAll('li');
+    console.log(typeof liens);
+    for (var i =0; i<liens.length; i++){
+        console.log(liens[i].innerHTML);
+        liens++;
+    }*/
+  
+// setAttribute()prend deux attributs 
+//document.getElementById(id).style.property = new style : exemple d'utilisation de la propriete style en js--> j'indique le nom de ma var a modifier, puis style puis propriete, ce qui donne dans notre cas des span:  span[i].style.background ="new value";  . Ici j'ai 'span[i]' qui indique que je prends en compte tous mes span du document, puis j'ai '.style' qui indique que je veux modifier le style des spans, puis '.background', qui indique la propriete que je veux modifier. J'ajoute ensuite '= ' suivi de la nouvelle valeur que je veux lui apporter, ici, un nouveau fond jaune.
+
+/***********correction************/
+var mesSpan = document.querySelectorAll("span");
+var nombre = 0;
+    for(var i = 0; i < mesSpan.length; i++){
+        mesSpan[i].style.background = "yellow";
+        console.log("mes spans : " + mesSpan[i].innerHTML);
+        nombre++;
+    }
+            
+console.log("il y a " + nombre + " " + " span dans le document");
+
+var mesLiens = document.querySelectorAll("a");
+var nombreLiens = 0;
+    for(var i = 0; i < mesLiens.length; i++){
+        mesLiens[i].style.background = "blue";
+        mesLiens[i].style.color = "#fff";
+        console.log("mes spans : " + mesLiens[i].innerHTML);
+        nombreLiens++;
+    }
+
+console.log("il y a " + nombreLiens + " " + " liens dans le document");
+
+var sousTitres = document.querySelectorAll('h2');
+
+    for(var i = 0; i < sousTitres.length; i++){
+        sousTitres[i].innerHTML = 'Mon Joli Sous-Titre';
+    }
+
+var mesP = document.querySelectorAll('p');
+    for(var i = 0; i < mesP.length; i++){
+        mesP[i].setAttribute("class","mes-jolis-paragraphes");
+    }
+
+</script>
+
+</body>
+</html>

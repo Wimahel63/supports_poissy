@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery js</title>
+</head>
+<body>
+    <header>
+            
+            <h1>Write less, do more!!!</h1>
+
+    </header>
+
+    <section>
+            <h2>vive le jquery</h2>
+
+    <p>et le html</p>
+    <p>et le css</p>
+    <p>et puis quoi aussi?</p>
+    <span class="rouge">une fois </span>
+    <span class="bleu">deux fois</span>
+    <span class="rouge">trois foix</span>
+    <div id="monId">ben non c'est fini maintenant</div>
+    <label for="quoi">quoi ?</label>
+    <input type="checkbox" id="validation" checked="">  <footer>
+      <div class="fois">Encore une fois?</div>
+   </footer>
+
+<section>
+        <div></div>
+        <button id="grandi">Agrandir</button><button id="reset">Reset</button>
+</section>
+  
+
+</section>
+
+
+    <!--le jquery est une bibliotheque a telecharger sur jquery.com et  a linker-->
+    <script type="text/javascript" src="../jquery-3.3.1.js"></script><!-- cette balise me permet de charger jquery, je n'ecris rien dedans, je dois en rouvrir une en dessous. pour voir si jquery est bien linké, j'ouvre ma console, debogger, source. S'il y apparait alors il est bien linké-->
+
+
+    <script>
+       $(document).ready(function(){
+           alert("chargement terminé !");
+       });//cette fonction signifie:quand le doc est pret tu executes cette fonction: on peut la simplifier en omettant le mot document qui est entre les () ou encore $(function()){alert("chargement terminé");}); ou d'autres encore...
+       //le $ symbolise le jquery
+
+       $(function(){
+          $('h1'); //ici j'ai selectionné mon h1
+        //   $('p');//selectionne tous les 'p'
+        //   $('p:last');//recupere uniquement le dernier
+        //   $('p:eq(1)');//recupere le deuxieme en fonction de l'indice 0, ou le troisieme s'il commence a l'indice 1
+
+       });
+        
+        //creer plusieurs elements html et recuperer leur valeur, par exemple <p>Il etait une fois</p>. Recuperer le texte il etait une fois. Le faire avec h1, h2, p,div, section, span, class, id, footer, header, checkbox.
+        $(function(){
+        var monTitre= $ ('h1');
+        console.log(monTitre[0].innerHTML);
+        var titre2=$('h2');
+        console.log(titre2[0].innerHTML);
+        var p=$('p:eq(2)');
+        console.log(p[2]);
+        var monId=$('#monId');
+        console.log(monId[0].innerHTML);
+$("p:eq(1)").addClass("mes-paragraphes").css({
+    "color": "red",
+    "background": "yellow"
+});//permet d'ajouter une class au deuxieme element p
+        var rouge=$('span.rouge:eq(0)');
+        console.log(rouge[0].innerHTML);
+        var bouton=$('#validation');
+        console.log(bouton[0].innerHTML);
+        });
+
+        // attention, si je veux que le contenu de mon element apparaisse dans un console.log ou un document.write...il ne faut pas que j'oublie de rajouter l'indice entre [] sinon la valeur retournée sera undefined
+
+
+        //evenements
+        //je selectionne mon texte, ici p, je lui indique la fonction que j'attends de lui, ici .click. 
+        $("p").click(function(){
+            alert("j'ai cliqué sur mon texte");
+        });//ici cela signifie Lorsque je clique sur mes p, tu m'affiches un popup indiquant 'j'ai clique sur mon texte
+
+$(".fois").mouseover(function(){//j'attends du jquery que, au survol de la souris, mon element change de couleur de fond et de police.Je dois donc d'abord lui definir un style css avec addClass.css
+    var x=$(".fois");
+        $(".fois").addClass("mon-para").css({
+          "color": "blue",
+          "background": "aquamarine"});
+
+$(".fois").mouseleave(function(){//ma fonction mouseleave est d'enlever le style css imposé au survol
+    var x=$(".fois");
+        $(".fois").addClass("mon-para").css({
+           "color": "black",
+           "background": "none"});
+            //changer la couleur du texte et son arriere plan
+            //lorsque je passe sur le texte, et lorsque je sors du texte je reviens sur l'effet d'origine.
+            //mouseleave() et mouseover()
+})});
+
+
+//ou, autre possibilite plus rapide:
+$('p').mouseover(function(){
+    $('p').css({
+        "color":"blue",
+        "background": "aquamarine"
+    });
+})
+
+$('p').mouseout(function(){
+    $('p').css({
+        "color":"#000",
+        "background": "none"
+    });
+})
+
+//declarer un carre taille 10x10 (lui donner une couleur), et a chaque fois que je cliques sur le bouton 'agrandir' mon carre grandit de 10px. Ajouter egalement un bouton reset qui permet de revenir a la taille initiale
+//div class=carre
+$(function(){
+                var hauteur = 10 , largeur = 10;
+
+                $("div").css({
+                        "background": "red",
+                        "width" : largeur+"px",
+                        "height": hauteur+"px",
+                        "border" : "1px solid black"
+                    });
+                
+                $("#grandi").click(function(){
+                
+                    hauteur += 10;
+                    largeur += 10;
+
+                    $("div").css({
+                        "width" : largeur+"px",
+                        "height": hauteur+"px"
+                    });
+                });
+
+                $("#reset").click(function(){
+                    hauteur = 10; largeur=10;
+                    
+                    $("div").css({
+                        "width" : largeur+"px",
+                        "height": hauteur+"px"
+                    });
+                });
+                
+            });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>setinterval</title>
+    <style type="text/css">
+        img{
+       width:400px;
+       height:300px;
+        }
+
+        .titre-principale{
+			color: #fff;
+			background: #000;
+			font-style: italic;
+			text-align: center;
+		}
+
+		.titre-principale-new{
+			color: #fff;
+			background: red;
+			font-style: normal;
+			text-align: center;
+		}
+
+		.presentation{
+			border: 1px solid black;
+			padding: 10px;
+			text-align: justify;
+		}
+
+
+   </style>
+</head>
+<body>
+    
+        <div>
+            <img id="monImage" src="../img/1.jpg"> 
+        </div>
+        <!--exo 1
+            <button id="demarrer">lancer le carroussel</button>
+            <button id="arreter">stopper le carroussel</button>-->
+
+<!--<select id="prenom">
+    <option>William</option>
+    <option>Elora</option>
+    <option >Lincoln</option>
+    <option >Ryan</option>
+    <option >Myrddin</option>
+    <option >Zeus</option>
+</select>-->
+
+
+<!--exo 2-->
+<form>
+    <input type="text" id="color" placeholder="saisir un code couleur" maxlength="6">
+    <input type="submit" id="buttonColor" value="changer couleur fond">
+</form>
+
+
+<!--exo 3-->
+
+<h1 class="titre-principale">Apparition Paragraphe</h1>
+		<p class="presentation">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<button id="disable">Disparition</button>
+   
+<script>
+ 
+   /* var img = 0;
+    var monImage = document.querySelector('#monImage');
+    var demarrer = document.querySelector("#demarrer");
+    var arreter = document.querySelector("#arreter");
+
+    function f(){
+        img += 1;//modifie la valeur img
+        monImage.setAttribute("src", "../img/" + img +".jpg");
+        if(img>=5){
+            img = 0;
+        }
+    }
+
+    demarrer.addEventListener("click", function(){
+        timer =window.setInterval("f()",3000);//setInterval declenche une fonction de maniere informatisee. 3000correspond au temps ou la fonction doit etre declencher en millisecondes, c-a-d toutes les 3 secondes
+    })//ce code est valide mais necessite une procedure qui lui mettrait fin, car ici il va continuer a chercher des images apres la derniere alors qu'il n'y en a plus.Il faut donc le stopper pour qu'il ne tourne pas dans le vide a la recherche d'images qui n'existent pas ici.
+//
+    arreter.addEventListener("click", function(){
+   clearInterval(timer);
+    }) */
+
+/*definir un tableau de prenom (5 min) et remplir un "select option" avec les prenoms*/
+
+//je definis mon tableau:
+//  var choixprenom= ["William","Elora","Lincoln","Ryan","Myrddin","Zeus"];
+
+// //-->definir d'abord le select et je l'affiche dans ma page avec le nom de ma balise. Je n'oublie pas de la fermer a la fin
+// //je pense a la façon dont je peux automatiser la selection avec une boucle
+// document.write("<select>");
+// for (var i=0 ; i < choixprenom.length; i++){
+//     document.write("<option>" + choixprenom[i] + "</option>")
+// }
+// document.write("</select>");
+
+
+/*demander a l'utilisateur si c'est un homme ou une femme.Lui demander son prenom, puis afficher le prenom de l'utilisateur en orange si c'est une femme ou en vert si c'est un homme*/
+
+//style et autres fonctions ne sont pas definies en objet mais en dom, qui sont des balises je dois donc les creer en js
+// var sexe =  prompt("sexe ?");
+//             var prenom = prompt("prenom ?");
+//             var p = document.write("<p></p>");
+//             var text = document.querySelector("p");
+
+//             if(sexe == "homme")
+//             {
+//                 text.innerHTML = prenom;
+//                 text.setAttribute("style", "color:green");
+
+//             }
+
+//             if(sexe == "femme")
+//             {
+//                 text.innerHTML = prenom;
+//                 text.setAttribute("style", "color:purple");
+//             }
+
+
+/*je veux creer un bouton qui me permet d'entrer une couleur et un autre qui pourra charger cette couleur. Le bouton couleur definira la couleur de fond de ma page et le bouton chargement me permet de creer l'evenement au clic*/
+ var form =document.querySelector('form');
+ var fond = document.querySelector('#color');
+
+ form.addEventListener('submit', function(event){
+     event.preventDefault();
+     document.querySelector("body").setAttribute("style","background :#"+fond.value+";");
+ })
+
+ //le event.preventDefault(); permet d'eviter la reinitialisation de la page par defaut, sinon la couleur de fond ne resterait pas et passerait immediatement
+
+ /*HTML: creer 1 titre (apparition Paragraphe) avec un paragraphe et un bouton
+ CSS: donner un style (couleur, taille ) à vos éléments.
+ JS: lorsque je cliques sur le bouton mon paragraphe disparait et un nouveau style que j'aurai au prealable definie dans mon css est appliqué à mon titre. Le titre change lui aussi et affiche 'Disparition paragraphe'*/
+
+
+//l'action se fait au clic sur le bouton.Je le recupere donc avec document.querySelector("#nomdemonid")
+var magie = document.querySelector("#disable");//le # est mis car c'est une id
+			var text = document.querySelector(".presentation");//comme pour le # avec l'id, le . correspond a une classe. cette var correspond a l'action realisee au clic du bouton sur le paragraphe lorsque la fonction sera appelée
+			var titre = document.querySelector(".titre-principale");//cette var correspond a l'action que je veux realiser sur le titre h1 lorsque l'on clique sur le bouton dans la fonction
+
+			magie.addEventListener("click", function(){
+				text.style.display = "none";
+				titre.className = "titre-principale-new";
+				titre.innerHTML = "Disparission paragraphe";
+			})//fonction qui va me permettre de mettre en application les changements voulus lors du clic sur le bouton
+
+
+            
+</script>
+        
+</body>
+</html>

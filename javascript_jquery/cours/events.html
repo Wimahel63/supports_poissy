@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>modif</title>
+
+    <style type="text/css">
+         img{
+        width:400px;
+        height:300px;
+         }
+    </style>
+    
+</head>
+
+ <body>   
+    
+    <h1 onclick="alert('j\'ai cliqué sur mon titre')">Mon titre h1</h1>
+
+    <div>
+        <img id="monImage" src="../img/fennec.jpg"> 
+    </div>
+
+    <button id="changerImage">Changer image et titre</button>
+
+    <h2>un sous-titre</h2>
+
+    <script>
+//         var changerImage = document.querySelector("#changerImage");//je recupere le bouton, l'action se fait au clic sur le bouton-->l'evenement du clic se fait sur le bouton mais la fonctionnalite change la source, src
+//         changerImage.onclick = function(){
+//             document.getElementById('monImage').src = "../img/panda-roux.jpg";
+//             //document.querySelector('monImage').title="un mignon panda roux";
+//         }//je dis au js 'si je cliques sur le bouton, tu modifies mon attribut src de ma balise image et tu le remplaces par l'element que je te dictes
+
+// //methode 1:
+//         var retour= document.querySelector("#monImage");
+//         retour.onclick = function(){
+//            retour.src = "../img/fennec.jpg";
+//         }
+
+//methode 2:
+//on applique la modif dans la balise img, ici j'ai rajoute src dans le onclick
+
+var titre= document.querySelector("#monImage");
+        titre.onclick = function(){
+           retour.src = "../img/fennec.jpg";
+        }
+
+
+//au survol de la souris sur le titre h1 on surligne en rouge
+//onmouseover
+//l'evenement se fait sur le titre, je dois donc le recuperer
+var monTitre = document.querySelector("h1");
+monTitre.onmouseover = function(){//l'action se fait lorsque                                la souris survole l'element
+    monTitre.style.background = "red";
+
+}
+
+monTitre.onmouseout = function(){//fonction qui a lieu                     lorsque la souris n'est pas sur l'element
+    monTitre.style.background = "blue";
+
+}
+
+//je veux changer mon texte:
+/*var monH2 = document.getElementsByTagName('h2');
+monH2.addEventListener("mouseover", changertxt);
+function changertxt(){
+    monH2.innerHTML = "mon nouveau sous-titre";
+}
+
+// pour revenir en arriere:
+monH2.addEventListener('mouseout',function(){
+    monH2.innerHTML = "un sous-titre";
+});*/
+
+
+//pour un caroussel, je pars de mon image de base.A chaque clic sur le bouton, je passe a l'image suivante jusqu'a la derniere où je reviens à mon point de depart
+// je cree ma fonction
+var bouton =  document.querySelector("#changerImage");
+
+bouton.addEventListener('click', carroussel);
+
+function carroussel(){
+    var monImage =  document.querySelector("#monImage");//je recupere la source de mon image
+    var monImageSource = monImage.getAttribute("src");
+
+    switch(monImageSource){
+        case '../img/1.jpg':
+        monImage.src = "../img/2.jpg";
+        break;
+        case '../img/2.jpg':
+        monImage.src = "../img/3.jpg";
+        break;
+        case '../img/3.jpg':
+        monImage.src = "../img/4.jpg";
+        break;
+        case '../img/4.jpg':
+        monImage.src = "../img/5.jpg";
+        break;
+        case '../img/5.jpg':
+        monImage.src = "../img/1.jpg";
+        break;
+
+    }
+}
+    </script>
+    
+</body>
+</html>
