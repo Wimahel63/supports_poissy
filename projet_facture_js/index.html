@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Facture js</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+    <!--zone du haut de facture , avec adresse de la societe emetrice, la date et le n° de facture-->
+    <h1>facture</h1>
+
+    
+
+    <div class="identite">
+        <input type="text" placeholder="nom de la societe emettrice">
+        <input type="text" placeholder="adresse de la société emettrice">
+        <input type="text" placeholder="entrez un numero valide">
+        <input type="text" placeholder="adresse de messagerie">
+    </div>
+
+
+
+    <div class="numero">
+
+      <div class="facture"><!--je separe ma div numero en deux pour pouvoir appliquer des styles differents a chaque partie-->
+        <label for="facture">N° de la facture</label>
+        <input type="text">
+      </div><!--fin class facture-->
+
+      <div class="facturation">
+        <label for="date">Date</label>
+           <select id="jour"><!--les dates sont au choix de l'utilisateur qui doit entrer celle du jour de la facture-->
+           </select>
+           <select id="mois"></select>
+           <select id="annee"></select>
+      </div><!--fin date-->
+
+    </div><!--fin class numero-->
+
+    <!--fin zone haute-->
+
+    <!--debut zone intermediaire-->
+<div class="gauche">
+    <div class="destinataire"><!--adresse de facturation, peut etre differente de l'adresse du payeur-->
+       
+     <h5>A</h5>
+     <select class="client"><option>nouveau client</option></select><!--liste deroulante pour le choix des clients deja enregistres-->
+     
+     <input type="text" placeholder="Nom de la société">
+     <input type="text" placeholder="Nom ">
+     <input type="text" placeholder="Rue">
+     <input type="text" placeholder="Code Postal, ville">
+     <input type="text" placeholder="Numero de telephone">
+
+   </div><!--fin destinataire-->
+</div><!--fin gauche-->
+
+<div class="droite">
+   <div class="expediteur">
+
+    <h5>Expedier à:</h5>
+    <select class="client"><option>nouveau client</option></select><!--liste deroulante pour le choix des clients deja enregistres-->
+    
+    <input type="text" placeholder="Nom de la société">
+    <input type="text" placeholder="Nom ">
+    <input type="text" placeholder="Rue">
+    <input type="text" placeholder="Code Postal, ville">
+    <input type="text" placeholder="Numero de telephone">
+
+   </div><!--fin expediteur-->
+</div><!--fin class droite-->
+<div class="clear"></div>
+
+   <table>
+
+       <caption>Détails des produits facturés</caption>
+
+       <thead>
+           <tr>
+               <th>Code produit</th>
+               <th>Libellé produit</th>
+               <th>Prix Unitaire en €</th>
+               <th>Quantité commandée</th>
+               <th>Montant en €</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <td><input type="text"><!--realise un select option avec js--></td>
+               <td></td>
+               <td></td>
+               <td><input type="text"></td>
+               <td></td>
+           </tr>
+           <tr>
+                <td><input type="text"><!--realise un select option avec js--></td>
+                <td></td>
+                <td></td>
+                <td><input type="text"></td>
+                <td></td>
+            </tr>
+            <tr>
+            <td><input type="text"><!--realise un select option avec js--></td>
+                <td></td>
+                <td></td>
+                <td><input type="text"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="text"><!--realise un select option avec js--></td>
+                <td></td>
+                <td></td>
+                <td><input type="text"></td>
+                <td></td>
+            </tr>
+       </tbody>
+    </table>
+
+    <table>    <!--tableau sous-total-->  
+       <tbody>
+           
+           <tr>
+               <td colspan="4">Sous-total</td>
+               <td class="total"></td>
+            </tr>   
+            <tr>   
+               <td colspan="4">TVA  20%</td>
+               <td class="total"></td>
+            </tr>      
+            <tr>
+               <td colspan="4">Port et manutention </td>
+               <td class="total"></td>
+            </tr> 
+            <tr>     
+               <td colspan="4">total du (total ttc)</td>
+               <td class="total"></td>
+            </tr>   
+              
+           
+       </tbody>
+   </table>
+
+   <!--partie remise-->
+<!--cette partie peut etre faite en js, avec le paragraphe qui n'apparait que si la condition est realisée, a savoir atteindre tel montant pour avoir une reduction-->
+   <!--fin partie remise-->
+<footer>
+   <!--partie paragraphe de fin-->
+   <p>Veuillez rediger tous vos cheques a l'ordre du <span>nom de la societe</span><br>
+   Pour toute question concernant cette facture, veuillez contacter: machin au <span>tel</span> ou a l'adresse mail <span>adresse mail<!--ces zones sont a remplir par la suite--></span></p>
+
+   <p>Nous vous remercions de votre confiance</p>
+
+   <button onclick="window.print()">Imprimer la page</button>
+</footer>
+</section>
+
+<script type="text/javascript" src="css/style.js"></script>
+    
+<script type="text/javascript" src="jquery-3.3.1.js"></script>
+
+</body>
+</html>

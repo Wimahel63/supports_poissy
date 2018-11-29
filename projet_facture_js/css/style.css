@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+body{
+    margin:0;
+    padding:0;
+}
+
+section{
+    width:70%;
+    margin:auto;
+    background:grey;
+    padding:5px 40px;
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size:200%;
+}
+
+.identite{
+    width:100%;
+}
+
+.identite input{
+    width:30%;
+    display:block;
+}
+
+.numero{
+    display:flex;
+    flex-direction:column;/*pour pouvoir les mettre les uns au-dessus des autres en colonne*/
+    margin-left:80%;/*1050px, mais pas responsive*/
+    text-transform:uppercase;
+}
+
+.facture input{
+    width:20%;  
+}
+
+.facturation select{
+    width:15.2%;
+}
+
+.gauche{
+    float:left;
+}
+
+.droite{
+    float:right;
+}
+
+.clear{
+    clear:both;
+} 
+
+.destinataire , .expediteur{
+   font-size:120%;/*1.2em*/
+   text-transform:uppercase; 
+   margin:0 50px;
+}
+
+.expediteur{
+    padding:0 60px;
+}
+
+.destinataire input, .expediteur input{
+    display:block; 
+    width:100%;/*200px*/
+    padding: 0 50px;
+}
+
+.expediteur select,.destinataire select{
+    width:142%;/*206px*/
+}
+
+table:first-of-type{
+    width:100%;
+    border:1px solid;
+    border-collapse: collapse;
+    margin-top:50px;
+}
+
+
+caption{
+    font-size:1.5em;
+    font-weight:bold;
+    
+    font-family: 'Lora', serif;
+}
+
+td, th{
+    border:1px solid;
+}
+
+table input{
+    width:95%;
+}
+
+table:last-of-type{
+   text-transform:uppercase;
+    border-collapse: collapse;
+    margin-top:20px;
+    width:100%;
+}
+
+td[colspan="4"]{
+    border:none;
+    text-align:right;
+}
+
+footer{
+    margin-top:60px;
+}
+
+.total{
+    width:200px;
+}
+
+p:last-of-type{
+    text-align:center;
+    font-weight:bold;
+}
+
+
+
+
