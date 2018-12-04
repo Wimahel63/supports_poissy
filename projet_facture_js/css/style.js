@@ -1,3 +1,4 @@
+
 //if(window.matchMedia("(min-width: 480px")).matches){
 //}else{
 //}
@@ -366,31 +367,29 @@ document.querySelectorAll("#codepdt4 option")[3].addEventListener("click",functi
    document.querySelectorAll("#codepdt2 option")[0].addEventListener("click",function (){
     document.getElementById("lib2").innerHTML="";
     document.getElementById("prix2").innerHTML=""; 
-      });
+    });
 
-      document.querySelectorAll("#codepdt3 option")[0].addEventListener("click",function (){
-          document.getElementById("lib3").innerHTML="";
-          document.getElementById("prix3").innerHTML="";  
-     
-     });
+    document.querySelectorAll("#codepdt3 option")[0].addEventListener("click",function (){
+    document.getElementById("lib3").innerHTML="";
+    document.getElementById("prix3").innerHTML="";  
+    });
 
-     document.querySelectorAll("#codepdt4 option")[0].addEventListener("click",function (){
-          document.getElementById("lib4").innerHTML="";
-          document.getElementById("prix4").innerHTML="";  
-     
-     });
+    document.querySelectorAll("#codepdt4 option")[0].addEventListener("click",function (){
+    document.getElementById("lib4").innerHTML="";
+    document.getElementById("prix4").innerHTML="";  
+    });
 
     
 // affichage montant ,tva,frais de port et montant ttc
 
 // fonction qui calcule la tva
-//    les frais de ports et manutention et 5% du montant d'achat ttc
+//    les frais de port et manutention et 5% du montant d'achat ttc
 
 function calcultva(x){
     return x*0.2;// tva=prix*(1+20/100);
 }
 
-document.getElementById("quantite").addEventListener("input",qteproduit);
+document.getElementById("quantite").addEventListener("change",qteproduit);
 
 function qteproduit(){
    var i=document.getElementById("quantite").value;
@@ -402,26 +401,50 @@ function qteproduit(){
 document.getElementById("quantite1").addEventListener("input",qteproduit1);
 
 function qteproduit1(){
+    if(document.getElementById("quantite1")==0){
+        document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML);
+        document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);//je fixe a 2 le nombre de decimaux
+       document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;//les frais de port representent 5% du sous-total
+    }
+    else{
+        
     var i=document.getElementById("quantite1").value;
     var j=document.getElementById("prix2").innerHTML;
         var k=i*j;
         document.getElementById("prixht1").innerHTML=k; 
+    }
 }
 
 
  document.getElementById("quantite2").addEventListener("input",qteproduit2);
 
  function qteproduit2(){
+    if(document.getElementById("quantite2")==0){
+        document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML);
+        document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);//je fixe a 2 le nombre de decimaux
+       document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;//les frais de port representent 5% du sous-total
+    }
+    else{
     var i=document.getElementById("quantite2").value;
     var j=document.getElementById("prix3").innerHTML;
         var k=i*j;
         document.getElementById("prixht2").innerHTML=k;  
+    }
 }
-
 // lorsqu'on remplit la derniere case on a tout le tableau 2 qui s'affiche et le message alternatif
 document.getElementById("quantite3").addEventListener("input",qteproduit3);
 
 function qteproduit3(){
+    if(document.getElementById("quantite3")==0){
+        document.getElementById("quantite4");
+    //     document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML);
+    //     document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);//je fixe a 2 le nombre de decimaux
+    //    document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;//les frais de port representent 5% du sous-total
+    }
+    else{
+        document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML);
+        document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);//je fixe a 2 le nombre de decimaux
+       document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;//les frais de port representent 5% du sous-total
     var i=document.getElementById("quantite3").value;
     var j=document.getElementById("prix4").innerHTML;
         var k=i*j;
@@ -440,7 +463,12 @@ function qteproduit3(){
        document.getElementById("prixttc").innerHTML=
        parseFloat(document.getElementById("stotal").innerHTML)+parseFloat( document.getElementById("tva").innerHTML)+parseFloat(document.getElementById("port").innerHTML);
    
-
+    //    var prixU=["prix1", "prix2", "prix3","prix4"];
+    //    for (i=0; i<prixU.length;i++);
+    //    function sousTotal(){
+    //        sstot=quantite*prixU.length[i];
+    //    }
+       
     //    correspond au paragraphe qui apparait lorsque le montant total depasse 1000€
        var bonus= parseFloat( document.getElementById("prixttc").innerHTML).toFixed(2);//sur la console, considérée comme string, donc pour eviter la concatenation, on ajoute parseFloat
 
@@ -450,20 +478,20 @@ function qteproduit3(){
 //        bonus*5/100;
 // document.getElementById("remise").visibility=visible;
 //     }
+ 
+if(bonus>=1000){//calcul du bonus de 5% dès 1000€ d'achat
+    document.getElementById("remise").style.display="block";
+    document.querySelector("#remise span").innerHTML= bonus*5/100; 
+}else{
+    document.getElementById("remise").style.display="none";   
+    }
+} 
 
-       if(bonus>1000){//calcul du bonus de 5% dès 1000€ d'achat
-             document.getElementById("remise").visibility="visible";
-       }else{
-             document.querySelector("#remise span").innerHTML= bonus*5/100;
-       }
-
-}  
        document.querySelector("#cheque span").innerHTML=document.querySelectorAll(".identite input")[0].value;
 
      document.querySelectorAll("#contact span")[0].innerHTML=document.querySelectorAll(".identite input")[2].value;
 
      document.querySelectorAll("#contact span")[1].innerHTML=document.querySelectorAll(".identite input")[3].value;
-
- 
+}
 
 
