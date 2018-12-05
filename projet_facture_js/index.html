@@ -23,7 +23,7 @@
 
       <div class="facture"><!--je separe ma div numero en deux pour pouvoir appliquer des styles differents a chaque partie-->
         <label for="facture">N° de la facture</label>
-        <input type="text">
+        <input type="text" id="facture">
       </div><!--fin class facture-->
 
       <div class="facturation">
@@ -42,7 +42,7 @@
 <div class="gauche">
     <div class="destinataire">
         <h5>A</h5>
-        <select name="" id="nomClientD" >
+        <select name="client" id="nomClientD" >
             
         </select>
         <input type="text" placeholder="Nom de la société" id="nsociete" value="">
@@ -55,22 +55,24 @@
 
 <div class="droite">
     <div class="expediteur">
+
         <h5>EXPEDIER A:</h5>
-        <select name="" id="nomClientE">
-            
-        </select>
+
+        <select name="client" id="nomClientE"> </select>
         <input type="text" placeholder="Nom de la société" id="nsocieteE">
         <input type="text" placeholder="Nom " id="clientE"> 
         <input type="text" placeholder="Rue" id="rueE">
         <input type="text" placeholder="Code postal,Ville" id="villeE">
         <input type="text" placeholder="numero de télephone" id="telephoneE">
-</div>
     </div>
+</div>
+
 <div class="clear"></div>
 
-   <table>
+<table>
 
     <caption>Détails des produits facturés</caption>
+
     <thead>
         <tr>
                 <th>Code produit</th>
@@ -79,10 +81,11 @@
                 <th>Quantité commandée</th>
                 <th>Montant en euros</th>
         </tr>
+    </thead>    
         <tbody>
             <tr>
                 <td>
-                    <select name="" id="codepdt1"></select>
+                    <select name="produit" id="codepdt1"></select>
                 </td>
                 <td id="lib1"></td>
                 <td id="prix1"></td>
@@ -91,7 +94,7 @@
             </tr>
             <tr>
                 <td>
-                    <select name="" id="codepdt2"></select>
+                    <select name="produit" id="codepdt2"></select>
                 </td>
                 <td id="lib2"></td>
                 <td id="prix2"></td>
@@ -100,7 +103,7 @@
             </tr>
             <tr>
                 <td>
-                    <select name="" id="codepdt3"></select>
+                    <select name="produit" id="codepdt3"></select>
                 </td>
                 <td id="lib3"></td>
                 <td id="prix3"></td>
@@ -109,16 +112,15 @@
             </tr>
             <tr>
                 <td>
-                    <select name="" id="codepdt4"></select>
+                    <select name="produit" id="codepdt4"></select>
                 </td>
                 <td id="lib4"></td>
                 <td id="prix4"></td>
                 <td><input type="text" value="0" id="quantite3"></td>
                 <td id="prixht3"></td>
             </tr>
-        </tbody>
-       
-    </thead>
+        </tbody>    
+    
 </table>
 
 <table>
@@ -127,6 +129,7 @@
             <td colspan="4">SOUS-TOTAL</td>
             <td id="stotal"></td>
         </tr>
+
         <tr>
             <td colspan="4">T.V.A 20,00%</td>
             <td id="tva"></td>
@@ -136,30 +139,32 @@
             <td colspan="4">PORT & MANUTENTION</td>
             <td id="port"></td>
         </tr>
+
         <tr>
             <td colspan="4">TOTAL DU (TOTAL TTC)</td>
             <td id="prixttc"></td>
         </tr>
     </tbody>
 </table>
+
 <p id="remise">N.B votre facture a depassé 1000€,vous avez obtenu pour votre prochaine facture
-   une remise de: <span ></span>
+   une remise de: <span > </span>
    représentant 5% de votre commande ci-dessus
-</p>
+</p><!--ce paragraphe ne s'affiche que lorsque les conditions sont réunies, c-a-d le montant atteint-->
+
 <!-- footer -->
 <footer>
     <p id="cheque">Veuillez rédiger tous les chèques à l'ordre de :<span>Nom de la société</span></p>
     <p id="contact">Pour toute question concernant cette facture ,veuillez contacter: DUPONT au 
-        <span>Numero de télephone</span> ou à l'adresse : <span> Email</span>
-
+        <span> Numero de télephone</span> ou à l'adresse : <span> Email</span>
     </p>
+
     <p>Nous vous remercions de votre confiance</p>
-    <button onclick="window.print()">Inprimer la page</button>
+
+    <button onclick="window.print()">Imprimer la page</button>
+
 </footer>
            
-       </tbody>
-   </table>
-
 </section>
 
 

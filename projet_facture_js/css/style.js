@@ -11,7 +11,7 @@
 //     }
 // }
 // window.addEventListener('resize',redimensionnement,false);
-//       test code mediaquery en js
+//       /****** test code mediaquery en js*******/
 
 
 
@@ -21,14 +21,14 @@ var date=[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
 var dateParDefaut= new Date();
 
 document.getElementById('jour').innerHTML="<option>" + dateParDefaut.getDate()+ "</option>";//je choisis d'afficher le jour par defaut en lui appliquant la fonction get.Date()
-var t=dateParDefaut.getMonth()+1;//je ne peux pas changer sans avoir d'abord creer une variable
+var t=dateParDefaut.getMonth()+1;//je ne peux pas changer sans avoir d'abord creer une variable, donc je rajoute +1
 document.getElementById('mois').innerHTML="<option>" +t+ "</option>";//getDate recupere le jour, getMonth recupere le mois
 
 document.getElementById('annee').innerHTML="<option>" + dateParDefaut.getFullYear()+ "</option>";
 
 for(var i=0; i < date[0].length; i++){
     document.getElementById('jour').innerHTML+="<option>" + date[0][i] + "</option>";
-}//document.getElementById cible l'id du html dans lequel je veux placer mon element option.Je rajoute .innerHTML pour indiquer que je cible dans mon HTML. <option></option> s'insere dans mon html cependant je l'ecris ici et PAS dans mon html directement. J'indique [0] pour indiquer que je cherche dans mon premer tableau, celui avec les jours, [i] sert a cibler le chiffre du jour que je veux, c-a-d que si je veux le jour 5, j'ecrirai [4].
+}//document.getElementById cible l'id du html dans lequel je veux placer mon element option.Je rajoute .innerHTML pour indiquer que je cible dans mon HTML. <option></option> s'insere dans mon html cependant je l'ecris ici et PAS dans mon html directement. J'indique [0] pour indiquer que je cherche dans mon premier tableau, celui avec les jours, [i] sert a cibler le chiffre du jour que je veux, c-a-d que si je veux le jour 5, j'ecrirai [0][4].
 for(var i=0; i < date[1].length; i++){
     document.getElementById('mois').innerHTML+="<option>" + date[1][i] + "</option>";
 }
@@ -65,11 +65,11 @@ function Client(nomS,nom,rue,adresse,telephone){
 }
 
 //je transforme ces parametres en arguments, specifiques a chaque client
-var client1 = new Client("Savon","alain","1 rue des bois"," 75500,Paris ","03 02 06 08 07");
+var client1 = new Client("Sephora","Didier Arom ","1 rue des bois"," 75500,Paris ","03 02 06 08 07");
 
-var client2 = new Client("Purée","yvette","8 rue des ferrites","95400, cergy","03 02 06 08 10");
+var client2 = new Client("Castorama","Alain Deloin ","8 rue des ferrites","95400, Cergy","03 02 06 08 10");
 
-var client3 = new Client("Patate","alfred","8 rue des cormeille","78700, Poissy ","03 02 06 08 10");
+var client3 = new Client("Toys'R'Us","Alfred Saker","8 rue des cormeille","78300, Poissy ","03 02 06 08 10");
 
 var tab = [client1,client2,client3];//je recupere les données completes de mes clients pour pouvoir m'en resservir plus tard
 
@@ -77,6 +77,8 @@ var tab = [client1,client2,client3];//je recupere les données completes de mes 
 document.getElementById("nomClientD").innerHTML+="<Option> Nouveau client </Option>";
 document.getElementById("nomClientE").innerHTML+="<Option>Nouveau client </Option>";
 
+
+// essai avec switch:
 //function afficher(){
 //  var d=document.querySelectorAll(#nomClientD option)[0].innerHTML;
 //switch(d){  //var d pour destinataire
@@ -173,11 +175,11 @@ document.querySelectorAll("#nomClientE option")[0].addEventListener("click",func
 // j'applique l'evenement click à chaque option :il declenche le remplissage automatique des champs.Je n'oublie pas de preciser l'index pour lequel je cree l'evenement
 
 // for(var i=1;i<document.querySelectorAll("#nomClientE option").length;i++){
-//       document.querySelectorAll("#nomClientE option")[i].addEventListener("click",
-//      function(){
+//       document.querySelectorAll("#nomClientE option")[i].addEventListener("click",function(){
 //       var j =document.querySelectorAll("#nomClientE option")[i].innerHTML;
 //       remplissage1(j);
 //      } );
+//      
 // }
 
    document.querySelectorAll("#nomClientD option")[1].addEventListener("click",change);
@@ -209,14 +211,12 @@ document.querySelectorAll("#nomClientE option")[0].addEventListener("click",func
   });
 
 
-   document.querySelectorAll("#nomClientE option")[3].addEventListener("click",
-
-   function (){
+   document.querySelectorAll("#nomClientE option")[3].addEventListener("click",function (){
      var j =document.querySelectorAll("#nomClientE option")[3].innerHTML;
     remplissage1(j);
     });
 
-     //partie sur les produits
+     //partie sur les produits: création de l'objet Produit
            
     function Produit(codepdt,libelle,prixU){
       this.codepdt=codepdt;
@@ -224,11 +224,11 @@ document.querySelectorAll("#nomClientE option")[0].addEventListener("click",func
       this.prixU=prixU;
     }
 
-    // creation de mes produits
+    // specification de chacun de mes produits via l'objet Produit
 
-    var produit1 = new Produit("0000","batavia",19.5);
-    var produit2 = new Produit ("1111","mac",85);
-    var produit3 = new Produit("2222","romaine",122);
+    var produit1 = new Produit("0000","parfum",19.5);
+    var produit2 = new Produit ("1111","parquet",85);
+    var produit3 = new Produit("2222","console",122);
     
     var tabpdt=[produit1,produit2,produit3];//j'inclus dans un seul tableau toutes mes propriétés pour pouvoir les appeler plus rapidement
 
@@ -288,7 +288,8 @@ document.querySelectorAll("#nomClientE option")[0].addEventListener("click",func
     }
    
       
-//   produits de premiere ligne//l'evenement se fait au clic sur ma balise option de mon select id codepdt
+//   produits de premiere ligne
+//l'evenement se fait au clic sur ma balise option de mon select id codepdt
  document.querySelectorAll("#codepdt1 option")[1].addEventListener("click",function (){
         var j = document.querySelectorAll("#codepdt1 option")[1].innerHTML; 
          remplir(j);        
@@ -356,8 +357,7 @@ document.querySelectorAll("#codepdt4 option")[3].addEventListener("click",functi
     remplir3(j) ;  
 });
 
-
-    //  mettre les champs à zero si rien n'est selectionner
+    //  mettre les champs à zero si rien n'est selectionné
 
     document.querySelectorAll("#codepdt1 option")[0].addEventListener("click",function (){
     document.getElementById("lib1").innerHTML="";
@@ -392,106 +392,159 @@ function calcultva(x){
 document.getElementById("quantite").addEventListener("change",qteproduit);
 
 function qteproduit(){
-   var i=document.getElementById("quantite").value;
-   var j=document.getElementById("prix1").innerHTML;
-        var  k=i*j; 
-        document.getElementById("prixht").innerHTML=k;  
-}
+    var i=document.getElementById("quantite").value;
+    var j=document.getElementById("prix1").innerHTML;
+    var  k=i*j;
 
-document.getElementById("quantite1").addEventListener("input",qteproduit1);
+    document.getElementById("prixht").innerHTML=k;
+
+    document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML);
+
+    document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);
+
+    document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;
+
+    document.getElementById("prixttc").innerHTML=
+    parseFloat(document.getElementById("stotal").innerHTML)+parseFloat( document.getElementById("tva").innerHTML)+parseFloat(document.getElementById("port").innerHTML);
+       
+    var bonus= parseFloat( document.getElementById("prixttc").innerHTML);
+        if(bonus>1000){
+            document.getElementById("remise").style.display="block";
+            document.querySelector("#remise span").innerHTML= bonus*5/100;
+            document.querySelector("#cheque span").innerHTML=document.querySelectorAll(".identite input")[0].value;
+            document.querySelectorAll("#contact span")[0].innerHTML=document.querySelectorAll(".identite input")[2].value;
+            document.querySelectorAll("#contact span")[1].innerHTML=document.querySelectorAll(".identite input")[3].value;
+           }
+            else{
+            document.getElementById("remise").style.display="none";
+            document.querySelector("#cheque span").innerHTML=document.querySelectorAll(".identite input")[0].value;
+            document.querySelectorAll("#contact span")[0].innerHTML=document.querySelectorAll(".identite input")[2].value;
+            document.querySelectorAll("#contact span")[1].innerHTML=document.querySelectorAll(".identite input")[3].value;  
+           }                     
+};
+
+
+
+ document.getElementById("quantite1").addEventListener("change",qteproduit1);
 
 function qteproduit1(){
-    if(document.getElementById("quantite1")==0){
-        document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML);
-        document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);//je fixe a 2 le nombre de decimaux
-       document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;//les frais de port representent 5% du sous-total
-    }
-    else{
-        
     var i=document.getElementById("quantite1").value;
-    var j=document.getElementById("prix2").innerHTML;
+        var j=document.getElementById("prix2").innerHTML;
         var k=i*j;
-        document.getElementById("prixht1").innerHTML=k; 
-    }
-}
-
-
- document.getElementById("quantite2").addEventListener("input",qteproduit2);
-
- function qteproduit2(){
-    if(document.getElementById("quantite2")==0){
-        document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML);
-        document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);//je fixe a 2 le nombre de decimaux
-       document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;//les frais de port representent 5% du sous-total
-    }
-    else{
-    var i=document.getElementById("quantite2").value;
-    var j=document.getElementById("prix3").innerHTML;
-        var k=i*j;
-        document.getElementById("prixht2").innerHTML=k;  
-    }
-}
-// lorsqu'on remplit la derniere case on a tout le tableau 2 qui s'affiche et le message alternatif
-document.getElementById("quantite3").addEventListener("input",qteproduit3);
-
-function qteproduit3(){
-    if(document.getElementById("quantite3")==0){
-        document.getElementById("quantite4");
-    //     document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML);
-    //     document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);//je fixe a 2 le nombre de decimaux
-    //    document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;//les frais de port representent 5% du sous-total
-    }
-    else{
-        document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML);
-        document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);//je fixe a 2 le nombre de decimaux
-       document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;//les frais de port representent 5% du sous-total
-    var i=document.getElementById("quantite3").value;
-    var j=document.getElementById("prix4").innerHTML;
-        var k=i*j;
-         document.getElementById("prixht3").innerHTML=k;
-
-       document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML)+
-       parseFloat(document.getElementById("prixht1").innerHTML)+
-      parseFloat(document.getElementById("prixht2").innerHTML)+parseFloat(document.getElementById("prixht3").innerHTML);
-
-       document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);//je fixe a 2 le nombre de decimaux
-      
-
-       document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;//les frais de port representent 5% du sous-total
-
-    //    prixTTC= ss-total+ tva + frais de port, je recupere donc le montant de mon sous-total auquel j'ajoute la tva et les frais de port
-       document.getElementById("prixttc").innerHTML=
-       parseFloat(document.getElementById("stotal").innerHTML)+parseFloat( document.getElementById("tva").innerHTML)+parseFloat(document.getElementById("port").innerHTML);
-   
-    //    var prixU=["prix1", "prix2", "prix3","prix4"];
-    //    for (i=0; i<prixU.length;i++);
-    //    function sousTotal(){
-    //        sstot=quantite*prixU.length[i];
-    //    }
+        document.getElementById("prixht1").innerHTML=k;
+     
+        document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML)+ 
+        parseFloat(document.getElementById("prixht1").innerHTML);
+          
+       document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);
+          
+        document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;
+  
+        document.getElementById("prixttc").innerHTML=
+        parseFloat(document.getElementById("stotal").innerHTML)+parseFloat( document.getElementById("tva").innerHTML)+parseFloat(document.getElementById("port").innerHTML);
        
-    //    correspond au paragraphe qui apparait lorsque le montant total depasse 1000€
-       var bonus= parseFloat( document.getElementById("prixttc").innerHTML).toFixed(2);//sur la console, considérée comme string, donc pour eviter la concatenation, on ajoute parseFloat
+        var bonus= parseFloat( document.getElementById("prixttc").innerHTML);
+            if(bonus>1000){
+                document.getElementById("remise").style.display="block";
+                document.querySelector("#remise span").innerHTML= bonus*5/100;
+           
+              document.querySelector("#cheque span").innerHTML=document.querySelectorAll(".identite input")[0].value;
+  
+             document.querySelectorAll("#contact span")[0].innerHTML=document.querySelectorAll(".identite input")[2].value;
+  
+            document.querySelectorAll("#contact span")[1].innerHTML=document.querySelectorAll(".identite input")[3].value;
+           }
+            else{
+            document.getElementById("remise").style.display="none";
+            document.querySelector("#cheque span").innerHTML=document.querySelectorAll(".identite input")[0].value;
+  
+            document.querySelectorAll("#contact span")[0].innerHTML=document.querySelectorAll(".identite input")[2].value;
+     
+            document.querySelectorAll("#contact span")[1].innerHTML=document.querySelectorAll(".identite input")[3].value;  
+           }     
+ };
 
-//    if(bonus<=1000){
-//  document.getElementById("remise").visibility=hidden;
-//    } else if (bonus>1000){
-//        bonus*5/100;
-// document.getElementById("remise").visibility=visible;
-//     }
- 
-if(bonus>=1000){//calcul du bonus de 5% dès 1000€ d'achat
-    document.getElementById("remise").style.display="block";
-    document.querySelector("#remise span").innerHTML= bonus*5/100; 
-}else{
-    document.getElementById("remise").style.display="none";   
-    }
-} 
+   document.getElementById("quantite2").addEventListener("change",qteproduit2);
 
-       document.querySelector("#cheque span").innerHTML=document.querySelectorAll(".identite input")[0].value;
+   function qteproduit2(){
+      var i=document.getElementById("quantite2").value;
+        var j=document.getElementById("prix3").innerHTML;
+            var k=i*j;
+           
+      document.getElementById("prixht2").innerHTML=k;
 
-     document.querySelectorAll("#contact span")[0].innerHTML=document.querySelectorAll(".identite input")[2].value;
+    document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML)+ 
+    parseFloat(document.getElementById("prixht1").innerHTML)+parseFloat(document.getElementById("prixht2").innerHTML);
+     
+ document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);
+     
+      document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;
 
-     document.querySelectorAll("#contact span")[1].innerHTML=document.querySelectorAll(".identite input")[3].value;
-}
+      document.getElementById("prixttc").innerHTML=
+      parseFloat(document.getElementById("stotal").innerHTML)+parseFloat( document.getElementById("tva").innerHTML)+parseFloat(document.getElementById("port").innerHTML);
+  
+      var bonus= parseFloat( document.getElementById("prixttc").innerHTML);
 
+      if(bonus>1000){
+            document.getElementById("remise").style.display="block";
+            document.querySelector("#remise span").innerHTML= bonus*5/100;
+      
+            document.querySelector("#cheque span").innerHTML=document.querySelectorAll(".identite input")[0].value;
 
+    document.querySelectorAll("#contact span")[0].innerHTML=document.querySelectorAll(".identite input")[2].value;
+
+    document.querySelectorAll("#contact span")[1].innerHTML=document.querySelectorAll(".identite input")[3].value;
+      }
+       else{
+            document.getElementById("remise").style.display="none";
+            document.querySelector("#cheque span").innerHTML=document.querySelectorAll(".identite input")[0].value;
+  
+            document.querySelectorAll("#contact span")[0].innerHTML=document.querySelectorAll(".identite input")[2].value;
+     
+            document.querySelectorAll("#contact span")[1].innerHTML=document.querySelectorAll(".identite input")[3].value;  
+           }     
+ };
+
+ document.getElementById("quantite3").addEventListener("change",qteproduit3);
+
+ function qteproduit3(){
+       var i=document.getElementById("quantite3").value;
+      var j=document.getElementById("prix4").innerHTML;
+       
+            var k=i*j;
+           
+           document.getElementById("prixht3").innerHTML=k;
+
+         document.getElementById("stotal").innerHTML=parseFloat(document.getElementById("prixht").innerHTML)+
+         parseFloat(document.getElementById("prixht1").innerHTML)+
+        parseFloat(document.getElementById("prixht2").innerHTML)+parseFloat(document.getElementById("prixht3").innerHTML);
+
+         document.getElementById("tva").innerHTML=calcultva( document.getElementById("stotal").innerHTML).toFixed(2);
+        
+
+         document.getElementById("port").innerHTML=  document.getElementById("stotal").innerHTML*5/100;
+
+         document.getElementById("prixttc").innerHTML=
+         parseFloat(document.getElementById("stotal").innerHTML)+parseFloat( document.getElementById("tva").innerHTML)+parseFloat(document.getElementById("port").innerHTML);
+     
+         var bonus= parseFloat( document.getElementById("prixttc").innerHTML);
+
+         if(bonus>1000){
+               document.getElementById("remise").style.display="block";
+          document.querySelector("#remise span").innerHTML= bonus*5/100;
+         
+            document.querySelector("#cheque span").innerHTML=document.querySelectorAll(".identite input")[0].value;
+
+       document.querySelectorAll("#contact span")[0].innerHTML=document.querySelectorAll(".identite input")[2].value;
+
+       document.querySelectorAll("#contact span")[1].innerHTML=document.querySelectorAll(".identite input")[3].value;
+         }
+          else{
+            document.getElementById("remise").style.display="none";
+            document.querySelector("#cheque span").innerHTML=document.querySelectorAll(".identite input")[0].value;
+  
+            document.querySelectorAll("#contact span")[0].innerHTML=document.querySelectorAll(".identite input")[2].value;
+     
+            document.querySelectorAll("#contact span")[1].innerHTML=document.querySelectorAll(".identite input")[3].value;  
+           }
+};

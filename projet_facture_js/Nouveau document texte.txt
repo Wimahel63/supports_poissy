@@ -2,7 +2,13 @@ Projet facture
 
 Introduction:
 Le projet facture consiste à réaliser une facture dynamique et responsive en utilisant JavaScript, sur une base HTML-CSS, 
-en suivant les consignes données dans la notice.
+en suivant les consignes données avec la maquette.
+
+
+Equipe: Yvette Toukam et Magali Piszczyglowa.
+Repartition des taches:
+- HTML et CSS en commun dès le début, 
+- JavaScript : chacune a exposé ses idées et on a sélectionné les meilleures 'formulations' de code après discussion.
 
 
           PARTIE I:

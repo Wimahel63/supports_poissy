@@ -12,13 +12,16 @@ section{
 }
 
 
-@media(min-width:480px){/* min-width: 440px =>à partir d'un écran large de 768px et au-dessus*/
+@media(orientation:landscape) and (min-width:480px){/* min-width: 440px =>à partir d'un écran large de 768px et au-dessus*/
     section{
         width: 460px;
         display:block;
     }
      table:first-of-type{
         width:100%;
+    } 
+     .numero{
+        margin-left:65%;
     } 
 }
 
@@ -43,7 +46,7 @@ section{
     }
 }
 
-@media (min-width:1200px){ /*1200px et plus*/
+ @media (min-width:1200px){ /*1200px et plus*/
     section{
         width: 1170px;
         display:block;
@@ -51,7 +54,7 @@ section{
     table:first-of-type{
         width:100%;
     }
-}   
+}    
 
 @media print{
     section{
@@ -66,6 +69,7 @@ h1{
     font-size:200%;
 }
 
+/*zone gauche: identite societe emettrice*/
 .identite{
     width:100%;
 }
@@ -75,10 +79,12 @@ h1{
     display:block;
 }
 
+
+/*zone droite facture et date*/
 .numero{
     display:flex;
     flex-direction:column;/*pour pouvoir les mettre les uns au-dessus des autres en colonne*/
-    margin-left:80%;/*1050px, mais pas responsive*/
+    /* margin-left:65%;    1050px, mais pas responsive */
     text-transform:uppercase;
 }
 
@@ -114,12 +120,12 @@ h1{
 
 .destinataire input, .expediteur input{
     display:block; 
-    width:100%;/*200px*/
+    width:90%;/*200px*/
     padding: 0 50px;
 }
 
 .expediteur select,.destinataire select{
-    width:142%;/*206px*/
+    width:135%;/*206px*/
 }
 
 table:first-of-type{
