@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css_js/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+        <h1 class="display-4">Gestion de mes contacts</h1> 
+        </div>
+    <!-- </div>fin jumbotron -->
+
+        <section>
+          <div class="row">
+        <!--zone gauche-->
+           <div class="col-6">
+           <h4>Ajouter un contact</h4>
+           <hr>
+
+           <form>
+                <div class="form-group">
+                  <label for="exampleInputName"> nom</label>
+                  <input type="text" class="form-control" id="name" aria-describedby="nom" placeholder="nom">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputFirstName"> prenom</label>
+                  <input type="text" class="form-control" id="firstName" aria-describedby="prenom" placeholder="prenom">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail"> Email</label>
+                  <input type="email" class="form-control" id="e-mail" aria-describedby="email" placeholder="email">
+                </div>   
+                <div class="form-group">
+                  <label for="exampleInputTel">Telephone</label>
+                  <input type="text" class="form-control" id="phone" aria-describedby="telephone" placeholder="telephone">
+                </div>   
+                <button type="submit" class="btn btn-primary">Ajouter le contact</button>
+            </form>
+        
+        <!--fin zone gauche-->
+          </div> <!--fin class col 6-->
+          
+        <!--zone droite-->
+        
+
+        <div class="identite">
+                <table class="table table-hover col-6">
+                        <thead>
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">nom</th>
+                            <th scope="col">prenom</th>
+                            <th scope="col">email</th>
+                            <th scope="col">telephone</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row"></th><!--contact 1-->
+                            <td class="ligne"></td>
+                            <td class="ligne"></td>
+                            <td class="ligne"></td>
+                            <td class="ligne"></td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+
+    </div><!--fin row-->
+</section>
+
+</div><!--fin class container-->
+
+<script type="text/javascript" src="css_js/jquery-3.3.1.js"></script>
+
+    <script src="css_js/style.js"></script>
+    
+</body>
+</html>
