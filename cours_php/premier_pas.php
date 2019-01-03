@@ -232,6 +232,237 @@ for($i = 0; $i<=10; $i++){
 }
 echo "</select>";
 echo "<h2>Inclusion de fichiers</h2>";//cela signifie inclure du contenu de fichier
+echo "<p>cf main, header, navigation etc</p>";
+
+echo "<h2>Les tableaux de données ARRAY</h2>";
+
+$liste = array("Nic","Mick", "Will", "Elo");
+$liste[]="jean";//avec cette formulation, je peux ajouter des elements dans mon tableau quelque soit l'endroit de mon code où je me trouve
+echo "<pre>";
+print_r($liste);
+echo "</pre>";
+
+ecrir("var_dump(expression)");
+echo "<pre>";
+var_dump($liste);
+echo "</pre>";
+
+$tab[]="";
+$tab[]="Canada";
+$tab[]="Grece";
+$tab[]="Irlande";
+echo "<pre>";
+var_dump($tab);
+echo "</pre>";
+
+ecrir("sizeof(var)");
+for($i = 0; $i < sizeof($liste); $i++){
+    ecrir($liste[$i]);
+}//sizeof permet de renvoyer la taille du tableau
+
+ecrir("count(var)");
+for($i = 0; $i < count($liste); $i++){
+    ecrir($liste[$i]);
+}//meme resultat que sizeof
+
+//exercice: afficher la liste avec une boucle while et une boucle do...while
+$i = 0;//indice de depart
+while($i<sizeof($liste)){//condition
+    echo $i++;//incrementation
+}
+
+$i=0;//indice de depart
+do{//do while : condition
+    ecrir($liste[$i]) ;
+    $i++;//incrementation
+}while ($i < count($liste));
+
+//exercice: creer une liste de 10 fruits, afficher cette liste avec une boucle for, do, do...while dans une liste en html
+$fruit = array("Banane","Pomme", "Ananas", "Mangue", "Abricot", "Pomme", "Banane", "Fraise", "Orange", "Raisin");
+//for
+for($i = 0; $i<count($fruit); $i++){
+    ecrir($fruit[$i]);
+}
+
+//while
+$i=0;
+while($i<sizeof($fruit)){
+    echo($i++);
+}
+
+//do...while
+$i=0;
+do{
+    ecrir($fruit[$i]);
+    $i++;
+}while ($i< count($fruit));
+
+
+
+echo "<ul>";
+for($i = 0; $i<count($fruit); $i++){
+    echo "<li>$fruit[$i]</li>";
+}
+echo "</ul>";
+
+
+$i=0;
+ echo "<ul>";
+while($i<count($fruit)){
+    echo "<li>$fruit[$i]</li>";
+    echo ($i++);
+}
+echo "</ul>";
+
+
+$i=0;
+echo "<ul>";
+do{
+    echo "<li>$fruit[$i]</li>";
+    $i++;
+}while ($i< count($fruit));
+echo "</ul>";
+
+
+//correction
+ecrir("boucle do while");
+$i=0;
+echo("<ul>");
+do{
+    ecrir("<li>$fruit[$i]</li>");
+    $i++;
+}while($i < count($fruit));
+echo("</ul>");
+
+echo "<h2>La boucle foreach</h2>";
+
+//la boucle foreach sert a parcourir un tableau
+//condition (liste_a_parcourir as $key => $value)
+//$key et $value sont l'indice de la valeur ET la valeur du tableau ex: si pomme est le premier indice du tableau, alors sa key est 0 et sa valeur est pomme
+//syntaxe:
+// foreach ($variable as $key => $value){
+//     # code...
+// }
+
+foreach ($fruit as $key => $value){
+    ecrir("$key - $value");
+}
+
+foreach ($liste as $x => $y){
+    ecrir("$x - $y");
+}
+
+echo"<h2>Tableaux multidimensionnels</h2>";
+//avoir plusieurs tableaux dans un tableau
+
+$tabMulti = array(0 => array(), 1=>array());//ici j'ai un tableau global qui contient deux tableaux
+
+$tabMulti = array(0 => array("prenom"=>"Julien","nom"=>"Dupont"), 1=>array("prenom"=>"Yassine","nom"=>"Jaagoub"));//ici, tableau associatif, c-a-d que mes indices(mes keys) ne sont pas des nombres mais de noms("prenom", "nom")
+
+ecrir("<pre>");
+print_r($tabMulti);
+ecrir("</pre>");
+
+//exercice: afficher les prenoms du tableau avec une boucle for
+// for($i = 0; $i<count($fruit); $i++){
+//     ecrir($fruit[$i]);
+// }
+for($i=0; $i<count($tabMulti); $i++){
+    ecrir($tabMulti[$i]["prenom"]);//je ne recupere que les prenoms
+}
+
+foreach ($tabMulti as $key => $value){//le value ici correspond aux tableaux dans le tableau global
+    foreach ($value as $key2 => $value2){//value2 correspond aux valeurs qui sont dans chaque tableau
+   ecrir( "$key2 => $value2");
+    }
+}
+
+echo "<h2>Les objets</h2>";
+//on peut retrouver dans les objets des fonctions que l'on appelle methodes
+class Etudiant{
+    public $prenom = "Julien";//le mot-cle public permet de dire que l'attribut ou la propriete est accessible partout dans mon fichier php mais aussi dans d'autres fichiers php si j'appelle l'objet en question dans ces fichiers.On trouve aussi private et protected: avec private je n'y ai acces que dans le fichier en cours, avec protected je dois definir une fonction pour pouvoir y avoir acces partout. C'est l'encapsulation
+    public $age = 25;
+
+    public function resident(){
+        return "France";
+    }
+}
+//pour creer un objet, je cree ma var et je lui attribue le mot-cle new
+$objet = new Etudiant();
+
+echo $objet->prenom . "<br>";//dans cet exemple, j'ai accès au prenom de l'objet 'etudiant' grace a ->
+echo $objet->age."<br>";
+echo $objet->resident()."<br>";
+
+//modifier le prenom de l'objet et l'afficher
+
+//attribut=variable
+$objet->prenom="Alienor";
+echo $objet->prenom . "<br>";//ici j'ai accedé a mon objet etudiant et j'ai modifié le prenom de base
+
+//fonction de recuperation des données private et protected
+//ex:
+class Voiture{
+    private $modele = "c220";
+
+    public function getModele(){
+        return $this->modele;
+    }//avec get... je recupere mon element. C'est l'accesseur
+
+    public function setModele($modele){
+        $this->modele=$modele;//avec set... je peux modifier mon modele.C'est le mutateur
+    }
+}
+
+$megane = new Voiture();
+
+//$megane->getModele;
+echo $megane->getModele()."<br>";
+$megane->setModele("megane 4");
+echo $megane->getModele()."<br>";
+
+//exercice :creer un objet animal, ensuite declarer les attributs race, couleur, categorie ainsi que les methodes manger, boire, voler, courir.Ensuite créer un dauphin, un lion, un aigle
+
+class Animal{
+    public $race = "chauve-souris";
+    public $couleur = "blanche";
+    public $categorie = "mammifere";
+
+    
+
+    public function manger(){
+        echo "frugivore";
+    }
+    public function boire(){
+        echo "eau";
+    }
+    public function voler(){
+        echo "vol autorisé";
+    }
+    public function courir(){
+        echo "je ne cours pas je vole";
+    }
+}
+
+$objet = new Animal();
+echo $objet->race . "<br>";//dans cet exemple, j'ai accès au prenom de l'objet 'animal' grace a ->
+echo $objet->couleur."<br>";
+echo $objet->categorie."<br>";
+echo $objet->manger()."<br>";
+echo $objet->boire()."<br>";
+echo $objet->voler()."<br>";
+echo $objet->courir()."<br>";
+
+// $dauphin = new Animal("dauphin","gris","mammifere");
+// echo $objet->race="dauphin" ."<br>";
+// echo $objet->couleur="gris". "<br>";
+// echo $objet->categorie="mammifere" . "<br>";
+
+
+
+
+
+
 
 ?>
 </body>
