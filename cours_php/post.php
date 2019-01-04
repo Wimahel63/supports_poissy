@@ -20,7 +20,7 @@
     <?php
 
     $mot_de_passe="";
-  if($_POST){
+  if($_POST){//$_POST : supervariable de type tableau qui me permet de recuperer les infos ecrites dans mon formulaire.Cette condition me dit :si j'ai clique sur le bouton valider, les fonctions ci-apres s'activent
       if(htmlspecialchars($_POST['mdp'])!="lepoles"){
           $mot_de_passe .=  "c'est pas bon";
       }else{

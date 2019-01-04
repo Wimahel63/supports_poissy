@@ -339,6 +339,7 @@ echo "<h2>La boucle foreach</h2>";
 //la boucle foreach sert a parcourir un tableau
 //condition (liste_a_parcourir as $key => $value)
 //$key et $value sont l'indice de la valeur ET la valeur du tableau ex: si pomme est le premier indice du tableau, alors sa key est 0 et sa valeur est pomme
+//key recupere egalement le name des input
 //syntaxe:
 // foreach ($variable as $key => $value){
 //     # code...

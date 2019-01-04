@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php
-    echo htmlspecialchars($_POST['pseudo']) . " et " . $_POST["mdp"];
+    echo htmlspecialchars($_POST['nom']) . " et " . $_POST['prenom'] . " et " . $_POST['adresse'] . " et " . $_POST['zipcode'] . " et " . $_POST['ville'] . " et " . $_POST['email'];
 ?>    
 <!--la fonction htmlspecialcharts() permet d'avoir un certain controle sur ce qu'ecrivent les utilisateurs en empechant par ex l'usage d'html dans mes zones dediees aux donnees. ainsi, si l'utilisateur utilise du html, le texte ne sera pas considere comme du html mais comme du texte basique. L'utilisateur n'aura donc pas acces a mon code-->
 </body>
