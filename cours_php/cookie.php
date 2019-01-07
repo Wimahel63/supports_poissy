@@ -1,6 +1,6 @@
 <?php
 
-//un cookie est un fichier sauvegardé sur l'ordi de l'internaute, avec des informations non sensibles (sans mots de passe, c-a-d par ex la langue choisie pour la navigation, les gouts pour proposer du contenu ciblé correspondant aux goûts de l'utilisateur...)
+//un cookie est un fichier sauvegardé sur l'ordi de l'internaute, avec des informations non sensibles (sans mots de passe, c-a-d par ex la langue choisie pour la navigation, les gouts pour proposer du contenu ciblé correspondant aux goûts de l'utilisateur...). Un cookie par donnée
 
 //pour creer un cookie : setcookie(trois param)
 // setcookie("nomdemoncookie","contenuCookie","dateExpirationCookieEnSecondes");
