@@ -23,4 +23,17 @@ function executeRequete($req){//recoit en argument la requete sql qui arrivera d
      echo "</div>";
  }
 //ex debug(MaVariable,1); prendra en compte la variable qui s'appelle MaVariable, et le mode correspond a ce que la fonction debug doit executer si c'est = a 1, donc echo "<pre>"; print_r($d); echo "</pre>"; sinon var_dump($d);
+
+function internauteEstConnecte(){
+    if(!isset($_SESSION['membre'])) return false;
+    else return true;
+}
+//si mon internaute est connecté , retourne true, s'il n'est pas enregistré, retourne false
+
+
+function internauteEstConnecteEtEstAdmin(){
+    if(internauteEstConnecte() && $_SESSION['membre']['statut']==1) return true;
+    else return false;
+}
+//si mon internaute est connecté et qu'il est admin, retourne vrai, sinon retourne false
 ?>
