@@ -23,7 +23,7 @@
     if(internauteEstConnecte()){//si l'internaute est un membre, mais pas l'admin, alors il a accès à:
       echo
       '<li class="nav-item">
-        <a class="nav-link" href="<?php echo RACINE_SITE; ?>connexion.php">Connexion</a>
+        <a class="nav-link" href=" '.RACINE_SITE.'connexion.php">Connexion</a>
       </li>';
       echo 
       '<li class="nav-item">
@@ -49,6 +49,10 @@
        </li>';
       echo '<li class="nav-item">
         <a class="nav-link" href="'.RACINE_SITE. 'boutique.php"> boutique</a>
+      </li>';
+      echo
+      '<li class="nav-item">
+        <a class="nav-link" href=" '.RACINE_SITE.'connexion.php">Connexion</a>
       </li>';
     }
 
