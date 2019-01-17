@@ -18,6 +18,7 @@ if(isset($_GET['action']) && $_GET['action'] == "deconnexion"){
 
 if($_POST){
 // debug($membre); cette fonction est definie dans ma page fonction.inc et me sert a voir s'il y a un probleme avec ma var membre. Je peux aussi utiliser var_dump($membre); pour voir le contenu de $membre
+
        $resultat = executeRequete("SELECT * FROM membre WHERE pseudo = '$_POST[pseudo]' AND mdp = '$_POST[mdp]'");//je stocke ma requete dans une var resultat
 
        $membre = $resultat->fetch(PDO::FETCH_ASSOC);//je stocke mon resultat retourné dans une var $membre.Les param du fetch evitent de recuperer tous les champs en double en prenant en compte les id + l'associatif

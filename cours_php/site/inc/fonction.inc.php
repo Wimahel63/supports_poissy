@@ -1,39 +1,85 @@
-<?php 
+<?php
 
-function executeRequete($req){//recoit en argument la requete sql qui arrivera dans la fonction
-    global $bdd;//permet d'avoir acces a la variable definie dans init.inc.php $bdd
+function executeRequete($req){
+    global $bdd;
 
     $result = $bdd->query($req);
     if(!$result){
-        die('Erreur sur la requete sql.<br>Message : ' . $bdd->error() .'<br>Code: ' . $req);
+        die('Erreur sur la requete sql.<br>Message : ' . $bdd->error() . '<br>Code : ' . $req);
     }
 
     return $result;
 }
 
- function debug($d, $mode = 1){//param1= variable a debuguer, param2 :mode a definir pour la condition qui suit
-     echo '<div class="alert alert-warning" role="alert">';
-     $trace = debug_backtrace();//recupere les erreurs eventuelles du fichier
-     echo "debug demandé dans le fichier " . $trace[0]['file'] . ' à la ligne ' . $trace[0]['line'];
-     if($mode === 1){
-         echo "<pre>"; print_r($d); echo "</pre>";
-     } else {
-         var_dump($d);
-     }
-     echo "</div>";
- }
-//ex debug(MaVariable,1); prendra en compte la variable qui s'appelle MaVariable, et le mode correspond a ce que la fonction debug doit executer si c'est = a 1, donc echo "<pre>"; print_r($d); echo "</pre>"; sinon var_dump($d);
+function debug($d, $mode = 1){
+    echo '<div class="alert alert-warning" role="alert">';
+    $trace = debug_backtrace();
+    echo "debug demandé dans le fichier " . $trace[0]['file'] . ' à la ligne ' . $trace[0]['line'];
+    if($mode === 1){
+        echo "<pre>" ; print_r($d) ; echo "</pre>";
+    }else{
+        var_dump($d);
+    }
+    echo "</div>";
+}
 
 function internauteEstConnecte(){
     if(!isset($_SESSION['membre'])) return false;
     else return true;
 }
-//si mon internaute est connecté , retourne true, s'il n'est pas enregistré, retourne false
-
 
 function internauteEstConnecteEtEstAdmin(){
-    if(internauteEstConnecte() && $_SESSION['membre']['statut']==1) return true;
+    if(internauteEstConnecte() && $_SESSION['membre']['statut'] == 1) return true;
     else return false;
 }
-//si mon internaute est connecté et qu'il est admin, retourne vrai, sinon retourne false
-?>
+
+function creationPanier(){
+
+    if(!isset($_SESSION['panier'])){
+        $_SESSION['panier'] = array();//titre, id, quantite, prix
+        $_SESSION['panier']['titre'] = array();//titre de mes produits
+        $_SESSION['panier']['id_produit'] = array();//id de mes produits
+        $_SESSION['panier']['quantite'] = array();//quantite
+        $_SESSION['panier']['prix'] = array();//prix
+    }
+    
+}
+
+function ajouterProduitDansPanier($titre,$id_produit,$quantite,$prix){
+    
+    creationPanier();
+    $position_produit = array_search($id_produit, $_SESSION['panier']['id_produit']);
+    if($position_produit !== false){
+        $_SESSION['panier']['quantite'][$position_produit] += $quantite;
+    }else {
+        $_SESSION['panier']['titre'][]= $titre;
+        $_SESSION['panier']['id_produit'][]= $id_produit;
+        $_SESSION['panier']['quantite'][]= $quantite;
+        $_SESSION['panier']['prix'][]= $prix;
+    }
+    
+}
+
+function montantTotal(){
+    $total = 0;
+
+    for($i = 0; $i < count($_SESSION['panier']['id_produit']); $i++){
+        $total += $_SESSION['panier']['quantite'][$i] * $_SESSION['panier']['prix'][$i];
+    }
+
+    return round($total,2);
+}
+
+function retirerProduitPanier($id_produit_a_supprimer){
+
+    $position_produit = array_search($id_produit, $_SESSION['panier']['id_produit']);
+    if($position_produit !== false){
+        array_splice($_SESSION['panier']['titre'], $position_produit, 1);
+        array_splice($_SESSION['panier']['id_produit'], $position_produit, 1);
+        array_splice($_SESSION['panier']['quantite'], $position_produit, 1);
+        array_splice($_SESSION['panier']['prix'], $position_produit, 1);
+    }
+    
+}
+
+

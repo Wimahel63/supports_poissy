@@ -34,6 +34,27 @@ $content .="</div>";
 
     }
 }
+//exercice:
+//input: pour chercher avec des termes particuliers: SELECT * FROM produit WHERE ... LIKE '%'. Je me cree un input, avec une requete qui recupere des donnees particulieres en partant de l'initiale tapée par exemple
+// $content .='<form method="post" action="">';
+// $content .='<label for="recherche">Rechercher un article </label>';
+// $content .='<input type="text" name="keywords">';
+// $content .='<input type="submit" value="rechercher">';
+// $content .='<label for="prix">prix : </label>';
+// $content .='<select id="prix" name="prix">';
+// $prix=executeRequete("SELECT * FROM produit WHERE prix BETWEEN 0 AND 20")
+// if(isset($_POST['prix']))
+
+
+// $content .="</form>";
+// lors de l'envoi, liste deroulante des donnees trouvées incluant les conditions de recherche: ex dans mon input je tape 'a', si je valide, j'obtiens une liste deroulante contenant tous les produits de ma bdd commençant par 'a', je choisis alors le produit que je cherchais
+ 
+// if(isset($_POST['keywords']))
+// $keywords=executeRequete("SELECT * FROM produit WHERE titre OR description LIKE '%')
+
+
+
+
 
 ?>
 

@@ -95,14 +95,14 @@ if(empty($_SESSION['panier']['id_produit'])){
             echo '<tr><td colspan="3">Veuillez vous inscrire ou vous connecter afin de finaliser votre paiement</td></tr>';
         }
 
-        echo '<tr><td calspan="5"><a href="?action=vider">Vider mon panier</a></td></tr>';
+        echo '<tr><td colspan="5"><a href="?action=vider">Vider mon panier</a></td></tr>';
 }
 
 echo "</table><br>";
 
 echo "<i>Règlement par chèque uniquement à l'adresse suivante : 300 rue de la maladrerie 78300 Poissy</i><br>";
 
-echo "<hr>session panier.php : <br>"; debug($_SESSION);
+ echo "<hr>session panier.php : <br>"; //debug($_SESSION);
 
 require_once('inc/bas.inc.php');
 
