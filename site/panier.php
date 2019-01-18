@@ -92,7 +92,7 @@ if(empty($_SESSION['panier']['id_produit'])){
             echo '<tr><td colspan="5"><input type="submit" name="payer" value="valider mon paiement"></td></tr>';
             echo '</form>';
         } else {
-            echo '<tr><td colspan="3">Veuillez vous inscrire ou vous connecter afin de finaliser votre paiement</td></tr>';
+            echo '<tr><td colspan="3">Veuillez vous <a href="inscription.php">inscrire</a> ou vous <a href="connexion.php">connecter </a> afin de finaliser votre paiement</td></tr>';
         }
 
         echo '<tr><td colspan="5"><a href="?action=vider">Vider mon panier</a></td></tr>';

@@ -34,44 +34,45 @@ $content .="</div>";
 
     }
 }
-//exercice:
-//input: pour chercher avec des termes particuliers: SELECT * FROM produit WHERE ... LIKE '%'. Je me cree un input, avec une requete qui recupere des donnees particulieres en partant de l'initiale tapée par exemple
-// $content .='<form method="post" action="">';
-// $content .='<label for="recherche">Rechercher un article </label>';
-// $content .='<input type="text" name="keywords">';
-// $content .='<input type="submit" value="rechercher">';
-// $content .='<label for="prix">prix : </label>';
-// $content .='<select id="prix" name="prix">';
+?>
+<!--exercice:effectuer un moteur de recherche par mots-cle avec suggestion de saisie
+//effectuer une zone de recherche permettant de trier par tranche de prix
+
+
+ // <label for="prix">prix : </label>';
+// <select id="prix" name="prix">';
 // $prix=executeRequete("SELECT * FROM produit WHERE prix BETWEEN 0 AND 20")
-// if(isset($_POST['prix']))
+// if(isset($_POST['prix'])) 
 
+ input: pour chercher avec des termes particuliers: SELECT * FROM produit WHERE ... LIKE '%'. Je me cree un input, avec une requete qui recupere des donnees particulieres en partant de l'initiale tapée par exemple-->
 
-// $content .="</form>";
-// lors de l'envoi, liste deroulante des donnees trouvées incluant les conditions de recherche: ex dans mon input je tape 'a', si je valide, j'obtiens une liste deroulante contenant tous les produits de ma bdd commençant par 'a', je choisis alors le produit que je cherchais
- 
-// if(isset($_POST['keywords']))
-// $keywords=executeRequete("SELECT * FROM produit WHERE titre OR description LIKE '%')
+<form method="post" action="">
+ <label for="recherche">Rechercher un article </label>
+<input type="text" name="keywords">
+ <input type="submit" value="rechercher">
+</form>
+<?php 
+//essai:
+// if(isset($_POST['keywords'])){
+//  $keywords=executeRequete("SELECT  titre, description  FROM produit WHERE titre OR description LIKE '$_POST[keywords]%'");
 
-
-
-
-
+// while($recuperationProduit=$keywords->fetch(PDO::FETCH_ASSOC)) { 
+//     $content .=$recuperationProduit['keywords'];//j'affiche mes categories disponibles 
+// }
+// }
+ if($_POST){
+     $keywords=executeRequete("SELECT titre, description FROM produit WHERE titre, description LIKE %$_POST[$value]%");
+     while($value=$keywords->fetch(PDO::FETCH_ASSOC)){
+     foreach($_POST as $key=>$value){
+         if(!empty($value)){
+             echo $key;
+         }
+     }
+ }
+}
 ?>
 
- <table class="table">
-  <caption>Articles</caption>
-  <thead>
-    <tr>
-      <th scope="col">REFERENCE</th>
-      <th scope="col">TITRE</th>
-      <th scope="col">PRIX</th>
-      <th scope="col">EN STOCK</th>
-      <th scope="col">PHOTO</th>
-    </tr>
-  </thead> 
-  <?php echo $content; ?>
-  
-</table>
-<?php 
+<?php
+ echo $content;
 require_once("inc/bas.inc.php");
 ?>
