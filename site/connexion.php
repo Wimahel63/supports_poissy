@@ -23,6 +23,7 @@ if($_POST){
 
        $membre = $resultat->fetch(PDO::FETCH_ASSOC);//je stocke mon resultat retourné dans une var $membre.Les param du fetch evitent de recuperer tous les champs en double en prenant en compte les id + l'associatif
 
+
        if($membre){//si j'ai bien un membre qui existe avec le mdp et le pseudo entré, alors :
          foreach($membre as $key => $value){//je parcours ses infos...
            if($key != 'mdp'){//...j'arrive a son mdp, et si l'indice est different de mdp alors j'enregistre tout sauf le mdp ...

@@ -46,12 +46,10 @@ while ($membreInscrit=$membres->fetch(PDO::FETCH_ASSOC)){
 // var_dump($statut_a_modifier);
 
    if(isset($_GET['action']) && $_GET['action']=="suppression"){
-    // $suppression=executeRequete("SELECT * FROM membre, commande WHERE id_membre=$_GET[id_membre]");
-    //  $membre_a_supprimer=$suppression->fetch(PDO::FETCH_ASSOC);
-    //   if(!empty( $membre_a_supprimer['id_membre'])){
-      executeRequete("DELETE FROM membre, commande WHERE id_membre=$_GET[id_membre]");
+    
+      executeRequete("DELETE FROM membre WHERE id_membre=$_GET[id_membre]");
       }
-//  }
+  
 //  header("location:gestion_membre.php");
  require_once('../inc/bas.inc.php');
 ?>

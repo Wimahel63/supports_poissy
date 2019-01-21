@@ -38,28 +38,28 @@ if(isset($_GET['action']) && $_GET['action'] == "tri_montant"){
     WHERE p.id_produit=dc.id_produit 
     AND m.id_membre=c.id_membre 
     AND dc.id_commande=c.id_commande 
-    ORDER BY montant DESC");
+    ORDER BY montant DESC");//tri par montant
     
 } elseif(isset($_GET['action']) && $_GET['action'] == "tri_etat"){
     $commande=executeRequete("SELECT dc.id_commande, c.date_enregistrement, c.montant, c.etat, m.id_membre, m.nom, m.prenom, m.pseudo, m.adresse, m.ville, m.code_postal, p.photo, p.id_produit, dc.quantite, p.titre FROM produit p, membre m, details_commande dc, commande c 
     WHERE p.id_produit=dc.id_produit 
     AND m.id_membre=c.id_membre 
     AND dc.id_commande=c.id_commande 
-    ORDER BY etat DESC");
+    ORDER BY etat DESC");//tri par etat de livraison
 
 } elseif(isset($_GET['action']) && $_GET['action'] == "tri_date"){
   $commande=executeRequete("SELECT dc.id_commande, c.date_enregistrement, c.montant, c.etat, m.id_membre, m.nom, m.prenom, m.pseudo, m.adresse, m.ville, m.code_postal, p.photo, p.id_produit, dc.quantite, p.titre FROM produit p, membre m, details_commande dc, commande c 
   WHERE p.id_produit=dc.id_produit 
   AND m.id_membre=c.id_membre 
   AND dc.id_commande=c.id_commande 
-  ORDER BY date_enregistrement DESC");
+  ORDER BY date_enregistrement DESC");//tri par date d'achat
 
 } elseif(isset($_GET['action']) && $_GET['action'] == "tri_membre"){
   $commande=executeRequete("SELECT  dc.id_commande, c.date_enregistrement, c.montant, c.etat, m.id_membre, m.nom, m.prenom, m.pseudo, m.adresse, m.ville, m.code_postal, p.photo, p.id_produit, dc.quantite, p.titre FROM produit p, membre m, details_commande dc, commande c 
   WHERE p.id_produit=dc.id_produit 
   AND m.id_membre=c.id_membre 
   AND dc.id_commande=c.id_commande 
-  ORDER BY id_membre ");
+  ORDER BY id_membre ");//tri par membre
 }
  
   while ($commandesPassees=$commande->fetch(PDO::FETCH_ASSOC)){//tant qu'il y a des concordances, recupere-les, puis je les appelles dans ma table pour les afficher
@@ -108,20 +108,7 @@ if(isset($_GET['action']) && $_GET['action'] == "tri_montant"){
         
 
          <td>
-         <!--/!\code non valide: vide la colonne etat de la table commande?php if(isset($_POST['etatLivraison'])){
-          $etatLivraison=$_POST['etatLivraison'];
-          switch($etatLivraison){
-            case 'en_cours':
-            $change=executeRequete("UPDATE commande SET etat='en_cours' WHERE id_commande='$commandesPassees[id_commande]'" );
-            break;
-            case 'envoi':
-            $change=executeRequete("UPDATE commande SET etat='envoye' WHERE id_commande='$commandesPassees[id_commande]'" );
-            break;
-            case 'livre':
-            $change=executeRequete("UPDATE commande SET etat='livre' WHERE id_commande='$commandesPassees[id_commande]'" );
-            break;
-          }
-        }?> -->
+         
        <form method="post" action="">
         <select id="etatLivraison" name="etatLivraison">
         <option value="en_cours">En cours de traitement</option>
