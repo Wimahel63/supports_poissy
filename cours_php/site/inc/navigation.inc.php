@@ -32,9 +32,9 @@
       echo '<li class="nav-item">
         <a class="nav-link" href="'.RACINE_SITE. 'boutique.php"> boutique</a>
       </li>';
-      // echo '<li class="nav-item">
-      //   <a class="nav-link" href="'.RACINE_SITE. 'commande.php">commande</a>
-      // </li>';
+      echo '<li class="nav-item">
+        <a class="nav-link" href="'.RACINE_SITE. 'membres.php">membres</a>
+      </li>';
       echo '<li class="nav-item">
         <a class="nav-link" href="'.RACINE_SITE. 'panier.php">panier</a>
       </li>';

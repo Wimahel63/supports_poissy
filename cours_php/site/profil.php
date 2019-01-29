@@ -10,7 +10,9 @@ if(!internauteEstConnecte()) header('location:connexion.php');
 ?>
 
 <div class="card border-info mb-3" style="max-width: 18rem;">
-  <div class="card-header"><?php echo $_SESSION['membre']['pseudo']?></div>
+  <div class="card-header"><?php echo $_SESSION['membre']['pseudo']?>
+  <img src="<?php echo $avatar_dossier['avatar']?>" width=90 height=90><br>
+  </div>
   <div class="card-body text-dark">
     <h5 class="card-title"><?php echo $_SESSION['membre']['nom']?></h5>
     <p class="card-text"><?php echo $_SESSION['membre']['prenom']?></p>
@@ -19,53 +21,50 @@ if(!internauteEstConnecte()) header('location:connexion.php');
     <p class="card-text"><?php echo $_SESSION['membre']['code_postal']?></p>
     <p class="card-text"><?php echo $_SESSION['membre']['adresse']?></p>
   </div>
-
-<a href="?action=modifier&id_membre=<?= $_SESSION['membre']['id_membre']?>">Modifier mon profil</a><br>
+</div>
+<a href="membres.php?action=modifier&id_membre=<?= $_SESSION['membre']['id_membre']?>&amp;pseudo=<?=$_SESSION['membre']['pseudo']?>">Modifier mon profil</a><br>
 <a href="?action=supprimer&id_membre=<?= $_SESSION['membre']['id_membre']?>">Supprimer mon profil</a><br>
 
 <?php 
-// if(isset($_GET['action'] && $_GET['action']=="supprimer")){
-//   executeRequete("DELETE FROM membre WHERE id_membre= '$_SESSION[membre][id_membre]'");
-// }
+if(isset($_GET['action']) && $_GET['action']=="supprimer"){
+  executeRequete("DELETE FROM membre WHERE id_membre= '$_SESSION[membre][id_membre]'");
+}
+?>
 
 
-// if(isset($_GET['action'] && $_GET['action']=="modifier")){?>
- <form method="post" action="">
+<!--ajout avatar-->
+<form method="post" action="" enctype="multipart/form-data">
+<label for="avatar">Ajouter un avatar</label>
+<input type="hidden" name="MAX_FILE_SIZE" value="50000"><!--valeur max en octet-->
+ <input type="file" name="avatar">
+ <input type="submit" name="valider" value="valider">
+ <br><br>
 
- <label for="pseudo">Nouveau pseudo</label>
- <input type="text" name="newPseudo" >
- <label for="nom">Nouveau nom</label>
- <input type="text" name="newNom" >
- <label for="prenom">Nouveau prenom</label>
- <input type="text" name="newPrenom">
- <label for="email">Nouvel email</label>
- <input type="email" name="newEmail" >
- <label for="ville">Nouvelle ville</label>
- <input type="text" name="newVille" >
- <label for="code_postal">Nouveau code postal</label>
- <input type="text" name="newZip" >
- <label for="adresse">Nouvelle adresse</label>
- <input type="text" name="newZip" >
- <label for="mot_de_passe">Nouveau mot de passe</label>
- <input type="password" name="newPassword" >
- <input type="submit" name="changer" value="changer">
-</form>
-
-  <?php
-  // executeRequete("UPDATE membre SET pseudo='$_POST["newPseudo"]', nom='$_POST["newName"]', prenom='$_POST["newPrenom"]', email='$_POST["newEmail"]', ville='$_POST["newVille"]', code_postal='$_POST["newZip"]', adresse='$_POST["newAdresse"]',  mdp='$_POST["newPassword"]'  WHERE  id_membre= '$_SESSION[membre][id_membre]'");
-//}?> 
-
-
-
-<form method="post" action="">
+ <!--zone correspondance-->
 <p>Laissez nous un message</p>
-<textarea name="message" clos="60" rows="10"></textarea>
+<textarea name="message" cols="60" rows="10"></textarea>
 <input type="submit" name="poster" value="Poster">
 </form>
 <?php 
 //postez un message pour signifier que la commande est bien reçue, par ex.avec ce message de confirmation, je peux modifier le statut de ma livraison
 $message="";
 if(!empty($_POST['message'])){
+  executeRequete("UPDATE membre SET message='$_POST[message]' WHERE id_membre='$_POST[id_membre]' ");
    $message .= "votre message a bien ete poste";
 }
+
+
+//gestion avatar
+var_dump($_FILES);
+debug($_FILES);
+if(!empty($_FILES['avatar']['name'])){
+    $nom_avatar = $_FILES['avatar']['name'];
+$avatar_bdd = RACINE_SITE . "photo/$nom_avatar";
+$avatar_dossier = $_SERVER['DOCUMENT_ROOT']. RACINE_SITE . "photo/$nom_avatar";
+         copy($_FILES['avatar']['tmp_name'], $avatar_dossier);
+     }
+
+
+
 require_once("inc/bas.inc.php"); ?>
+

@@ -1,0 +1,119 @@
+/*
+Theme Name: mon theme perso
+Author: PISZCZYGLOWA Magali
+Description: Voici mon theme
+Version: 1.2
+Text Domain: monthemeperso
+*/
+*{
+    list-style-type:none;
+}
+
+.haut-gauche{
+    min-height: 200px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+}
+
+.haut-droite{
+    min-height:200px;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    flex-direction:column;
+}
+
+.entete{
+    background:linear-gradient( aquamarine, #005DE0);
+}
+
+.bas-gauche{
+    background: purple;
+    min-height: 80px;
+    align-items:center;
+}
+
+.bas-droite{
+    background: orangered;
+    min-height: 80px;
+}
+
+section{
+    min-height:500px;
+}
+
+.my-logo{
+    width:85px;
+    height:85px;
+}
+
+.my-logo img{
+    width:100%;
+}
+
+.my-slogan a{
+    font-size:30px;
+}
+
+.my-number p{
+    font-size:30px;
+}
+
+.my-number .fa-phone-square{
+    margin-right:10px;
+    font-size:30px;
+    color:#0067EA;
+}
+
+.my-email .fa-envelope{
+    margin-right:20px;
+    font-size:30px;
+    color:#0067EA;
+}
+
+.my-email p{
+
+font-size:30px;
+}
+
+.my-entete img{
+    width:100%;
+}
+
+.realisations > .col-md-4{
+    margin-bottom:15px;
+}
+
+.lead{
+    font-size:22px!important;
+    margin-bottom:0;
+    color:#0067EA;
+}
+
+.lead:last-of-type{
+    margin-bottom:15px;
+}
+
+.competences{
+    margin:20px 0;
+}
+
+#menu-main-navigation{
+    display:flex;
+    margin:0;
+    padding:0;
+    width:300px;
+    justify-content:space-around;
+}
+
+#menu-footer-navigation{
+    display:flex;
+
+}
+
+.menu-header{
+    display:flex;
+    align-items:center;
+}
+

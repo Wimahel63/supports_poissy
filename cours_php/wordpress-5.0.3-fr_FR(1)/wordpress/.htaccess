@@ -1,0 +1,12 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /supports_poissy/cours_php/wordpress-5.0.3-fr_FR(1)/wordpress/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /supports_poissy/cours_php/wordpress-5.0.3-fr_FR(1)/wordpress/index.php [L]
+</IfModule>
+
+# END WordPress
